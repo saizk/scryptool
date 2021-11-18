@@ -1,6 +1,6 @@
 import datetime, pandas as pd, warnings
 from time import strftime, localtime
-from twint.tweet import Tweet_formats
+from scraper.twint.tweet import Tweet_formats
 
 Tweets_df = None
 Follow_df = None
@@ -14,16 +14,17 @@ _object_blocks = {
 }
 
 weekdays = {
-        "Monday": 1,
-        "Tuesday": 2,
-        "Wednesday": 3,
-        "Thursday": 4,
-        "Friday": 5,
-        "Saturday": 6,
-        "Sunday": 7,
-        }
+    "Monday": 1,
+    "Tuesday": 2,
+    "Wednesday": 3,
+    "Thursday": 4,
+    "Friday": 5,
+    "Saturday": 6,
+    "Sunday": 7,
+}
 
 _type = ""
+
 
 def _concat(df, _type):
     if df is None:
@@ -32,6 +33,7 @@ def _concat(df, _type):
         _df = pd.DataFrame(_object_blocks[_type])
         df = pd.concat([df, _df], sort=True)
     return df
+
 
 def _autoget(_type):
     global Tweets_df
@@ -45,28 +47,28 @@ def _autoget(_type):
     elif _type == "user":
         User_df = _concat(User_df, _type)
     else:
-        error("[x] Wrong type of object passed")
+        raise RuntimeError("[x] Wrong type of object passed")
 
 
 def update(object, config):
     global _type
 
-    #try:
+    # try:
     #    _type = ((object.__class__.__name__ == "tweet")*"tweet" +
     #             (object.__class__.__name__ == "user")*"user")
-    #except AttributeError:
+    # except AttributeError:
     #    _type = config.Following*"following" + config.Followers*"followers"
     if object.__class__.__name__ == "tweet":
         _type = "tweet"
     elif object.__class__.__name__ == "user":
         _type = "user"
     elif object.__class__.__name__ == "dict":
-        _type = config.Following*"following" + config.Followers*"followers"
+        _type = config.Following * "following" + config.Followers * "followers"
 
     if _type == "tweet":
         Tweet = object
         datetime_ms = datetime.datetime.strptime(Tweet.datetime, Tweet_formats['datetime']).timestamp() * 1000
-        day = weekdays[strftime("%A", localtime(datetime_ms/1000))]
+        day = weekdays[strftime("%A", localtime(datetime_ms / 1000))]
         dt = f"{object.datestamp} {object.timestamp}"
         _data = {
             "id": str(Tweet.id),
@@ -84,7 +86,7 @@ def update(object, config):
             "username": Tweet.username,
             "name": Tweet.name,
             "day": day,
-            "hour": strftime("%H", localtime(datetime_ms/1000)),
+            "hour": strftime("%H", localtime(datetime_ms / 1000)),
             "link": Tweet.link,
             "urls": Tweet.urls,
             "photos": Tweet.photos,
@@ -107,7 +109,7 @@ def update(object, config):
             "translate": Tweet.translate,
             "trans_src": Tweet.trans_src,
             "trans_dest": Tweet.trans_dest
-            }
+        }
         _object_blocks[_type].append(_data)
     elif _type == "user":
         user = object
@@ -134,12 +136,12 @@ def update(object, config):
             "verified": user.is_verified,
             "avatar": user.avatar,
             "background_image": background_image,
-            }
+        }
         _object_blocks[_type].append(_data)
     elif _type == "followers" or _type == "following":
         _data = {
-            config.Following*"following" + config.Followers*"followers" :
-                             {config.Username: object[_type]}
+            config.Following * "following" + config.Followers * "followers":
+                {config.Username: object[_type]}
         }
         _object_blocks[_type] = _data
     else:
@@ -157,6 +159,7 @@ def clean():
     Tweets_df = None
     Follow_df = None
     User_df = None
+
 
 def save(_filename, _dataframe, **options):
     if options.get("dataname"):
@@ -177,6 +180,7 @@ def save(_filename, _dataframe, **options):
     else:
         print("""Please specify: filename, DataFrame, DataFrame name and type
               (HDF5, default, or Pickle)""")
+
 
 def read(_filename, **options):
     if not options.get("dataname"):

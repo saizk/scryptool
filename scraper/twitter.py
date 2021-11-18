@@ -1,5 +1,5 @@
 import tweepy
-import twint
+from scraper import twint
 
 
 class Twitter(object):
