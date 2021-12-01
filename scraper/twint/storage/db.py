@@ -7,10 +7,10 @@ import hashlib
 from datetime import datetime
 
 
-def Conn(database):
+def Conn(config, database):
     if database:
         print("[+] Inserting into Database: " + str(database))
-        conn = init(database)
+        conn = init(config, database)
         if isinstance(conn, str):  # error
             print(conn)
             sys.exit(1)
@@ -20,7 +20,7 @@ def Conn(database):
     return conn
 
 
-def init(db):
+def init(cfg, db):
     try:
         conn = sqlite3.connect(db)
         cursor = conn.cursor()
@@ -51,7 +51,8 @@ def init(db):
                     CONSTRAINT users_pk PRIMARY KEY (id, hex_dig)
                 );
             """
-        cursor.execute(table_users)
+        if cfg.Username or cfg.User_id:
+            cursor.execute(table_users)
 
         table_tweets = """
             CREATE TABLE IF NOT EXISTS
@@ -107,7 +108,8 @@ def init(db):
                     CONSTRAINT tweet_id_fk FOREIGN KEY(tweet_id) REFERENCES tweets(id)
                 );
         """
-        cursor.execute(table_retweets)
+        if cfg.SaveRetweets:
+            cursor.execute(table_retweets)
 
         table_reply_to = """
             CREATE TABLE IF NOT EXISTS
@@ -119,7 +121,8 @@ def init(db):
                     CONSTRAINT tweet_id_fk FOREIGN KEY (tweet_id) REFERENCES tweets(id)
                 );
         """
-        cursor.execute(table_reply_to)
+        if cfg.SaveReplies:
+            cursor.execute(table_reply_to)
 
         table_favorites = """
             CREATE TABLE IF NOT EXISTS
@@ -131,7 +134,8 @@ def init(db):
                     CONSTRAINT tweet_id_fk FOREIGN KEY (tweet_id) REFERENCES tweets(id)
                 );
         """
-        cursor.execute(table_favorites)
+        if cfg.Favorites:
+            cursor.execute(table_favorites)
 
         table_followers = """
             CREATE TABLE IF NOT EXISTS
@@ -143,7 +147,18 @@ def init(db):
                     CONSTRAINT follower_id_fk FOREIGN KEY(follower_id) REFERENCES users(id)
                 );
         """
-        cursor.execute(table_followers)
+        table_followers_names = """
+            CREATE TABLE IF NOT EXISTS
+                followers_names (
+                    user text not null,
+                    time_update integer not null,
+                    follower text not null,
+                    PRIMARY KEY (user, follower)
+                );
+        """
+        if cfg.Followers:
+            cursor.execute(table_followers)
+            cursor.execute(table_followers_names)
 
         table_following = """
             CREATE TABLE IF NOT EXISTS
@@ -155,19 +170,6 @@ def init(db):
                     CONSTRAINT following_id_fk FOREIGN KEY(following_id) REFERENCES users(id)
                 );
         """
-        cursor.execute(table_following)
-
-        table_followers_names = """
-            CREATE TABLE IF NOT EXISTS
-                followers_names (
-                    user text not null,
-                    time_update integer not null,
-                    follower text not null,
-                    PRIMARY KEY (user, follower)
-                );
-        """
-        cursor.execute(table_followers_names)
-
         table_following_names = """
             CREATE TABLE IF NOT EXISTS
                 following_names (
@@ -177,29 +179,26 @@ def init(db):
                     PRIMARY KEY (user, follows)
                 );
         """
-        cursor.execute(table_following_names)
+        if cfg.Following:
+            cursor.execute(table_following)
+            cursor.execute(table_following_names)
 
         return conn
+
     except Exception as e:
         return str(e)
 
 
 def fTable(Followers):
     if Followers:
-        table = "followers_names"
-    else:
-        table = "following_names"
-
-    return table
+        return "followers_names"
+    return "following_names"
 
 
 def uTable(Followers):
     if Followers:
-        table = "followers"
-    else:
-        table = "following"
-
-    return table
+        return "followers"
+    return "following"
 
 
 def follow(conn, Username, Followers, User):
@@ -294,15 +293,15 @@ def tweets(conn, Tweet, config):
             query = 'INSERT INTO favorites VALUES(?,?)'
             cursor.execute(query, (config.User_id, Tweet.id))
 
-        if Tweet.retweet:
+        if config.SaveRetweets and Tweet.retweet:
             query = 'INSERT INTO retweets VALUES(?,?,?,?,?)'
             _d = datetime.timestamp(datetime.strptime(Tweet.retweet_date, "%Y-%m-%d %H:%M:%S"))
             cursor.execute(query, (int(Tweet.user_rt_id), Tweet.user_rt, Tweet.id, int(Tweet.retweet_id), _d))
 
-        if Tweet.reply_to:
+        if config.SaveReplies and Tweet.reply_to:
             for reply in Tweet.reply_to:
                 query = 'INSERT INTO replies VALUES(?,?,?)'
-                cursor.execute(query, (Tweet.id, int(reply['user_id']), reply['username']))
+                cursor.execute(query, (Tweet.id, int(reply['id']), reply['name']))
 
         conn.commit()
     except sqlite3.IntegrityError:

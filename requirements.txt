@@ -1,1 +1,15 @@
-tweepy>=4.3.0
+tweepy>=4.4.0
+dataprep>=0.4.1
+aiohttp==3.7.0
+aiodns
+beautifulsoup4
+cchardet
+dataclasses
+elasticsearch
+pysocks
+pandas>=0.23.0
+aiohttp_socks<=0.4.1
+schedule
+geopy
+fake-useragent
+googletransx

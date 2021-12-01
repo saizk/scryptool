@@ -34,7 +34,7 @@ class Twint:
         # USAGE : to get a new guest token simply do `self.token.refresh()`
         self.token = token.Token(config)
         self.token.refresh()
-        self.conn = db.Conn(config.Database)
+        self.conn = db.Conn(config, config.Database)
         self.d = datelock.Set(self.config.Until, self.config.Since)
         verbose.Elastic(config.Elasticsearch)
 

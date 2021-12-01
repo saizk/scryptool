@@ -37,6 +37,8 @@ class Config:
     Followers: bool = False
     Following: bool = False
     Favorites: bool = False
+    SaveReplies: bool = False
+    SaveRetweets: bool = False
     TwitterSearch: bool = False
     User_full: bool = False
     # Profile_full: bool = False
