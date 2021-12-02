@@ -1,3 +1,7 @@
+import csv
+
+import pandas as pd
+
 
 class classproperty(object):  # noqa
     def __init__(self, f):
@@ -14,3 +18,10 @@ def traverse_dict(original_dict):
             traversed[account] = name
 
     return traversed
+
+
+def save_csv(my_dict, file='results.csv'):
+    with open(file, 'w') as f:  # You will need 'wb' mode in Python 2.x
+        w = csv.DictWriter(f, my_dict.keys())
+        w.writeheader()
+        w.writerow(my_dict)

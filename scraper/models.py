@@ -1,7 +1,7 @@
 import sqlalchemy as sq
 from sqlalchemy import orm
 from sqlalchemy.ext.declarative import declarative_base
-from .util import classproperty
+from .utils import classproperty
 
 Model = declarative_base()
 Model.__tablename__ = classproperty(lambda o: o.__name__.lower())

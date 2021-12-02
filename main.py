@@ -1,12 +1,19 @@
+import csv
+import datetime
 import json
+import time
+from IPython.display import display
+
 from pprint import pprint
 
 import pandas as pd
 from dataprep.eda import create_report
 
 from scraper._config import *
+from scraper.utils import *
 from scraper.twitter import Twitter, AsyncTwitter
 from scraper.lunarcrush import LunarCrush
+
 
 
 def gen_query(query):
@@ -46,14 +53,19 @@ def save_json(data, file='results.json'):
 
 def lunarcrush_bot():
     bot = LunarCrush(LUNAR_CRUSH_API_KEY)
-    info = bot.get_assets(coins=['ETH'], interval='day')
+    start = datetime.datetime(2021, 9, 1, 0, 0, 0)
+    end = datetime.datetime(2021, 12, 1, 0, 0, 0)
+    info = bot.get_assets(symbol=['ETH'],
+                          start=start, end=end, interval='hour')
+    data = info['data']
+    time_series = data[0].pop('timeSeries')
 
-    save_json(info)
+    file, ts = 'results.csv', 'time_series.csv'
+    save_csv(data, file)
+    save_csv(time_series, ts)
 
-    data = info['data'][0]
-    time_series = data.pop('timeSeries')
-
-    df = pd.read_json('results.json', typ='series')
+    df = pd.read_csv(file)
+    display(df)
     report = create_report(df)
     print(report)
 

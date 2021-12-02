@@ -1,6 +1,9 @@
+import datetime
 import json
+import time
 import urllib.parse
 import urllib.request
+from pprint import pprint
 
 
 class LunarCrush(object):
@@ -25,6 +28,8 @@ class LunarCrush(object):
         for param, value in kwargs.items():
             if isinstance(value, list):
                 kwargs[param] = ','.join(value)
+            if isinstance(value, datetime.datetime):
+                kwargs[param] = time.mktime(value.timetuple())
         return kwargs
 
     def get_assets(self, symbol: list, **kwargs) -> dict:
@@ -45,6 +50,26 @@ class LunarCrush(object):
         :key int end: A unix timestamp (seconds) of the latest time series point to provide. Use in combination with
              data_points to provide the most recent X data points leading up to a certain time.
         """
+        # results = []
+        total = (kwargs.get('end') - kwargs.get('start')).days *\
+                (24 if kwargs.get('interval') == 'hour' else 1)
+        print(total)
+        dates = []
+
+        # if total > 720:
+        #     start = kwargs.get('start')
+        #     while total:
+        #         hours = 720 if total >= 720 else total % 720
+        #         offset = datetime.timedelta(hours=hours)
+        #         dates.append(([start, start + offset], hours))
+        #         start += offset
+        #         total -= hours
+        # pprint(dates)
+        # for (start, end), data_points in dates:
+        #     results = self._get_data('assets', symbol=symbol, start=start, end=end,
+        #                              data_points=data_points)
+        #     pprint(results['data'][0]['timeSeries'])
+        #     print(len(results['data'][0]['timeSeries']))
 
         return self._get_data('assets', symbol=symbol, **kwargs)
 
