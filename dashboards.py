@@ -24,12 +24,12 @@ def gen_dashboard_2(sanbot, **kwargs) -> pd.DataFrame:
 
         df = pd.concat(dfs, axis='columns')
         df.insert(0, 'asset', [coin] * len(df), True)
-        df.to_csv(f'{path}/{coin.lower()}_social_volume.csv', index=False)
+        df.to_csv(f'{path}/{coin.lower()}_social_volume.csv')
 
         global_dfs.append(df)
 
     merged_df = pd.concat(global_dfs, axis='index')
-    merged_df.to_csv(f'{path.parent}/ALL_social_volume.csv', index=False)
+    merged_df.to_csv(f'{path.parent}/ALL_social_volume.csv')
 
     return merged_df
 
