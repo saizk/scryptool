@@ -8,11 +8,11 @@ import urllib.request
 class LunarCrush(object):
     _BASE_URL = 'https://api2.lunarcrush.com/v2'
 
-    def __init__(self, api_key):
+    def __init__(self, api_key=None):
         self._api_key = api_key
 
     def _gen_url(self, endpoint, **kwargs):
-        url = f'{self._BASE_URL}?data={endpoint}&key={self._api_key}'
+        url = f'{self._BASE_URL}?data={endpoint}'#&key={self._api_key}'
         url += '&' + urllib.parse.urlencode(kwargs) if kwargs else ''
         return url
 

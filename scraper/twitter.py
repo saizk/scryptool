@@ -76,7 +76,7 @@ class AsyncTwitter(object):
         elif output.endswith('.json'):
             self.config.Store_json = True
 
-    def _parallel_config(self, interval: int) -> List[twint.Config]:
+    def _parallel_config(self, interval: int) -> list:
         """
         Creates a list of N twint.Config objects with each respective datetime configurations, where N
         is the number of cores in the CPU.
