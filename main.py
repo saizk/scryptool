@@ -1,39 +1,37 @@
+import san
 import csv
-import datetime
 import json
 import time
-from IPython.display import display
+import datetime
+import pandas as pd
 
 from pprint import pprint
-
-import pandas as pd
+from IPython.display import display
 from dataprep.eda import create_report
 
+import dashboards
 from scraper._config import *
 from scraper.utils import *
 from scraper.twitter import Twitter, AsyncTwitter
 from scraper.lunarcrush import LunarCrush
-
+from scraper.santiment import Santiment
+from scraper.tickers import *
 
 
 def gen_query(query):
-    TICKERS = {
-        'BTC': ['BTC', 'bitcoin'],
-        'ETH': ['ETH', 'ethereum'],
-        'SHIB': ['SHIB', 'shiba inu'],
-        '': []
-    }
     return ' OR '.join(TICKERS[query])
 
 
 def twitter_bot():
-    bot = Twitter(BEARER_TOKEN)
+    bot = scraper.twitter.Twitter(BEARER_TOKEN)
 
     coin = gen_query('BTC')
+    start = datetime.datetime(2021, 9, 1, 0, 0, 0)
     # recent_tweets = bot.get_recent_tweets(query=coin, max_results=10)
     # print(recent_tweets)
-
-    recent_tweets_count = bot.get_recent_tweets_count(coin, granularity='day')
+    recent_tweets_count = bot.get_all_tweets_count(coin, granularity='day', start_time=start)  # 403 Forbidden :(
+    # recent_tweets_count = bot.get_recent_tweets_count(coin, granularity='day', start_time=start)
+    save_json(recent_tweets_count)
     for tw in recent_tweets_count:
         pprint(tw)
 
@@ -41,39 +39,64 @@ def twitter_bot():
 def async_twitter():
     coin = gen_query('ETH')
     # coin = 'ETH'
+    end = datetime.datetime(2021, 9, 1, 0, 0, 0)
+    start = datetime.datetime(2021, 12, 1, 0, 0, 0)
+
     async_bot = AsyncTwitter()
-    async_bot.get_all_tweets(query=coin, limit=10,
+    async_bot.search(search=coin, count=None, end_date=start, start_date=end,
                              show_cashtags=True, output='test.db')
-
-
-def save_json(data, file='results.json'):
-    with open(file, "w") as f:
-        json.dump(data, f)
+    # async_bot.run()
+    # async_bot.parallel_run()  # not implemented yet
 
 
 def lunarcrush_bot():
-    bot = LunarCrush(LUNAR_CRUSH_API_KEY)
+    bot = LunarCrush('9qjtop453be13yhh6nzmq2j')
     start = datetime.datetime(2021, 9, 1, 0, 0, 0)
-    end = datetime.datetime(2021, 12, 1, 0, 0, 0)
+    end = datetime.datetime(2021, 10, 1, 0, 0, 0)
     info = bot.get_assets(symbol=['ETH'],
                           start=start, end=end, interval='hour')
-    data = info['data']
-    time_series = data[0].pop('timeSeries')
+    data = info['data'][0]
+    time_series = data.pop('timeSeries')
+    pprint(data)
 
-    file, ts = 'results.csv', 'time_series.csv'
-    save_csv(data, file)
-    save_csv(time_series, ts)
-
-    df = pd.read_csv(file)
+    df = pd.DataFrame(data)
     display(df)
-    report = create_report(df)
-    print(report)
+
+
+def santiment_bot():
+    sanbot = Santiment(SANTIMENT_API_KEY)
+    from_date, to_date = '2021-09-01', '2021-12-01'
+
+    # DASHBOARD 1
+    # db1 = dashboards.gen_dashboard_1(
+    #     sanbot,
+    #     from_date=from_date, to_date=to_date,
+    #     interval='1d'
+    # )
+    # print(f'{san.api_calls_made()[0}[-1 out of {san.api_calls_remaining()}')
+
+    # DASHBOARD 2
+    db2 = dashboards.gen_dashboard_2(
+        sanbot,
+        from_date=from_date, to_date=to_date,
+        interval='1d'
+    )
+    print(f'{san.api_calls_made()[0][-1]} out of {san.api_calls_remaining()}')
+
+    # DASHBOARD 3
+    # db3 = dashboards.gen_dashboard_3(
+    #     sanbot,
+    #     from_date=from_date, to_date=to_date,
+    #     interval='1d'
+    # )
+    # print(f'{san.api_calls_made()[0}[-1 out of {san.api_calls_remaining()}')
 
 
 def main():
     # twitter_bot()
     # async_twitter()
-    lunarcrush_bot()
+    # lunarcrush_bot()
+    santiment_bot()
 
 
 if __name__ == '__main__':

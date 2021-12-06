@@ -1,0 +1,2168 @@
+,marketSegment,name,slug,ticker,totalSupply
+0,Platform,Color Platform,color-platform,CLR,350000000
+1,Blockchain Network,Enecuum,enecuum,ENQ,197847931.122
+2,Interoperability,Cosmos,cosmos,ATOM,283509834.890493
+3,Financial,ZeuxCoin,zeuxcoin,ZUC,750000000
+4,Energy,Treelion,treelion,TRN,1000000000
+5,Lending,Kava,kava,KAVA,152889591
+6,,Synth sLINK,slink,sLINK,61278.144609
+7,Lending,TrueFi,truefi-token,TRU,1441129427
+8,Other,HyperExchange,hyperexchange,HX,90767835.7014
+9,Trading,MargiX,margix,MGX,1000000000
+10,Platform,EOS Force,eos-force,EOSC,1000000000
+11,Cloud Storage,YottaChain,yottachain,YTA,4000000000
+12,Stablecoin,Anchor,anchor,ANCT,759493671
+13,,SEED Pool Token,pseed,pSEED,
+14,Financial,AllianceBlock,allianceblock,ALBT,1000000000
+15,Stablecoin,Euro Tether,tether-eurt,EURT,50001660.54
+16,DeFi,0x Tracker,0xtracker,ZRT,
+17,Financial,Tepleton,tepleton,TEP,1000000000
+18,Other,7Eleven,7eleven,7E,1000000000000
+19,Blockchain Network,everiToken,everitoken,EVT,194322605.36644
+20,Cryptocurrency,Yap Stone,yap-stone,YAP,1000000000
+21,Cryptocurrency,Dash Cash,dash-cash,DSC,22657590.44
+22,AI,Hintchain,hintchain,HINT,1000000000
+23,Financial,Azbit,azbit,AZ,124724662825.0904
+24,Sports,Project WITH,project-with,WIKEN,1057786429
+25,Sports,Chiliz,chiliz,CHZ,8888888888
+26,Cloud Computing,DeepCloud AI,deepcloud-ai,DEEP,200000000
+27,,Mint Club,mint-club,MINT,1149363840000
+28,DeFi,Pokeball,pokeball,POKE,4965992
+29,Social,Sessia,sessia,KICKS,100000000
+30,Insurance,Polkacover,polkacover,CVR,137865569
+31,Prediction Market,Helena,helena,HLN,
+32,Exchange,Bitfex,bitfex,BFX,216525879
+33,Stablecoin,HUSD,husd,HUSD,316945970.8676033
+34,Stablecoin,Fei USD,fei-protocol,FEI,426116732.6917724
+35,Advertising,DAD,dad-chain,DAD,1000000000
+36,Cryptocurrency,MeconCash,meconcash,MCH,1000000000
+37,Exchange,GateToken,gatechain-token,GT,300000000
+38,Cryptocurrency,Helium ,helium,HNT,223000000
+39,DeFi,Augmint,augmint,AUG,
+40,Ethereum,Define,define,DFA,500000000
+41,Cryptocurrency,MB8 Coin,mb8-coin,MB8,162318938.73964253
+42,Other,Swapcoinz,swapcoinz,SPAZ,1000000
+43,Cryptocurrency,ChronoCoin,chronocoin,CRN,5680000000
+44,DeFi,Nitrogen Network,nitrogen,NGN,
+45,DeFi,Totle,totle,TTL,
+46,Social,D Community,d-community,DILI,10000000000
+47,DeFi,Ash,ash,ASH,
+48,Other,LINKA,linka,LINKA,2000000000
+49,DeFi,Karura,karura,KAR,100000000
+50,DeFi,Poketto,poketto,PKT,
+51,AI,Tesra,tesra,TSR,10000000000
+52,Lending,INLOCK,inlock,ILK,4400000000
+53,DeFi,InstaDApp,instadapp,IDA,
+54,DeFi,XVIX,xvix,XVIX,177820
+55,Ethereum,SuperRare,superrare,RARE,1000000000
+56,Marketplace,CryptoBossCoin,cryptobosscoin,CBC,23277.81
+57,Exchange,CoinHe Token,coinhe-token,CHT,200000000
+58,Blockchain Network,Flow,flow,FLOW,1378211739
+59,IoT,Xensor,xensor,XSR,4800000000
+60,Ethereum,Stake DAO,stake-dao,SDT,41600000
+61,DeFi,FiatDex Gateway,fiatdex-gateway,FDG,
+62,Bitcoin,Lightning Network,lightning-network,LNN,
+63,DeFi,Zerion,zerion,ZRN,
+64,Exchange,ALP Coin,alp-coin,ALP,100000000
+65,DeFi,Nuo Network,nuo,NUO,
+66,Jobs,Braintrust,BTRST,BTRST,250000000
+67,DeFi,UMA,uma,UMA,105410331.6153335
+68,Advertising,BenePit Protocol,benepit-protocol,BNP,30000000000
+69,Ethereum,SSV Network,ssv-network,SSV,10000000
+70,DeFi,Set Protocol,set-protocol,SPX,
+71,Cryptocurrency,Litecoin,litecoin,LTC,84000000
+72,Privacy,Typhoon Cash,typhoon-cash,PHOON,30000
+73,Cryptocurrency,MimbleWimbleCoin,mimblewimblecoin,MWC,10797822.0569404
+74,DeFi,Razor Network,razor,RZR,
+75,DeFi,Veil,veil,VEL,
+76,,Snax,snax,SNAX,
+77,Blockchain Service,PegaSys,pegasys,PSS,
+78,DeFi,Chintai,chintai,CHN,
+79,,Coinzo Token,coinzo,CNZ,
+80,DeFi,Worbli,worbli,WBL,
+81,DeFi,MARKET Protocol,market-protocol,MPX,
+82,Platform,BlockMason Credit Protocol,blockmason,BCPT,116158667
+83,Decentralized Exchange,JulSwap,julswap,JULD,799383875.3500402
+84,,Synth sBCH,sbch,sBCH,
+85,DeFi,Transledger,transledger,TRN,
+86,Ethereum,Punk,punk,PUNK,0
+87,Blockchain Service,Kambria,kambria,KAT,3098854699.998901
+88,,Cere Network,cere,CERE,
+89,,X-power Chain,xpower,XPO,
+90,Data,GXChain,gxchain,GXC,99793350.13105
+91,,Eminer,eminer,EM,2100000000
+92,Binance,Pledgecamp,pledge-coin,PLG,10000000000
+93,Stablecoin,Basis Cash,basis-cash,BAC,54589290.34194546
+94,Insurance,inSure DeFi,insure,SURE,88000000000
+95,,Simone,simone,SON,99900
+96,Stablecoin,Celo Dollar,celo-dollar,CUSD,111193890.9904958
+97,Gaming,Game.com,game,GTC,2000000000
+98,,EMOGI Network,emogi-network,LOL,21000000000
+99,Insurance,Insured Finance,insured-finance,INFI,120000000
+100,Financial,Swipe,swipe,SXP,285368788.73913497
+101,,12Ships,12ships,TSHP,4980527200
+102,,Lukki,lukki,LOT,2000000000
+103,Ethereum,PLANET,planet,PLA,5000000000
+104,,Tokoin,tokoin,TOKO,2000000000
+105,,FIBOS,fibos,FO,1075771761.0869
+106,,Cryptocean,cryptocean,CRON,19121150.61929778
+107,,VideoCoin,videocoin,VID,265000000
+108,,MixMarvel,mixmarvel,MIX,10000000000
+109,,Sealchain,sealchain,SEAL,1800000000
+110,,Streamit Coin,streamit-coin,STREAM,13529414.41204769
+111,,Yobit Token,yobit,YO,17000
+112,Binance,CryptoBonusMiles,cryptobonusmiles,CBM,5000000000
+113,Stablecoin,Paxos Standard,paxos-standard,USDP,945642940.11
+114,,VIDY,vidy,VIDY,10000000000
+115,Financial,Vodi X,vodi-x,VDX,1397703182.84111
+116,,BidiPass,bidipass,BDP,1500000000
+117,,Wavesbet,wavesbet,WBET,59499999948
+118,Gaming,Splintershards,splintershards,SPS,382291666
+119,Cryptocurrency,AXE,axe,AXE,5260967.896223
+120,,Synth sDEFI,sdefi,sDEFI,862.0891
+121,Blockchain Service,QLC Chain,qlink,QLC,600000000
+122,Tokenization,DeFi Socks,defisocks,DEFISOCKS,
+123,,Emirex Token,emirex,EMRX,500000000
+124,,Amino Network,amino,AMIO,1000000000
+125,,NSS Coin,nss,NSS,100000000
+126,,Synth sXAG,sxag,sXAG,6463.877
+127,,xCrypt Token,xcrypt,XCT,200000000
+128,Protocol,Sentinel Protocol,sentinel-protocol,UPP,500000000.00000006
+129,,En-Tan-Mo,en-tan-mo,ETM,210000000
+130,,Decentralized Vulnerability Platform,decentralized-vulnerability-platform,DVP,5000000000
+131,Gaming,Seedify.fund,seedify-fund,SFUND,100000000
+132,Protocol,ChatCoin,chatcoin,CHAT,1000000000
+133,Cloud Computing,Ankr,ankr,ANKR,10000000000
+134,Trading,CNNS,cnns,CNNS,10000000000
+135,Investments,Molecular Future,molecular-future,MOF,100000000
+136,Art,Artfinity,artfinity,AT,1000000000
+137,Trading,Autonio,autonio,NIOX,315000000
+138,Other,SIRIN LABS Token,sirin-labs-token,SRN,572166103.886
+139,Other,WHEN Token,when-token,WHEN,875000000
+140,Financial,Safe Exchange,safe-exchange-coin,SAFEX,785836169
+141,Other,VNT Chain,vnt-chain,VNT,10000000000
+142,Trading,Spiking,spiking,SPIKE,5000000000
+143,Platform,GoPower,gopower,GPT,111227045.9
+144,Cloud Storage,Flowchain,flowchain,FLC,1000000000
+145,Blockchain Network,Trias,trias,TRY,10000000000
+146,Financial,QuickX Protocol,quickx-protocol,QCX,500000000
+147,Trading,ChartEx,chartex,CHART,250000000
+148,AI,PATHHIVE,phv,PHV,3500000000
+149,Financial,BOLT,bolt,BOLT,995000000
+150,Binance,PulsePad,pulsepad,PLSPAD,4990185463.61865
+151,Exchange,TOKOK,tokok,TOK,998617461.09785
+152,Exchange,INMAX,inmax,INX,6500000
+153,Cloud Storage,Lambda,lambda,LAMB,6000000000
+154,Advertising,Birdchain,birdchain,BIRD,287504829.4830753
+155,DeFi,Yearn Finance DOT,yearn-finance-dot,YFDOT,18493.75
+156,Media,Contents Protocol,contents-protocol,CPT,10000000000
+157,Advertising,AdEx,adx-net,ADX,144914997.22441092
+158,DeFi,Tribe,tribe,TRIBE,1000000000
+159,Other,P2P Global Network,p2p-global-network,P2PX,100000000
+160,Ethereum,Paragon,paragon,PRG,164936509.401132
+161,Other,Asian Fintech,asian-fintech,AFIN,500000000
+162,,Synth sCHF,schf,sCHF,
+163,,Synth sADA,sada,sADA,77750.6
+164,,Synth sDASH,sdash,sDASH,
+165,Blockchain Service,S4FE,s4fe,S4F,1000000000
+166,Platform,GMB,gmb,GMB,5000000000
+167,DeFi,Zero Collateral,zero-collateral,ZCT,
+168,Advertising,Online,online,OIO,2500000000
+169,Social,CYCLUB,cyclub,CYCLUB,3300000000
+170,Exchange,Bitrue Coin,bitrue-coin,BTR,801307097.3484074
+171,AI,Lisk Machine Learning,lisk-machine-learning,LML,400000000
+172,Smart Contracts,API3,api3,API3,104238461
+173,Protocol,Xriba,xriba,XRA,275000000
+174,Financial,Almeela ,almeela,KZE,8000000
+175,Entertainment,SnapCoin,snapcoin,SNPC,678333334
+176,Other,FNB Protocol,fnb-protocol,FNB,2490000160
+177,Exchange,Coineal Token,coineal-token,NEAL,10000000000
+178,Platform,BUDDY,buddy,BUD,35000000000
+179,Cryptocurrency,BuySell,buysell,BULL,5037284.0172
+180,Financial,Cryptopay,cryptopay,CPAY,90414745
+181,Decentralized Exchange,DIGG,digg,DIGG,6613.10392834
+182,,Synth iOIL,ioil,iOIL,
+183,Cloud Computing,NKN,nkn,NKN,700000000
+184,,Synth sETC,setc,sETC,
+185,Other,HashNet BitEco,hashnet-biteco,HNB,1000000000
+186,,TNC Coin,tnc-coin,TNC,196719999947
+187,,Decentral Games [new],decentral-games-new,DG,225070524.81208998
+188,Financial,EveryCoin,everycoin,EVY,88800000000
+189,Platform,IZIChain,izichain,IZI,1250000000
+190,Supply,InnovaMinex,innovaminex,MINX,300000000
+191,Data,Quadrant Protocol,quadrantprotocol,EQUAD,1000000000
+192,Other,Q DAO Governance token v1.0,q-dao-governance-token,QDAO,999081.58
+193,AI,Fetch,fetch,FET,1151441225.6042874
+194,Gaming,MOBOX,mobox,MBOX,389181745
+195,Insurance,ARMOR,armor,ARMOR,1000000000
+196,Ethereum,SpiderDAO,spiderdao,SPDR,1000000000
+197,Ethereum,Polygon,matic-network,MATIC,10000000000
+198,Exchange,DEX,dex,DEX,1892996914
+199,Trading,Hxro,hxro,HXRO,1000000000
+200,Social,PTON,pton,PTON,23200000000
+201,Financial,Bonpay,bonpay,BON,21745688.3534
+202,Financial,SwftCoin,swftcoin,SWFTC,10000000000
+203,Platform,Levolution,levolution,LEVL,311000000
+204,E-Commerce,IOU,iou,IOUX,800000000
+205,Communication Network,SpaceChain,spacechain,SPC,392257015.94627684
+206,DeFi,Yfi.mobi,yfi-mobi,YFIM,60000
+207,Transportation,ParkinGo,parkingo,GOT,94808613.2074404
+208,Infrastructure,Stacks,blockstack,STX,1352464600
+209,Exchange,Fatcoin,fatcoin,FAT,200000000
+210,Supply,Hercules,hercules,HERC,177593051.093575
+211,Financial,CoinUs,coinus,CNUS,2000000000
+212,Platform,Assemble Protocol,assemble-protocol,ASM,1350000000
+213,Gaming,Decimated,decimated,DIO,1000000000
+214,Other,BOSAGORA,bosagora,BOA,450000000
+215,Healthcare,Skychain,skychain,SCH,12360000
+216,Insurance,Etherisc,etherisc,DIP,1000000000
+217,Platform,FLETA,fleta,FLETA,2000000000
+218,Interoperability,EXRNchain,exrnchain,EXRN,100000000000
+219,Financial,Internxt,internxt,INXT,1119294
+220,Media,Fountain,fountain,FTN,2208919510.99
+221,Financial,EurocoinToken,eurocoin-token,ECTE,100000000
+222,Data,Carry,carry,CRE,10000000000
+223,Financial,AIDUS TOKEN,aidus-token,AID,10000000000
+224,Blockchain Network,Shyft Network,shyft-network,SHFT,2520000000
+225,Other,IntelliShare,intellishare,INE,986000000
+226,Exchange,B2BX,b2bx,B2B,19822337.19958543
+227,Healthcare,SOLVE,solve,SOLVE,1000000000
+228,Platform,Origo,origo,OGO,681277829.938
+229,,Tchain,tchain,TCH,100000000
+230,Stablecoin,CryptoFranc,cryptofranc,XCHF,2000000
+231,Other,Membrana,membrana,MBN,588316307.739053
+232,Blockchain Network,Solana,solana,SOL,510610651.4987374
+233,Investments,DuckDaoDime,duckdaodime,DDIM,1472092.49864144
+234,Blockchain Service,Evedo,evedo,EVED,17756589.687825
+235,Other,DREP,drep,DREP,3431350063.1348667
+236,Exchange,TigerCash,tigercash,TCH,1000000000
+237,Ethereum,SKALE Network,skale-network,SKL,4276664349
+238,Entertainment,PIXEL,pixel,PXL,987500000
+239,Data,COVA,cova,COVA,6500000000
+240,Prediction Market,Bodhi,bodhi,BOT,100000000
+241,Blockchain Service,FOAM Protocol,foam,FOAM,1000000000
+242,Protocol,Dusk Network,dusk-network,DUSK,500000000
+243,,Circuits of Value,circuits-of-value,COVAL,1200000000
+244,Financial,Turtlecoin,turtlecoin,TRTL,116826917328.8
+245,Gaming,Binemon,binemon,BIN,950000000
+246,Protocol,Sharder,sharder,SS,350000000
+247,Marketplace,Herbalist Token,herbalist-token,HERB,9500000000
+248,Entertainment,The Currency Analytics,the-currency-analytics,TCAT,400000000
+249,,UFO Gaming,ufo-gaming,UFO,25757575757575.5
+250,Ethereum,Upfiring,upfiring,UFR,24000000.00578804
+251,Travel,Tratok,tratok,TRAT,100000000000
+252,Cloud Computing,Akash Network,akash-network,AKT,162863559.115862
+253,,SifChain,sifchain,erowan,1224966910.7243588
+254,Fund,Numeraire,numeraire,NMR,10970786.48867155
+255,Binance,DeRace,derace,DERC,120000000
+256,,DigitalBits,digitalbits,XDB,1500000000
+257,Cryptocurrency,Titan Coin,titan-coin,TTN,910820150.1590686
+258,,ProBit Token,probit,PROB,190000000
+259,,Gomics,gomics,GOM,75000000
+260,Prediction Market,Gnosis,gnosis-gno,GNO,10000000
+261,Gaming,Playkey,playkey,PKT,19893267.57518124
+262,DeFi,PolkaBridge,polkabridge,PBR,83901196.69918746
+263,Cryptocurrency,Wrapped Bitcoin,wrapped-bitcoin,WBTC,256789.73405071
+264,Ethereum,MetisDAO,metisdao,METIS,4930000.51
+265,Financial,O3Swap,o3swap,O3,43741143.06878021
+266,Decentralized Exchange,Lattice Token,lattice-token,LTX,100000000
+267,Trading,Coinvest,coinvest,COIN,107142857
+268,DeFi,Cherry Swap,cherry-swap,CSW,
+269,Bitcoin,ZeroNet,zeronet,ZNT,
+270,Bitcoin,Bisq,bisq,BISQ,
+271,Other,pEOS,peos,PEOS,1000000000
+272,DeFi,Band Protocol,band-protocol,BAND,100000000
+273,EOS,Telos,telos,TLOS,355208370.6674
+274,Decentralized Exchange,SnowSwap,snowswap,SNOW,500000
+275,Gaming,Gods Unchained,gods-unchained,GODS,500000000
+276,Blockchain Network,LGCY Network,lgcy-network,LGCY,100000000000
+277,,Hyper Speed Network,hyper-speed-network,HSN,939999999.99
+278,Stablecoin,Binance USD,binance-usd,BUSD,13598465809.9
+279,DeFi,Staked,staked,STK,
+280,Exchange,KUN,kun,KUN,1000000
+281,DeFi,Alpaca Finance,alpaca-finance,ALPACA,144858125.18686786
+282,Gaming,Crabada,crabada,CRA,48304113
+283,Platform,PAID Network,paid-network,PAID,594717455.71
+284,Insurance,Tidal Finance,tidal-finance,TIDAL,19838000001
+285,Gaming,Wall Street Games,wall-street-games,WSG,969784779736925
+286,,Krios,krios,KRI,500000000
+287,Platform,CyberFi Token,cyberfi,CFI,2400000
+288,Exchange,Dragon Token,dragon-token,DT,21406200
+289,Virtual Reality,CEEK,ceek-vr,CEEK,1000000000
+290,Interoperability,BICONOMY,biconomy,BICO,1000000000
+291,,TrueFeedBack,truefeedback,TFB,5000000000
+292,Tokenization,PAX Gold,pax-gold,PAXG,179141.425
+293,DeFi,Abra,abra,ABR,
+294,Blockchain Network,Hive,hive,HIVE,380298571.099
+295,DeFi,MetaMoneyMarket,metamoneymarket,MMM,
+296,Travel,Ariva,ariva,ARV,93640000000
+297,,Unifty,unifty,NIF,5000000
+298,Platform,Elitium,elitium,EUM,332200000
+299,Smart Contracts,Agrello,agrello-delta,DLT,130271020.035721
+300,DeFi,AlphaWallet,alphawallet,AWL,
+301,DeFi,Ambo,ambo,AMBO,
+302,DeFi,Argent,argent,ARG,
+303,DeFi,Betoken,betoken,BTK,
+304,,LiquidApps,liquid-apps,DAPP,1056939327.1283
+305,,OTOCASH,otocash,OTO,38307412.5696
+306,,Colletrix,colletrix,CIPX,1838477280
+307,Social,Howdoo,howdoo,UDOO,888888888
+308,,AmonD,amond,AMON,7176499999
+309,Other,Bob’s Repair,bobs-repair,BOB,360000000
+310,Other,Business Credit Substitute,business-credit-substitute,BCS,68000000
+311,DeFi,Bitpie,bitpie,BTP,
+312,Ethereum,ClearPoll,clearpoll,POLL,8999991.9
+313,DeFi,BUTTON Wallet,button-wallet,BUTT,
+314,DeFi,Cobo Wallet,cobo-wallet,COBO,
+315,Financial,Blockzero Labs,blockzerolabs,XIO,100000000
+316,,Synth iLINK,ilink,iLINK,
+317,,Polis,polis,POLIS,9831890.566954
+318,Other,Blockchain Quotations Index Token,blockchain-quotations-index-token,BQT,1000000000
+319,DeFi,Coinbase Wallet,coinbase-wallet,CBW,
+320,Ethereum,KEY,key,KEY,100000000000
+321,DeFi,Fetch,fetch-wallet,FTW,
+322,DeFi,imToken,imtoken,IMT,
+323,Financial,Roobee,roobee,ROO,5400000000
+324,Decentralized Exchange,SolFarm,solfarm,TULIP,10000000
+325,,Synth iTRX,itrx,iTRX,
+326,DeFi,DeFi Saver,defi-saver,DFS,
+327,DeFi,DexWallet,dexwallet,DWL,
+328,Travel,Condominium,condominium,CDM,1607137916.7034
+329,,Synth sXMR,sxmr,sXMR,
+330,Financial,Solanium,solanium,SLIM,100000000
+331,Cryptocurrency,CENTERCOIN,centercoin,CENT,3500002431.62882
+332,Data,LemoChain,lemochain,LEMO,1600000000
+333,Privacy,Beam,beam,BEAM,102440880
+334,Financial,SaluS,salus,SLS,1012265.271484
+335,Financial,Solrise Finance,solrise-finance,SLRS,1000000000
+336,,Synth sETH,seth,sETH,29935.4
+337,Data,Tierion,tierion,TNT,1000000000
+338,Tokenization,DeHive,dehive,DHV,2481597.0158735
+339,Cryptocurrency,Rhenium,rhenium,XRH,33891939.4450499
+340,Ethereum,Block Array,block-array,ARY,88409932.93
+341,,Synth sXRP,sxrp,sXRP,
+342,Financial,Alpha Token,alpha-token,A,278273649.09200984
+343,,Synth iXRP,ixrp,iXRP,
+344,,Synth sEOS,seos,sEOS,
+345,Investments,Blackmoon,blackmoon,BMC,60000000
+346,Exchange,Bibox Token,bibox-token,BIX,235972808.27
+347,,Synth iADA,iada,iADA,
+348,,Synth iCEX,icex,iCEX,
+349,,Synth iDEFI,idefi,iDEFI,
+350,DeFi,KeeperDAO,keeperdao,ROOK,1226310
+351,DeFi,Modefi,modefi,MOD,22000000
+352,,Synth iBCH,ibch,iBCH,
+353,Platform,B.Protocol,b-protocol,BPRO,2194432
+354,Privacy,Sumokoin,sumokoin,SUMO,46572230.27049632
+355,Cryptocurrency,Pure,purex,PUREX,20220781.688152
+356,,Synth sEUR,seur,sEUR,
+357,,Synth iDASH,idash,iDASH,
+358,Other,NNB Token,nnb-token,NNB,6000000000
+359,Other,NIX,nix,NIX,49238466.326487
+360,AI,Invacio,invacio,INV,19424494
+361,Financial,Spendcoin,spendcoin,SPND,2595786940
+362,,Synth sBNB,sbnb,sBNB,
+363,Stellar,Smartlands,smartlands,SLT,7186785.07945
+364,Sports,Cubiex,cubiex,CBIX,71852557
+365,Cryptocurrency,Redd,reddcoin,RDD,30397274955
+366,Cryptocurrency,Bitcoin Cash ABC,bitcoin-cash-abc-2,BCHA,18572921
+367,Network,Cajutel,cajutel,CAJ,1780000
+368,Virtual Reality,VIBE,vibe,VIBE,267000000
+369,,Synth iLTC,iltc,iLTC,
+370,Blockchain Service,Engine,engine,EGC,10000000000
+371,Interoperability,Lamden,lamden,TAU,288090567.494
+372,,Synth sLTC,sltc,sLTC,
+373,Lending,Beta Finance,beta-finance,BETA,1000000000
+374,Exchange,DEW,dew,DEW,200000000
+375,,Synth sOIL,soil,sOIL,
+376,Stablecoin,Vai,vai,VAI,67074720
+377,,Synth sXTZ,sxtz,sXTZ,
+378,Cryptocurrency,HyperCash,hypercash,HC,45071909.329052
+379,Ethereum,Zilla,zilla,ZLA,60000000
+380,Financial,MenaPay,menapay,MPAY,400000000
+381,Decentralized Exchange,Polkadex,polkadex,PDEX,4501930
+382,Prediction Market,SEER,seer,SEER,4100000000
+383,Network,MaidSafeCoin,maidsafecoin,MAID,452552412
+384,Gambling,CashBet,cashbet-coin,CBC,401647957.75
+385,DeFi,Sav3Token,sav3token,SAV3,26734226
+386,Cryptocurrency,Unobtanium,unobtanium,UNO,203328.411519
+387,Protocol,Bytom,bytom,BTM,1717861650
+388,,Synth iBTC,ibtc-synthetix,iBTC,504.91243286
+389,Blockchain Service,Cloudbric,cloudbric,CLBK,989556846
+390,Interoperability,Ink,ink,INK,1000000000
+391,Platform,Komodo,komodo,KMD,129097602.01634
+392,IoT,Blockcloud,blockcloud,IOT,10000000000
+393,,Synth iETH,ieth,iETH,33199.81990523
+394,Insurance,Insureum,insureum,ISR,290000000
+395,Neo,Zeepin,zeepin,ZPT,1000000000
+396,,Synth iEOS,ieos,iEOS,
+397,,Synth sAUD,saud,sAUD,
+398,Financial,Zippie,zippie,ZIPT,1000000000
+399,Cryptocurrency,Decred,decred,DCR,13560118.10149534
+400,Binance,Mines of Dalarnia,mines-of-dalarnia,DAR,800000000
+401,,Synth iETC,ietc,iETC,
+402,Investments,Intelligent Investment Chain,intelligent-investment-chain,IIC,21000000000
+403,Financial,Enzyme,melon,MLN,1824437.31909865
+404,,FREE Coin,free-coin,FREE,10000000000000
+405,Binance,RedFOX Labs,redfox-labs,RFOX,2000000000
+406,,Synth iXMR,ixmr,iXMR,
+407,Exchange,International Crypto X,internationalcryptox,INCX,599999990
+408,Travel,Quasarcoin,quasarcoin,QAC,263449705.26
+409,Healthcare,MediBloc,medibloc,MED,7697598449
+410,,Synth iXTZ,ixtz,iXTZ,
+411,Gambling,FUNToken,funfair,FUN,10994873521.398026
+412,Cloud Computing,Internet Computer,internet-computer,ICP,475166718.68437594
+413,Financial,TenX,tenx,PAY,205218255.94857776
+414,,Elite,1337coin,1337,29381014024.1221
+415,Investments,SPINDLE,spindle,SPD,10000000000
+416,Social,ONOToken,onotoken,ONOT,75000000000
+417,,Synth iBNB,ibnb,iBNB,
+418,Ethereum,Dogs Of Elon,dogs-of-elon,DOE,940000000
+419,Financial,BeeKan,beekan,BKBT,10000000000
+420,Neo,Gas,gas,GAS,17190378
+421,Cryptocurrency,Emercoin,emercoin,EMC,48502843.649068
+422,Platform,COPYTRACK,copytrack,CPY,52999378
+423,Platform,Burst,burst,BURST,2120642444
+424,,Synth sTRX,strx,sTRX,
+425,Cryptocurrency,EUNO,euno,EUNO,6390035460.496779
+426,Ethereum,Dignity,dignity,DIG,3000000000
+427,Protocol,Odyssey,odyssey,OCN,10000000000
+428,Binance,Berry Data,berry-data,BRY,7500000
+429,Exchange,Themis,themis,GET,1000000000
+430,Other,CanonChain,cononchain,CZR,1618033988
+431,Verification,Experience Token,experience-token,EXT,10000000000
+432,Smart Contracts,Ether Zero,ether-zero,ETZ,228469282.9
+433,Blockchain Service,Namecoin,namecoin,NMC,14736400
+434,Fund,Invictus Hyperion Fund,invictus-hyperion-fund,IHF,118470656.8138736
+435,Gaming,REVV,revv,REVV,3000000000
+436,Fund,PEAKDEFI,peakdefi,PEAK,1431424159.6690676
+437,IoT,HDAC,hdac,DAC,2147063497
+438,Platform,Primas,primas,PST,101342465.753
+439,Binance,GameFi,gamefi,GAFI,14965600
+440,Jobs,VikkyToken,vikkytoken,VIKKY,12000000000
+441,Cryptocurrency,MonaCoin,monacoin,MONA,65729674.871168
+442,Blockchain Network,DACC,dacc,DACC,30000000000
+443,Financial,Paytomat,paytomat,PTI,3600000000
+444,Blockchain Service,Time New Bank,time-new-bank,TNB,4413848444.218691
+445,Transportation,ShipChain,shipchain,SHIP,500000000
+446,AI,Effect.AI,effect-ai,EFX,650000000
+447,Interoperability,Zipper,zip,ZIP,100000000000
+448,Sports,Esports Token,esports-token,EST,1000000000
+449,Financial,Everus,everus,EVR,1000000000
+450,Blockchain Network,Zen Protocol,zen-protocol,ZP,26631450
+451,Blockchain Service,Yuan Chain Coin,yuan-chain-coin,YCC,10000000000
+452,Marketplace,MediShares,medishares,MDS,2000000000
+453,Platform,Phoenix Global,phoenix-global,PHB,3711738526.056178
+454,DeFi,MoonSwap,moonswap,MOON,33094207.40437041
+455,Exchange,Mothership,mothership,MSP,200000000
+456,Gaming,Step Hero,step-hero,HERO,
+457,Gambling,Wagerr,wagerr,WGR,228749925.15039417
+458,E-Commerce,Connect Coin,connect-coin,XCON,70000000
+459,Energy,Grid+,gridplus,GRID,300000000
+460,Platform,StockChain,stockchain,SCC,10000000000
+461,Financial,OWL Token (StealthSwap),owl-token-stealthswap,OWL,10000000
+462,Smart Contracts,TomoChain,tomochain,TOMO,100000000
+463,Media,Scorum,scorum-coins,SCR,29265074.799
+464,Marketing,qiibee,qiibee,QBX,1380392157
+465,Marketplace,EUNOMIA,eunomia,ENTS,19973330191.3784
+466,Cryptocurrency,Jiyo,jiyo,JIYOX,19171174.0990736
+467,Financial,Moeda Loyalty Points,moeda-loyalty-points,MDA,19628888
+468,Financial,Request,request,REQ,999877116.4706944
+469,Platform,Sun (New),sun-token,SUN,19900730000
+470,Cryptocurrency,Bitcoin Atom,bitcoin-atom,BCA,21000000
+471,Masternodes,Divi,divi,DIVI,2629769908.9672046
+472,Entertainment,Content Value Network,content-value-network,CVNT,1000000000
+473,Smart Contracts,Hurify,hurify,HUR,273325000
+474,Cryptocurrency,FairCoin,faircoin,FAIR,53193831.469966
+475,Cryptocurrency,DigitalNote,digitalnote,XDN,8068406331.671134
+476,Cryptocurrency,Bitcore,bitcore,BTX,18617494.848048
+477,Cryptocurrency,Safe,safe,SAFE,29600000
+478,Cryptocurrency,Primecoin,primecoin,XPM,38724160.81027372
+479,Blockchain Network,Aeternity,aeternity,AE,393358129.49932
+480,Ethereum,Snetwork,snetwork,SNET,1000000000
+481,Financial,Klever,klever,KLV,10000000000
+482,Gambling,BlitzPredict,blitzpredict,XBP,950873123.2766
+483,Ethereum,Hermez Network,hermez-network,HEZ,100000000
+484,Decentralized Exchange,Sashimi,sashimi,SASHIMI,2303603
+485,Stablecoin,Steem Dollars,steem-dollars,SBD,9929925.567
+486,DeFi,Maple,maple,MPL,10000000
+487,Blockchain Service,Eligma,eligma-token,ELI,327902034
+488,Jobs,Chrono.tech,chronotech,TIME,710112.81
+489,Ethereum,ValueChain,valuechain,VLC,300000000
+490,Exchange,Graviocoin,graviocoin,GIO,293438521.758814
+491,Cryptocurrency,Stealth,stealth,XST,39630018.57645603
+492,Cryptocurrency,Bitsum,bitsum,BSM,1844674407
+493,,SHIELD,shield-xsh,XSH,512973375.234463
+494,Social,Pivot Token,pivot-token,PVT,31415926535
+495,Binance,ADAPad,adapad,ADAPAD,117642373.1
+496,Ethereum,Fantom,fantom,FTM,2545006273
+497,Cryptocurrency,MinexCoin,minexcoin,MNX,6597237.5
+498,Financial,TokenPay,tokenpay,TPAY,22076270.82026039
+499,Verification,Faceter,faceter,FACE,936154235
+500,Platform,VITE,vite,VITE,1028218980.2559378
+501,Binance,vEmpire DDAO,vempire-ddao,VEMP,810720000
+502,Cryptocurrency,Litecoin Cash,litecoin-cash,LCC,745982543.7084944
+503,Cryptocurrency,Pura,pura,PURA,183205630.159698
+504,Mining,EvenCoin,evencoin,EVN,31247851.344495
+505,Platform,Bee Token,bee-token,BEE,500000000
+506,Blockchain Service,Nebulas,nebulas-token,NAS,76050299.43476
+507,Blockchain Network,GoChain,gochain,GO,1156931195.357076
+508,Ethereum,DomRaider,domraider,DRT,1300000000
+509,DeFi,FLUX,flux,FLUX,954328.98346261
+510,Blockchain Service,Experty,experty,EXY,79404563.976511
+511,Infrastructure,CPChain,cpchain,CPC,999999999.171729
+512,Cryptocurrency,Gulden,gulden,NLG,556517473
+513,Data,MyToken,mytoken,MT,4000000000
+514,Privacy,Monero Classic,monero-classic,XMC,19176436.19105911
+515,Blockchain Service,BrahmaOS,brahmaos,BRM,3000000000
+516,Blockchain Service,Morpheus Labs,morpheus-labs,MITX,713999995
+517,Social,Narrative Network,narrative,NRV,82428004
+518,Social,U Network,u-network,UUU,10000000000
+519,Decentralized Exchange,ParaSwap,paraswap,PSP,2000000000
+520,Financial,Polybius,polybius,PLBT,3969564.998325
+521,Gambling,Sp8de,sp8de,SPX,8888888888
+522,Lending,SALT,salt,SALT,120000000
+523,Gambling,HEROcoin,herocoin,PLAY,252165028.70539504
+524,Blockchain Service,GoWithMi,gowithmi,GMAT,14900000000
+525,Binance,YooShi,yooshi,YOOSHI,1000000000000000
+526,Decentralized Exchange,DerivaDAO,derivadao,DDX,50297306
+527,Other,Po.et,poet,POE,3141592653
+528,Data,CyberVein,cybervein,CVT,2147483648
+529,Lending,Lendingblock,lendingblock,LND,1000000000
+530,Mining,Speed Mining Service,speed-mining-service,SMS,300000
+531,Platform,TosDis,tosdis,DIS,100000
+532,Platform,Stratis,stratis,STRAX,131499477.4069986
+533,Financial,Particl,particl,PART,11751238.04984224
+534,Decentralized Exchange,Nash Exchange,nash-exchange,NEX,50000000
+535,Platform,Starbase,starbase,STAR,1000000000
+536,Exchange,The Midas Touch Gold,the-midas-touch-gold,TMTG,9161139666.073038
+537,Supply,OriginTrail,origintrail,TRAC,500000000
+538,DeFi,Opium,opium,OPIUM,0
+539,Blockchain Service,Expanse,expanse,EXP,22845437
+540,Blockchain Service,Sentinel,sentinel,DVPN,13511414869
+541,Decentralized Exchange,Blockport,blockport,BPT,69434799.6292112
+542,Gambling,DAO.Casino,dao-casino,BET,167270820.687909
+543,Other,eosDAC,eosdac,EOSDAC,1200000000
+544,Ethereum,No BS Crypto,no-bs-crypto,NOBS,2083803239.8837934
+545,DeFi,Polkastarter,polkastarter,POLS,100000000
+546,Real Estate,Rentberry,rentberry,BERRY,301473027.68713224
+547,,Venus BTC,venus-btc,vBTC,205836
+548,Gaming,Asura Coin,asura-coin,ASA,1000000000
+549,Blockchain Network,HYCON ,hycon,HYC,5000000000
+550,Cryptocurrency,Steem,steem,STEEM,409190981
+551,Ethereum,Sharpe Platform Token,sharpe-platform-token,SHP,32000000
+552,Marketplace,LBRY Credits,library-credit,LBC,705211760
+553,Financial,ALBOS,albos,ALB,28710000000
+554,Social,Waletoken,waletoken,WTN,19918713666.786705
+555,Mining,Eden,archer-dao-governance-token,EDEN,100000000
+556,Decentralized Exchange,Biswap,biswap,BSW,164221800.42901316
+557,Financial,BABB,babb,BAX,50000000000
+558,Healthcare,BioPassport Token,biopassport-token,BIOT,8800000000
+559,Platform,XMax,xmax,XMX,30000000000
+560,Exchange,Binance Coin,binance-coin,BNB,166801148
+561,Financial,WeTrust,trust,TRST,100000000
+562,Trading,Vivid Coin,vivid-coin,VIVID,7910746.172528
+563,Insurance,Bridge Mutual,bridge-mutual,BMI,160000000
+564,Gaming,Refereum,refereum,RFR,4999650000
+565,Entertainment,TRON,tron,TRX,101900144771.21684
+566,,VVS Finance,vvs-finance,VVS,35580072054449
+567,,Aurory,aurory,AURY,100000000
+568,Financial,Genesis Vision,genesis-vision,GVT,4436643.92853333
+569,Verification,THEKEY,thekey,TKY,9795844687
+570,Other,Sakura Bloom,sakura-bloom,SKB,6000000000
+571,Cryptocurrency,Nano,nano,XNO,133248297.197
+572,,IQ.cash,iqcash,IQ,19821218.95644556
+573,Ethereum,ConstitutionDAO,constitutiondao,PEOPLE,0
+574,Cryptocurrency,Groestlcoin,groestlcoin,GRS,78951898.88736624
+575,Cryptocurrency,Lightning Bitcoin,lightning-bitcoin,LBTC,7465926
+576,Entertainment,More Coin,more-coin,MORE,30000000
+577,Cryptocurrency,Kalkulus,kalkulus,KLKS,19947040.12418642
+578,Binance,Radio Caca,radio-caca,RACA,443478491084
+579,Trading,QASH,qash,QASH,1000000000
+580,Marketing,indaHash,indahash,IDH,399999999.991697
+581,Blockchain Service,Proxeus,proxeus,XES,300000000
+582,Smart Contracts,Stellar,stellar,XLM,50001802499.57205
+583,Data,UnMarshal,unmarshal,MARSH,100000000
+584,Gaming,Doge Dash,doge-dash,DOGEDASH,90286721009.31483
+585,Platform,Furucombo,furucombo,COMBO,100000000
+586,Data,Bottos,bottos,BTO,0
+587,Privacy,Bytecoin,bytecoin-bcn,BCN,184066828814.058
+588,Financial,Trust Wallet Token,trust-wallet-token,TWT,1000000000
+589,Neo,Trinity Network Credit,trinity-network-credit,TNC,1000000000
+590,Other,Globalvillage Ecosystem,globalvillage-ecosystem,GVE,1000000000
+591,Ethereum,Name Changing Token,name-changing-token,NCT,39442342.51678241
+592,Cloud Storage,Bitcoin File,bitcoin-file,BIFI,21050000000
+593,Interoperability,IRISnet,irisnet,IRIS,2050869358.833344
+594,Cryptocurrency,T.OS,t-os,TOSC,2088368121.484905
+595,Virtual Reality,Spectiv,signal-token,SIG,378851756.13266844
+596,Smart Contracts,YUI Token,yui-token,YUI,27823
+597,Decentralized Exchange,Futureswap,futureswap,FST,3481138.86850952
+598,Marketplace,Sentinel Chain,sentinel-chain,SENC,500000000
+599,Travel,MAPS,maps,MAPS,10000000000
+600,Marketplace,LockTrip,lockchain,LOC,18579040.57192072
+601,Financial,HorusPay,horuspay,HORUS,1200000000
+602,Cryptocurrency,Electroneum,electroneum,ETN,17908082466.89
+603,Data,Biotron,biotron,BTRN,411092461
+604,Financial,Nxt,nxt,NXT,998999941.50769
+605,Tokenization,Convergence,convergence,CONV,10000000000
+606,Financial,Stronghold Token,stronghold-token,SHX,100000000000
+607,Energy,Electrify.Asia,electrifyasia,ELEC,749999945.2724185
+608,Interoperability,Nerves,nerves,NER,5000000000
+609,Decentralized Exchange,Lykke,lykke,LKK,1285690000
+610,Ethereum,BOMB,bomb,BOMB,896539
+611,Gaming,DMarket,dmarket,DMT,56921773.1719715
+612,Cryptocurrency,Viacoin,viacoin,VIA,23174754.6077522
+613,Financial,ION,ion,ION,19676475.60565705
+614,Trading,Wootrade,wootrade,WOO,2991373744.711403
+615,Tokenization,Atlantis Blue Digital Token,atlantis-blue-digital-token,ABDT,399998765
+616,AI,Nebula AI,nebula-ai,NBAI,4966351487
+617,Blockchain Service,Decentralized Machine Learning,decentralized-machine-learning,DML,272937006.72553134
+618,Financial,Distributed Credit Chain,distributed-credit-chain,DCC,3423933690.00001
+619,Financial,PayPie,paypie,PPP,165000000
+620,Infrastructure,Ardor,ardor,ARDR,998999495
+621,Financial,SwissBorg,swissborg,CHSB,1000000000
+622,Cryptocurrency,Jesus Coin,jesus-coin,JC,20325184344.1018
+623,Blockchain Network,Ternio,ternio,TERN,899921008
+624,Exchange,UNUS SED LEO,unus-sed-leo,LEO,985239504
+625,Sports,SportyCo,sportyco,SPF,70673453.9859041
+626,Tokenization,Centrifuge,centrifuge,CFG,430011123
+627,E-Commerce,Pundi X NEM,pundi-x-nem,NPXSXEM,44748244753.68
+628,Education,Educoin,edu-coin,EDU,15000000000
+629,Cryptocurrency,DNotes,dnotes,NOTE,155043262.252
+630,Social,Influence Chain,influence-chain,IFC,1000000000
+631,Blockchain Service,Arcblock,arcblock,ABT,186000000
+632,Ardor,Ignis,ignis,IGNIS,999449694
+633,Data,Aeron,aeron,ARN,20000000
+634,Gaming,DMScript,dmscript,DMST,100000000
+635,Gambling,BetterBetting,betterbetting,BETR,300585863.0178498
+636,Cryptocurrency,The ChampCoin,the-champcoin,TCC,198824132
+637,Decentralized Exchange,QuickSwap,quickswap,QUICK,1000000
+638,Data,Dent,dent,DENT,100000000000
+639,Cloud Computing,ARPA Chain,arpa-chain,ARPA,1500000000
+640,IoT,IONChain,ionchain,IONC,520000000
+641,Decentralized Exchange,OAX,oax,OAX,100000000
+642,Blockchain Network,Oasis Network,oasis-network,ROSE,10000000000
+643,Lending,Maker,maker,MKR,988984.78969926
+644,,Maro,maro,MARO,956508051.36
+645,Trading,Rublix,rublix,RBLX,100000000
+646,,Compound Uniswap,compound-uniswap,cUNI,0
+647,Other,DAEX,daex,DAX,2000000000
+648,Cryptocurrency,MktCoin,mktcoin,MLM,2274139409.85096
+649,Stablecoin,Gemini Dollar,gemini-dollar,GUSD,200316364.06
+650,Cryptocurrency,Valuto,valuto,VLU,62964625
+651,Exchange,FTX Token,ftx-token,FTT,335329538.4859715
+652,Blockchain Network,TrueChain,truechain,TRUE,100000000
+653,Platform,Endorsit,endorsit,EDS,100000000000
+654,DeFi,Reef,reef,REEF,16112552172
+655,Platform,Penta,penta,PNT,49999999999.9999
+656,Interoperability,RAMP,ramp,RAMP,1000000000
+657,Data,DaTa EXchange,data-exchange,DTX,225000000
+658,,Compound USDT,compound-usdt,cUSDT,4558972537
+659,Gaming,Ultra,ultra,UOS,1000000000
+660,Cryptocurrency,Dascoin,dascoin,DASC,3294166500.60993
+661,Marketplace,Font,font,FONT,2000000
+662,Cryptocurrency,Peercoin,peercoin,PPC,27271586.03864035
+663,,Aave LINK,aave-link,aLINK,26144473
+664,Interoperability,Cellframe,cellframe,CELL,29735000
+665,Gambling,CoinPoker,coinpoker,CHP,278237314.35457474
+666,Exchange,BlockTrade,blocktrade-token,BTT,57746762
+667,Advertising,Bigbom,bigbom,BBO,1993751536.605432
+668,Communication Network,BlockMesh,blockmesh,BMH,2000000000
+669,Advertising,Kind Ads Token,kind-ads-token,KIND,61000000
+670,Stablecoin,bitCNY,bitcny,BITCNY,28245600
+671,Prediction Market,Polkamarkets,polkamarkets,POLK,100000000
+672,Media,Transcodium,transcodium,TNS,85900000
+673,Decentralized Exchange,TitanSwap,titanswap,TITAN,10000000000
+674,Cryptocurrency,Ryo Currency,ryo-currency,RYO,32908789.03
+675,Decentralized Exchange,JOE,joe,JOE,199010126.2
+676,Sports,BoutsPro,boutspro,BOUTS,2000000000
+677,Platform,TERA,tera,TERA,1000000000
+678,AI,ATN,atn,ATN,0
+679,Ethereum,Business Credit Alliance Chain,business-credit-alliance-chain,BCAC,512122609.3851905
+680,Marketplace,Storm,storm,STORM,9967745869.45655
+681,,Aave ETH,aave-eth,aETH,472179
+682,Cryptocurrency,Linda,linda,LINDA,13437714976.6654
+683,Financial,Bezant,bezant,BZNT,999999820
+684,Lending,Magic Internet Money,magic-internet-money,MIM,1933352207
+685,Cryptocurrency,GoldMint,goldmint,MNTP,10000000
+686,Transportation,Helbiz,helbiz,HBZ,1005250000
+687,Prediction Market,Bodhi [ETH],bodhi-eth,BOE,100000000
+688,Social,Kuende,kuende,KUE,3013984637
+689,Fund,BuckHathCoin,buck-hath-coin,BHIG,500000000
+690,Blockchain Service,Cardstack,cardstack,CARD,6000000000
+691,,Aave TUSD,aave-tusd,aTUSD,150533312
+692,Financial,Freeway Token,freeway-token,FWT,10000000000
+693,Ethereum,DigiFinexToken,digifinextoken,DFT,2100000000
+694,Blockchain Network,WaykiChain,waykichain,WICC,210000000
+695,Cryptocurrency,FuturoCoin,futurocoin,FTO,100000000
+696,Social,Patron,patron,PAT,400000000
+697,Healthcare,Docademic,docademic,MTC,850000000.0
+698,,Aave DAI,aave-dai,aDAI,27109786
+699,,Aave MKR,aave-mkr,aMKR,14773
+700,,Aave BAT,aave-bat,aBAT,10619595
+701,Financial,FuzeX,fuzex,FXT,1087156610
+702,,Aave USDT,aave-usdt,aUSDT,115251917
+703,Ethereum,Oraichain Token,oraichain-token,ORAI,19779272
+704,Transportation,Parkgene,parkgene,GENE,928840384.33
+705,Gambling,Quanta Utility Token,quanta-utility-token,QNTU,120000000000
+706,Blockchain Service,Presearch,presearch,PRE,500000000
+707,Financial,Bitex Global XBX Coin,bitex-global-xbx-coin,XBX,298021513
+708,,Valor Token,valor-token,VALOR,75000000
+709,Cryptocurrency,ODUWA,oduwa,OWC,14895857.8285
+710,Verification,Civic,civic,CVC,1000000000
+711,Protocol,Stafi,stafi,FIS,102245900
+712,E-Commerce,Elysian,elysian,ELY,260000000
+713,Financial,ALLUVA,alluva,ALV,3000000000
+714,Transportation,dKargo,dkargo,DKA,5000000000
+715,Investments,BnkToTheFuture,bnktothefuture,BFT,1000000000
+716,Blockchain Service,Silent Notary,silent-notary,SNTR,186462812051
+717,Real Estate,Cybereits,cybereits,CRE,1000000000
+718,Entertainment,POPCHAIN,popchain,PCH,2000000000
+719,Stablecoin,EOSDT,eosdt,EOSDT,2642505.293308
+720,Blockchain Service,OneLedger,oneledger,OLT,1000000000
+721,,Aave SUSD,aave-susd,aSUSD,2148854
+722,Smart Contracts,Aurora,aurora,AOA,10000000000
+723,Gaming,CryCash,crycash,CRC,7057137.0998682
+724,Platform,EDUCare,educare,EKT,724297908.475
+725,DeFi,Qredo,qredo,QRDO,1000000000
+726,Gaming,FootballCoin,footballcoin,XFC,1000000000
+727,Social,Skrumble Network,skrumble-network,SKM,1500000000
+728,,Aave MANA,aave-mana,aMANA,60287273
+729,DeFi,Kebab Token,kebab-token,KEBAB,0
+730,Media,Lunyr,lunyr,LUN,2703356.07853158
+731,Entertainment,Pepe Cash,pepe-cash,PEPECASH,701884009
+732,Marketing,Promotion Coin,promotion-coin,PC,8750000000
+733,Protocol,Raven Protocol,raven-protocol,RAVEN,10000000000
+734,Financial,Debitum,debitum-network,DEB,400000000
+735,Privacy,Aeon,aeon,AEON,15831459.311211
+736,Cryptocurrency,Soarcoin,soarcoin,SOAR,5000000000
+737,AI,DeepBrain Chain,deepbrain-chain,DBC,10000000000
+738,Ethereum,Crypterium,crpt,CRPT,96657762.00187267
+739,,Echoin,echoin,ECH,2000000000
+740,Financial,U.CASH,ucash,UCASH,21000000000
+741,,Aave KNC,aave-knc,aKNC,4654328
+742,Cryptocurrency,Telcoin,telcoin,TEL,100000000000
+743,Exchange,VinDax Coin,vindax-coin,VD,125000000
+744,Cryptocurrency,OLXA,olxa,OLXA,2600000000
+745,AI,VisionX,visionx,VNX,10000000000
+746,DeFi,BoringDAO,boringdao,BOR,200000
+747,Cryptocurrency,Shekel,shekel,JEW,133109989.976718
+748,,Aave ZRX,aave-zrx,aZRX,4714502
+749,Binance,Blind Boxes,blind-boxes,BLES,0
+750,Decentralized Exchange,Kava Swap,kava-swap,SWP,250000000
+751,Platform,Pixie Coin,pixie-coin,PXC,10000000000
+752,Insurance,Pal Network,pal-network,PAL,1000000000
+753,Cryptocurrency,PitisCoin,pitiscoin,PTS,1000000000
+754,Financial,Nexo,nexo,NEXO,1000000000
+755,Data,Proton Token,proton-token,PTT,10000000000
+756,Trading,ARBITRAGE,arbitrage,ARB,8910934.51117645
+757,Financial,Kora Network Token,kora-network-token,KNT,712500000
+758,Trading,Kryll.io,kryll,KRL,49417348
+759,Cryptocurrency,E-Dinar Coin,e-dinar-coin,EDR,1011211987.679
+760,Cryptocurrency,Nasdacoin,nasdacoin,NSD,26594784.98985646
+761,Cryptocurrency,CROAT,croat,CROAT,90374266.92505354
+762,Social,Matchpool,guppy,GUP,98855149.62
+763,Exchange,BQT,bqt,BQTX,800000000
+764,Exchange,Huobi Token,huobi-token,HT,500000000
+765,DeFi,Amp,amp,AMP,99213408535
+766,Financial,Jury.Online Token,jury-online-token,JOT,18601983.9507074
+767,Marketing,Friendz,friends,FDZ,1129842156.3806603
+768,Data,Cosmo Coin,cosmo-coin,COSM,923000000
+769,Smart Contracts,ModulTrade,modultrade,MTRC,78125410.7521347
+770,Blockchain Service,Blue Whale EXchange,blue-whale-token,BWX,64320000
+771,,Aave BUSD,aave-busd,aBUSD,9850345
+772,Financial,Forty Seven Bank (47 Bank),forty-seven-bank,FSBT,3699483.0
+773,Gaming,Wrapped NCG (Nine Chronicles Gold),wrapped-ncg,WNCG,287980996.3
+774,Other,empowr coin,empowr-coin,EMPR,12000000000000
+775,Other,Exosis,exosis,EXO,681268.10087038
+776,Cryptocurrency,Bitcoin BEP2,bitcoin-bep2,BTCB,112501
+777,Supply,Temco,temco,TEMCO,6000000000
+778,Protocol,0xcert Protocol,0xcert,ZXC,343562130.402
+779,Data,Prometeus,prometeus,PROM,19250000
+780,,Aave REP,aave-rep,aREP,4935
+781,,Aave LEND,aave-lend,aLEND,
+782,Blockchain Service,DAV Token,dav-coin,DAV,1380276937.5528216
+783,Cryptocurrency,Cashberry Coin,cashberry-coin,CBC,90005603.0
+784,Social,HitChain,hitchain,HIT,102400000000
+785,Financial,Pillar,pillar,PLR,800000000
+786,Protocol,PumaPay,pumapay,PMA,78042956829
+787,Exchange,LocalCoinSwap,local-coin-swap,LCS,69934886.54156014
+788,Cryptocurrency,LEOcoin,leocoin,LC4,21000000
+789,Exchange,OKB,okb,OKB,300000000
+790,Cryptocurrency,MIR COIN,mir-coin,MIR,1300000000
+791,Healthcare,Timicoin,timicoin,TMC,317149560.162186
+792,Trading,Mango Markets,mango-markets,MNGO,10000000000
+793,Platform,Honest,honest,HNST,400000000
+794,Social,Consentium,consentium,CSM,240000000
+795,Marketing,BitRewards,bitrewards,BIT,544070955.5837462
+796,Cryptocurrency,ATC Coin,atc-coin,ATCC,410000000
+797,Gas Token,Theta Fuel,theta-fuel,TFUEL,5301214400
+798,Cloud Computing,CUDOS,cudos,CUDOS,10000000000
+799,Data,Airbloc,airbloc,ABL,373217500
+800,Data,DxChain,dxchain-token,DX,100000000000
+801,Real Estate,APIS,apis,APIS,9520000000
+802,Advertising,Ubex,ubex,UBEX,3923877491.5183
+803,Transportation,LogisCoin,logiscoin,LGS,2351215.43440527
+804,Supply,Insolar,insolar,XNS,1000000000
+805,Ethereum,Davinci Coin,davinci-coin,DAC,8800000000
+806,Cloud Storage,Coldstack,coldstack,CLS,50000000
+807,Ethereum,NFTX Hashmasks Index,nftx-hashmasks-index,MASK,209.6325265
+808,Other,Olive,olive,OLE,10000000000
+809,Exchange,OceanEx,oceanex-token,OCE,8811756112.4
+810,Interoperability,Ark,ark,ARK,161278856
+811,Social,bitCEO,bitceo,BCEO,2970135500
+812,Prediction Market,IGToken,igtoken,IG,6562786056.1979
+813,Decentralized Exchange,Falconswap,fsw-token,FSW,100000000
+814,Social,AiLink Token,ailink-token,ALI,10000000000
+815,DeFi,Index Cooperative,index-cooperative,INDEX,10000000
+816,Exchange,Chintai,chex,CHEX,500000000
+817,Supply,Wabi,tael,WABI,100000000
+818,Energy,KWHCoin,kwhcoin,KWH,2193100000
+819,IoT,Six Domain Chain,six-domain-chain,SDA,2000000000
+820,Other,CariNet,carinet,CIT,1000000000
+821,Healthcare,FarmaTrust,farmatrust,FTT,1000000000
+822,Cryptocurrency,Niobio Cash,niobio-cash,NBR,140803742.762465
+823,Financial,MGC Token,mgc-token,MGC,600000000
+824,Blockchain Service,Knoxstertoken,knoxstertoken,FKX,150000000
+825,Supply,Blocery,blocery,BLY,1000000000
+826,Blockchain Service,Butterfly Protocol,butterfly-protocol-2,BFLY,0
+827,Other,Kin,kin,KIN,10000000000000
+828,Gambling,TFL.io,trueflip,TFL,8924667
+829,Cryptocurrency,ABBC Coin,abbc-coin,ABBC,1500000000
+830,Lending,HOLD,hold,HOLD,923453365
+831,Energy,WPP,wpp-token,WPP,5000000000
+832,Interoperability,BUMO,bumo,BU,1500000000
+833,Social,HeartBout,heartbout,HB,63695267
+834,DeFi,Auto,auto,AUTO,53002.53352229
+835,Other,Ti-Value,ti-value,TV,210000000
+836,Marketplace,district0x,district0x,DNT,1000000000
+837,Blockchain Service,Gems ,gems-protocol,GEM,8000000000
+838,Blockchain Service,EosBLACK,eosblack,BLACK,3000000000
+839,Smart Contracts,Quantstamp,quantstamp,QSP,976442388.321185
+840,Exchange,Bitmart,bitmart-token,BMX,640881615.9639114
+841,Social,Global Social Chain,global-social-chain,GSC,1000000000
+842,Blockchain Service,DWS,dws,DWS,500000000
+843,Financial,Formosa Financial,formosa-financial,FMF,2000000000
+844,Exchange,HashCoin,hashcoin,HSC,50000000000
+845,Entertainment,Contentos,contentos,COS,9957264018.6
+846,Financial,V-Dimension,v-dimension,VOLLAR,2100000000
+847,Other,Helpico,helpico,HELP,5008576.24641
+848,Gaming,Gourmet Galaxy,gourmet-galaxy,GUM,20000000
+849,Insurance,Zeusshield,zeusshield,ZSC,5642500000
+850,Financial,DPRating,dprating,RATING,9362961677.089724
+851,IoT,MyBit,mybit,MYB,179996749.91415927
+852,Mining,Ice Rock Mining,ice-rock-mining,ROCK2,15724272
+853,Cryptocurrency,BitcoiNote,bitcoinote,BTCN,13178171
+854,Marketing,Webcoin,webcoin,WEB,1000000000
+855,Real Estate,Relex,relex,RLX,2000000000
+856,Exchange,MEX,mex,MEX,1939999970
+857,Verification,Remme,remme,REM,1000000000
+858,,Aave USDC,aave-usdc,aUSDC,166565229
+859,Marketplace,Alphacat,alphacat,ACAT,6250000000
+860,Platform,YOU COIN,you-coin,YOU,2856000000
+861,,Aave WBTC,aave-wbtc,aWBTC,15853
+862,Media,ClearCoin,clearcoin,XCLR,1000000000
+863,Financial,Starta,starta,STA,4995565
+864,Other,GSENetwork,gsenetwork,GSE,100000000000
+865,Financial,MoneyToken,moneytoken,IMT,19155705310.11
+866,Platform,Rotharium,rotharium,RTH,5207470.24862486
+867,Gaming,ugChain,ugchain,UGC,1000000000
+868,Investments,United Traders Token,uttoken,UTT,69403130.9798553
+869,Platform,ProximaX,proximax,XPX,9000000000
+870,Other,OneRoot Network,oneroot-network,RNT,400000000
+871,Financial,LinkEye,linkeye,LET,1000000000
+872,Ethereum,Etherparty,etherparty,FUEL,1000000000
+873,Gambling,ShowHand,showhand,HAND,403000000000
+874,Gambling,Decentral Games,decentral-games,DG,1000000
+875,Trading,Lendroid Support Token,lendroid-support-token,LST,1210071487.342
+876,Financial,Iconomi,iconomi,ICN,98930339.7729087
+877,Ethereum,WHALE,whale,WHALE,10000000
+878,Decentralized Exchange,AirSwap,airswap,AST,500000000
+879,Healthcare,Medicalchain,medical-chain,MTN,500000000
+880,Smart Contracts,Chronologic,chronologic,DAY,1401739.23448688
+881,Decentralized Exchange,ZeroSwap,zeroswap,ZEE,100000000
+882,Platform,GoHelpFund,gohelpfund,HELP,23000000
+883,Financial,Metal,metal,MTL,66588888
+884,DeFi,Beefy.Finance,beefy-finance,BIFI,80000
+885,Other,Eva Cash,eva-cash,EVC,1000000
+886,Entertainment,WeShow Token,weshow-token,WET,1250000000
+887,Cryptocurrency,Novacoin,novacoin,NVC,2335756.713897
+888,Exchange,OTCBTC Token,otcbtc-token,OTB,199470887.762562
+889,Blockchain Network,Couchain,couchain,COU,23000000000
+890,Ethereum,Razor Network,razor-network,RAZOR,1000000000
+891,Cryptocurrency,Bitcoin SV,bitcoin-sv,BSV,18915795.39423905
+892,Ethereum,DreamTeam,dreamteam-token,DTT,55191260
+893,Cryptocurrency,W3Coin,w3coin,W3C,99998988889
+894,Marketplace,Earth Token,earth-token,EARTH,750000000
+895,Advertising,DATx,datx,DATX,10000000000
+896,Prediction Market,Stox,stox,STX,53817240.86769172
+897,Financial,Neumark,neumark,NEU,64410846.59360903
+898,Entertainment,Moviebloc,moviebloc,MBL,30000000000
+899,Privacy,MoneroV,monero-v,XMV,13598604.127477
+900,Blockchain Network,Decent,decent,DCT,73197775
+901,Gambling,Dragon Coins,dragon-coins,DRG,442695970.07088
+902,Mining,ZMINE,zmine,ZMN,220381404.9900193
+903,Protocol,Graphlinq Protocol,graphlinq-protocol,GLQ,499999972.79754
+904,Financial,SIX,six,SIX,999999970
+905,Financial,Paycent,paycent,PYN,100000000
+906,Energy,Robotina,robotina,ROX,331614076.92142236
+907,Privacy,DAPS Token,daps-token,DAPS,60000000000
+908,Cryptocurrency,Metronome,metronome,MET,13626367.47294469
+909,Healthcare,Humanscape,humanscape,HUM,1084734273.38
+910,Verification,Nuggets,nuggets,NUG,9729464161.02413
+911,Protocol,Smartshare,smartshare,SSP,10000000000
+912,Entertainment,Eristica,eristica,ERT,230502120.2949735
+913,DeFi,Non-Fungible Yearn,non-fungible-yearn,NFY,100000
+914,Interoperability,Clover Finance,clover,CLV,1000000000
+915,Verification,VeriME,verime,VME,400000000
+916,Protocol,Glitch,glitch,GLCH,88888888
+917,Data,Measurable Data Token,measurable-data-token,MDT,1000000000
+918,Media,Pibble,pibble,PIB,30000000000
+919,Tokenization,CARAT,carat,CARAT,2000000
+920,Financial,Daneel,daneel,DAN,69320719
+921,Data,Insights Network,insights-network,INSTAR,288531902.56
+922,Advertising,Fractal,fractal,FCL,465000000
+923,Entertainment,Theta,theta,THETA,1000000000
+924,,CyberMiles,cybermiles,CMT,1000000000
+925,Privacy,GIGA,giga,XG,472151842.053
+926,Trading,DEXTools,dextools,DEXT,149953255
+927,IoT,SDChain,sdchain,SDA,1999999978.51766
+928,Cryptocurrency,Wixlar,wixlar,WIX,5330000000
+929,Verification,Metadium,metadium,META,2000000000
+930,Blockchain Service,ADAMANT Messenger,adamant-messenger,ADM,108002535.9
+931,AI,ELA Coin,ela-coin,ELAC,10000000000
+932,Gaming,PlayDapp,playdapp,PLA,700000000
+933,Blockchain Service,IceChain,icechain,ICHX,1000000000
+934,Financial,VegaWallet Token,vegawallet-token,VGW,200000000
+935,Cryptocurrency,NAGA,naga,NGC,77910266.157691
+936,Mining,HashBX,hashsbx,HBX,1000000000
+937,Platform,AMO Coin,amo-coin,AMO,19679012761.81035
+938,Blockchain Network,LTO Network,lto-network,LTO,397969832.9859243
+939,Financial,Fortuna,fortuna,FOTA,1000000000
+940,Financial,Akropolis,akropolis,AKRO,4000000000
+941,Marketing,Fluz Fluz,fluz-fluz,FLUZ,204780000
+942,DeFi,Reserve,reserve-rights,RSR,100000000000
+943,Supply,TE-FOOD,te-food,TFD,1000000000
+944,Ethereum,Efinity,efinity,EFI,2000000000
+945,Blockchain Service,Ink Protocol,ink-protocol,XNK,500000000
+946,DeFi,Frax Share,frax-share,FXS,99899045.23782395
+947,Cryptocurrency,Ormeus Coin,ormeus-coin,ORME,200000000
+948,Protocol,Atlas Protocol,atlas-protocol,ATP,4000001000
+949,Protocol,Hashgard,hashgard,GARD,10000000000
+950,Education,Blockchain Certified Data Token,blockchain-certified-data-token,BCDT,40835044.38886192
+951,Financial,Darico Ecosystem Coin,darcio-ecosystem-coin,DEC,99006341.50190786
+952,Platform,HyperQuant,hyperquant,HQT,100000000
+953,Cryptocurrency,ILCoin,ilcoin,ILC,1761217657.452142
+954,Cryptocurrency,Tolar,tolar,TOL,760019385.3676834
+955,Real Estate,Etheera,etheera,ETA,9919303956.4122
+956,Financial,Safe Haven,safe-haven,SHA,8500000000
+957,Blockchain Network,Zilliqa,zilliqa,ZIL,15383848598.562176
+958,Platform,OnX Finance,onx-finance,ONX,787439.339231
+959,Network,Substratum,substratum,SUB,472000000
+960,,LinkToken,linktoken,LTK,1500000000
+961,Platform,Lition,lition,LIT,130039256.689
+962,Financial,BHPCash,bhpcash,BHPC,46915621.12
+963,Infrastructure,Unibright,unibright,UBT,150000000
+964,Blockchain Network,EdenChain,eden,EDN,1000000000
+965,Binance,aXpire,axpire,AXP,346274001.40087
+966,Gaming,Big Bang Game Coin,big-bang-game-coin,BBGC,10000000000
+967,DeFi,Duck DAO,duck-dao,DUCK,95986126.46717
+968,Verification,Blockpass,blockpass,PASS,1000000000
+969,Blockchain Service,Newton,newton,NEW,98823661261.46
+970,Data,Streamr,streamr-datacoin,DATA,861800041.8100061
+971,Protocol,Trinity Protocol,trinity-protocol,TRI,0
+972,Blockchain Service,XYO Network,xyo,XYO,13960974963
+973,Verification,Radium,radium,RADS,4195412.03757967
+974,Gaming,PlayGame Token,playgame-token,PXG,1000000000
+975,Jobs,Canya,canyacoin,CAN,95826983.065
+976,Real Estate,Max Property Group,max-property-group,MPG,1000000000
+977,Blockchain Network,VeriBlock,veriblock,VBK,1079314606.0821092
+978,Virtual Reality,Scanet World Coin,scanet-world-coin,SWC,1000000000
+979,Cryptocurrency,MetaHash,metahash,MHC,3114184079
+980,,DECOIN,decoin,DTEP,78593425.59619509
+981,Supply,Serve,serve,SERV,10000000000
+982,Decentralized Exchange,Nectar,nectar,NEC,618133330.107871
+983,Interoperability,ICON,icon,ICX,800460000
+984,Blockchain Service,Merculet,merculet,MVP,10000000000
+985,DeFi,SakeToken,sake-token,SAKE,136268757.9038026
+986,Ethereum,BitDAO,bitdao,BIT,10000000000
+987,Platform,Hyperion,hyperion,HYN,7876642307
+988,Cloud Storage,Filecoin,file-coin,FIL,132058151
+989,Real Estate,IHT Real Estate Protocol,iht-real-estate-protocol,IHT,996491162
+990,Cryptocurrency,Benz,benz,BENZ,6680472.88
+991,Gaming,Chain Guardians,chain-guardians,CGG,120000000
+992,Cryptocurrency,Bitcoin Gold,bitcoin-gold,BTG,17513923.589
+993,Platform,Simple Token (OST),ost,OST,800000000
+994,Virtual Reality,Matryx,matryx,MTX,314159265
+995,Ethereum,AidCoin,aidcoin,AID,42547118.7
+996,Ethereum,Adventure Gold,adventure-gold,AGLD,70170001
+997,Cryptocurrency,Bitcoin Interest,bitcoin-interest,BCI,18326891.5
+998,Blockchain Network,MultiVAC,multivac,MTV,10000000000
+999,Entertainment,Atari Token,atari-token,ATRI,1975082183
+1000,DeFi,ORO,oro,ORO,100000000
+1001,Stablecoin,Tether,tether,USDT,77351995260.81383
+1002,Platform,Callisto Network,callisto-network,CLO,2614098213.01297
+1003,Financial,Auctus,auctus,AUC,65829630.62007512
+1004,Gaming,Magic Cube Coin,magic-cube-coin,MCC,20000000000
+1005,Financial,Aladdin,aladdin,ADN,100000000000
+1006,AI,Jarvis+,jarvis,JAR,600000000
+1007,Blockchain Service,Dragonchain,dragonchain,DRGN,433494437
+1008,Decentralized Exchange,Loopring [NEO],loopring-neo,LRN,113602931.2
+1009,Cloud Storage,Holo,holo,HOT,177619433541.14133
+1010,Marketing,Incent,incent,INCNT,46015890.96620686
+1011,Gaming,Gala,gala,GALA,35240112493
+1012,Platform,Content Neutrality Network,content-neutrality-network,CNN,100000000000
+1013,Ethereum,Covesting,covesting,COV,18925444.21152613
+1014,Blockchain Service,Atonomi,atonomi,ATMI,1000000000
+1015,Platform,Volt,volt,ACDC,4000000000
+1016,Financial,Counos X,counos-x,CCXX,18402729.795
+1017,Art,Maecenas,maecenas,ART,100000000
+1018,Transportation,AVINOC,avinoc,AVINOC,1000000000
+1019,Gambling,WinStars.live,winstars-live,WNL,77777777
+1020,Protocol,PalletOne,palletone,PTN,1000000000
+1021,Exchange,Coinsuper Ecosystem Network,coinsuper-ecosystem-network,CEN,898614083.223577
+1022,Stablecoin,Brazilian Digital Token,brz,BRZ,1000000000
+1023,,WINk,wink,WIN,994169859243.4863
+1024,Gaming,GAMEE,gamee,GMEE,3180000000
+1025,Data,BaaSid,baasid,BAAS,10000000000
+1026,Smart Contracts,Ethereum,ethereum,ETH,118620670.874
+1027,Platform,NPER,nper,NPER,218999990
+1028,Financial,COTI,coti,COTI,2000000000
+1029,Ethereum,BOOM,boom,BOOM,967293007.0477667
+1030,Entertainment,Webflix Token,webflix-token,WFX,27000000000
+1031,Financial,UTRUST,utrust,UTK,500000000
+1032,Smart Contracts,NEM,nem,XEM,8999999999
+1033,Financial,Santiment,santiment,SAN,83337000
+1034,Blockchain Network,Elastos,elastos,ELA,24818694.5385112
+1035,Scaling,Boba Network,boba-network,BOBA,500000000
+1036,Data,Datawallet,datawallet,DXT,1000000000
+1037,Other,Neural Protocol,neural-protocol,NRP,9500000000
+1038,Blockchain Service,GoNetwork,gonetwork,GOT,100000000
+1039,Platform,Loom Network,loom-network,LOOM,1000000000
+1040,Infrastructure,Chromia,chromia,CHR,471970667.472656
+1041,Blockchain Service,Nucleus Vision,nucleus-vision,NCASH,10000000000
+1042,Blockchain Network,Mastercoin (Omni),omni,OMNI,619295.22998581
+1043,Platform,Katalyo,katalyo,KTLYO,85000000
+1044,Financial,Ivy,ivy,IVY,1610924200
+1045,Cryptocurrency,SF Capital,sf-capital,SFCP,100000000
+1046,Interoperability,ChainX,chainx,PCX,11238874.7
+1047,Healthcare,Lympo,lympo,LYM,999999999.017098
+1048,Platform,Cryptaur,cryptaur,CPT,27662180148.278465
+1049,Exchange,Birake,birake,BIR,103939316.83309366
+1050,Trading,Caspian,caspian,CSP,1000000000
+1051,Other,Function X,function-x,FX,408520357
+1052,Platform,YEE,yee,YEE,10000000000
+1053,Blockchain Service,Kleros,kleros,PNK,764626704
+1054,Cryptocurrency,Ulord,ulord,UT,180640332.042
+1055,Smart Contracts,POA Network,poa-network,POA,294428504.62320244
+1056,IoT,Thingschain,thingschain,TIC,26000000000
+1057,Gaming,CWV Chain,cwv-chain,CWV,10000000000
+1058,Platform,Unification,unification,UND,120000000
+1059,Real Estate,Propy,propy,PRO,100000000
+1060,Platform,HTMLCOIN,html-coin,HTML,80434575000
+1061,Blockchain Network,Neurochain,neurochain,NCC,657440000
+1062,Entertainment,CyberMusic,cybermusic,CYMT,15500000000
+1063,Other,Fivebalance ,fivebalance,FBN,1098280626.7322183
+1064,Ethereum,Splyt,splyt,SHOPX,500000000
+1065,Stablecoin,TrueUSD,trueusd,TUSD,1265425089.2646706
+1066,Financial,Smartup,smartup,SMARTUP,5000000000
+1067,Blockchain Service,carVertical,carvertical,CV,9835745291.659302
+1068,Sports,Rage Fan,rage-fan,RAGE,400000000
+1069,Financial,SafePal,safepal,SFP,500000000
+1070,Healthcare,Boltt Coin,boltt-coin,BOLTT,170000000
+1071,Platform,Dapp Token,dapp-token,DAPPT,5000000000
+1072,Cryptocurrency,Bitcoin Cash,bitcoin-cash,BCH,18919287.5
+1073,DeFi,MahaDAO,mahadao,MAHA,9997846.07721052
+1074,Cryptocurrency,ZClassic,zclassic,ZCL,9287024.33
+1075,Other,BoatPilot Token,boat-pilot-token,NAVY,161513803.918
+1076,Platform,Qredit,qredit,QRT,721685470
+1077,Financial,Pluton,pluton,PLU,20000000
+1078,Blockchain Network,UGAS,ugas,UGAS,1000000000
+1079,DeFi,IterationSyndicate,iterationsyndicate,ITS,100000
+1080,Energy,EFFORCE,efforce,WOZX,1000000000
+1081,DeFi,APY.Finance,apy-finance,APY,100000000
+1082,Blockchain Network,Quantum Resistant Ledger,quantum-resistant-ledger,QRL,75450638.89268772
+1083,Cloud Computing,MassGrid,massgrid,MGD,139594968.222342
+1084,Ethereum,Dexter G,dexter-g,DXG,91834502.8781996
+1085,Blockchain Service,Apex,apex,CPX,676989090
+1086,DeFi,PRIA,pria,PRIA,0
+1087,Insurance,InsurePal,insurepal,IPL,300000000
+1088,Energy,Power Ledger,power-ledger,POWR,999506122.99937
+1089,Smart Contracts,Lisk,lisk,LSK,144818773
+1090,Financial,HedgeTrade,hedgetrade,HEDG,1000000000
+1091,Metaverse,WEMIX,wemix,WEMIX,1018187200
+1092,Blockchain Service,nOS,nos,NOS,330000000
+1093,Data,Banyan Network,banyan-network,BBN,1000000000
+1094,Gaming,Mossland,moss-coin,MOC,500000000
+1095,Data,Bluzelle,bluzelle,BLZ,500000000
+1096,Insurance,ShineChain,shinechain,SHE,5000000000
+1097,Exchange,CGC Token,cgc-token,CGC,92314325.0
+1098,Supply,CargoX,cargox,CXO,215119015.62456924
+1099,Masternodes,Oxen,loki,LOKI,56193845
+1100,Gaming,Enjin Coin,enjin-coin,ENJ,1000000000
+1101,Marketing,Vexanium,vexanium,VEX,1008772305
+1102,Other,BitCapitalVendor,bitcapitalvendor,BCV,1200000000
+1103,Cryptocurrency,DDKoin,ddkoin,DDK,45000000
+1104,Cloud Storage,DADI,dadi,DADI,100000000
+1105,Blockchain Network,Credits,credits,CS,249471071.21
+1106,Infrastructure,CommerceBlock,commerceblock,CBT,174866686
+1107,Gaming,Plair,plair,PLA,100000000000
+1108,Financial,Kcash,kcash,KCASH,1000000000
+1109,Exchange,Tcash,tcash,TCASH,88000000
+1110,Data,OWNDATA ,owndata,OWN,110000000000
+1111,Cryptocurrency,Flash,flash,FLASH,900000000
+1112,Protocol,Hydro Protocol,hydro-protocol,HOT,1560000000
+1113,Smart Contracts,EOS,eos,EOS,1041072333.6993
+1114,Decentralized Exchange,Loopring,loopring,LRC,1373873440.4424574
+1115,Gaming,MobileGo,mobilego,MGO,99996877
+1116,Supply,VeChain,vechain,VET,86712634466
+1117,Tokenization,Polymath,polymath-network,POLY,1000000000
+1118,Lending,Ripio Credit Network,ripio-credit-network,RCN,999942647.353
+1119,DeFi,saffron.finance,saffron-finance,SFI,92122.50184922
+1120,Cryptocurrency,APR Coin,apr-coin,APR,13917887.88524478
+1121,DeFi,BarnBridge,barnbridge,BOND,10000000
+1122,Ethereum,OptionRoom,optionroom,ROOM,100000000
+1123,Decentralized Exchange,Uniswap,uniswap,UNI,1000000000
+1124,Cloud Computing,iExec RLC,rlc,RLC,86999784.9868455
+1125,Cryptocurrency,FLO,flo,FLO,152351008.348
+1126,Cloud Storage,Storj,storj,STORJ,424999998.00001335
+1127,Marketing,HOQU,hoqu,HQX,275854380
+1128,DeFi,Umbrella Network,umbrella-network,UMB,498500000
+1129,Smart Contracts,Thunder Token,thunder-token,TT,10000000000
+1130,Smart Contracts,Moonriver,moonriver,MOVR,10178063
+1131,Smart Contracts,Qtum,qtum,QTUM,103944501
+1132,Platform,Consensus,consensus,SEN,1762262602.4235
+1133,Privacy,Monero,monero,XMR,18041228.88242173
+1134,Interoperability,YGGDRASH,yeed,YEED,10000000000
+1135,Infrastructure,Orbs,orbs,ORBS,10000000000
+1136,Verification,Vetri,vetri,VLD,449848163.6903
+1137,Financial,Centauri,centauri,CTX,47879123.3895954
+1138,Education,WOLLO,wollo,WLO,674999515
+1139,Blockchain Service,DAOstack,daostack,GEN,60000000
+1140,Cloud Computing,Flux,zel,FLUX,220347379.7495742
+1141,Smart Contracts,Tezos,tezos,XTZ,898062783.085656
+1142,Financial,Dether,dether,DTH,100000000
+1143,Privacy,Tornado Cash,torn,TORN,10000000
+1144,Blockchain Network,Dero,dero,DERO,18400000
+1145,Gambling,Fire Lotto,fire-lotto,FLOT,100000000
+1146,Financial,Humaniq,humaniq,HMQ,207143695.03559843
+1147,Entertainment,ContentBox,contentbox,BOX,3000000000
+1148,Financial,Populous,populous,PPT,53252246
+1149,Financial,BOX Token,box-token,BOX,100000000
+1150,,usdc-b,usdc-b,USDC-B,
+1151,Decentralized Exchange,Waves,waves,WAVES,106879036
+1152,Verification,Selfkey,selfkey,KEY,5999999954.464072
+1153,Exchange,Bilaxy Token,bilaxy-token,BIA,2000000000
+1154,Exchange,CoinMetro,coinmetro-token,XCM,326798666.0705
+1155,Advertising,AdShares,adshares,ADS,38758206
+1156,Financial,Wirex,wirex-token,WXT,10000000000
+1157,Prediction Market,Endor,endor-protocol,EDR,1468902335.5060341
+1158,Supply,Budbo,budbo,BUBO,200000000
+1159,Transportation,DACSEE,dacsee,DACS,3000000000
+1160,Financial,Blank Wallet,blank-wallet,BLANK,124999999.99998416
+1161,DeFi,Sora Validator Token,sora-validator-token,VAL,406615.26391718
+1162,Blockchain Service,Syntropy,noia-network,NOIA,1000000000
+1163,Marketing,MileVerse,mileverse,MVC,3000000000
+1164,Infrastructure,IOST,iostoken,IOST,18099719631
+1165,Cloud Computing,Crowd Machine,crowd-machine,CMCT,2000000000
+1166,Financial,Puregold.io,puregold-token,PGT,60000000
+1167,Data,Scry.info,scryinfo,DDD,1000000000
+1168,Decentralized Exchange,BitShares,bitshares,BTS,2994580000
+1169,Lending,ZPER,zper,ZPR,1850000000
+1170,Financial,DUO Network,duo-network-token,DUO,100000000
+1171,NFT,Ecomi,ecomi,OMI,750000000000
+1172,Exchange,Digitex,digitex-futures,DGTX,1590000000
+1173,Platform,Red Pulse,red-pulse,PHX,3391976087.0243707
+1174,Financial,Silverway,silverway,SLV,1000000000
+1175,Blockchain Network,QuarkChain,quarkchain,QKC,10000000000
+1176,Entertainment,Like,likecoin,LIKE,1069222773.8018712
+1177,Ethereum,Ruff,ruff,RUFF,1880000000
+1178,Decentralized Exchange,Counterparty,counterparty,XCP,2613892
+1179,Protocol,AppCoins,appcoins,APPC,244353409.86780363
+1180,Blockchain Network,Usechain Token,usechain-token,USE,20000000000
+1181,DeFi,Ampleforth,ampleforth,AMPL,308811693.75025856
+1182,Data,Wibson,wibson,WIB,9000000000
+1183,Ethereum,Vulcan Forged PYR,vulcan-forged-pyr,PYR,50000000
+1184,Cryptocurrency,White Standard,white-standard,WSD,439402
+1185,Platform,Genaro Network,genaro-network,GNX,650000000
+1186,Blockchain Network,Vega Protocol,vegaprotocol,VEGA,64999723
+1187,Platform,QunQun,qunqun,QUN,1557000000
+1188,Ethereum,SolarCoin,solarcoin,SLR,98035260984.55385
+1189,AI,TranslateMe Network Token,translateme-network-token,TMN,300000000
+1190,Cryptocurrency,Bitcoin,bitcoin,BTC,18892387
+1191,Cryptocurrency,BHPCoin,bhp-coin,BHP,52881277.67
+1192,Financial,MASTERNET,masternet,MASH,200000000
+1193,Blockchain Network,Aergo,aergo,AERGO,500000000
+1194,,tBTC,tbtc,TBTC,
+1195,Trading,Swapfolio,swapfolio,SWFL,0
+1196,Ethereum,Raiden Network Token,raiden-network-token,RDN,99999999.99999996
+1197,Marketplace,BLOCKv,blockv,VEE,3646271241.2002554
+1198,Cryptocurrency,Arionum,arionum,ARO,545399000
+1199,Ethereum,adbank,adbank,ADB,1000000000
+1200,Education,ODEM,odem,ODE,268946131
+1201,Cryptocurrency,Feathercoin,feathercoin,FTC,336000000
+1202,Blockchain Service,Open Platform,open-platform,OPEN,1745447045
+1203,Entertainment,Viberate,viberate,VIB,200000000
+1204,Ethereum,Devery,devery,EVE,99998697
+1205,Decentralized Exchange,Switcheo,switcheo,SWTH,1720756085.9523203
+1206,Protocol,Offshift,offshift,XFT,10000000
+1207,DeFi,Stone DeFi,stone,STN,0
+1208,Smart Contracts,Hacken Token,hackenai,HAI,1000000000
+1209,Social,Cryptrust,cryptrust,CTRT,8966516683.735167
+1210,Financial,Zerobank,zerobank,ZB,1600000000
+1211,,3DCoin,3dcoin,3DC,76477814
+1212,Advertising,TouchCon,touchcon,TOC,250000000
+1213,Blockchain Network,Hero Node,heronode,HER,2000000000
+1214,Ethereum,Tokenbox,tokenbox,TBX,16051589.78269311
+1215,Protocol,Essentia,essentia,ESS,1755313373
+1216,Media,Factom,factom,FCT,10141895.52763334
+1217,Trading,NaPoleonX,napoleonx,NPX,29800000
+1218,Exchange,Finxflo,finxflo,FXF,150000000
+1219,Other,PolySwarm,polyswarm,NCT,1885913075.8515422
+1220,Blockchain Network,Egretia,egretia,EGT,8000000000
+1221,Blockchain Service,VINChain,vinchain,VIN,840108901
+1222,Ethereum,DAO Maker,dao-maker,DAO,274989749.67472255
+1223,Gambling,TGAME,tgame,TGAME,101945017
+1224,Media,AIOZ Network,aioz-network,AIOZ,1000000000
+1225,Data,Dock,dock,DOCK,866946478.12144
+1226,Binance,BinaryX,binaryx,BNX,2485629.41653268
+1227,Exchange,Niobium Coin,niobium-coin,NBC,102289706.27784455
+1228,Financial,Jibrel Network,jibrel-network,JNT,200000000
+1229,Blockchain Network,XinFin,xinfin-network,XDC,37705012698.75
+1230,DeFi,Deri Protocol,deri-protocol,DERI,453732435.592577
+1231,Financial,Bread,bread,BRD,88862718
+1232,E-Commerce,ARAW,araw,ARAW,4665366360
+1233,Financial,Amon,amon,AMN,1209963685.36
+1234,Financial,Litex,litex,LXT,2000000000
+1235,Data,Neurotoken,neurotoken,NTK,99987499.9
+1236,Cryptocurrency,ZIMBOCASH,zimbocash,ZASH,4500000000
+1237,Energy,Restart Energy MWAT,restart-energy-mwat,MWAT,500000000
+1238,Ethereum,UnlimitedIP,unlimitedip,UIP,2839985525.01
+1239,Blockchain Network,High Performance Blockchain,high-performance-blockchain,HPB,101119949.75
+1240,Other,MEET.ONE,meetone,MEETONE,10000000000
+1241,Financial,CoinFi,coinfi,COFI,300000000
+1242,DeFi,Whiteheart,whiteheart,WHITE,8888
+1243,Platform,Fabric Token,fabric-token,FT,43593614.8928
+1244,Media,Everipedia,everipedia,IQ,10021453884.929
+1245,Other,Einsteinium,einsteinium,EMC2,222178312.49999973
+1246,Other,BitKan,bitkan,KAN,10000000000
+1247,Media,Engagement Token,engagement-token,ENGT,1000000000
+1248,Blockchain Service,Hifi Finance,mainframe,MFT,10000000000
+1249,Platform,Naviaddress,naviaddress,NAVI,1000000000
+1250,Marketplace,Tripio,tripio,TRIO,5000000000
+1251,Media,adToken,adtoken,ADT,1000000000
+1252,Trading,Own,own,CHX,168956522.093084
+1253,Blockchain Service,SyncFab,syncfab,MFG,868459135.7414333
+1254,AI,ORS Group,ors-group,ORS,557670519.646
+1255,Gambling,Origin Sport,origin-sport,ORS,300000000
+1256,Blockchain Network,Nuls,nuls,NULS,111697638.27680597
+1257,Cloud Storage,EncrypGen,encrypgen,DNA,70938084.47283192
+1258,Prediction Market,Prosper,prosper,PROS,100000000
+1259,Communication Network,RightMesh,rightmesh,RMESH,129498559
+1260,Cryptocurrency,Mooncoin,mooncoin,MOON,227490931369.9521
+1261,Financial,Everex,everex,EVX,25000000
+1262,Energy,Electronic Energy Coin,electronic-energy-coin,E2C,975260934.1387401
+1263,Other,Mobius,mobius,MOBI,888000000
+1264,Infrastructure,Litentry,litentry,LIT,100000000
+1265,Financial,Gifto,gifto,GTO,1000000000
+1266,Tokenization,Bankex,bankex,BKX,400000000
+1267,Blockchain Service,Rate3 Network,rate3,RTE,1000000000
+1268,,Matrix AI Network,matrix-ai-network,MAN,647450055.959024
+1269,Financial,Monetha,monetha,MTH,402400000
+1270,Data,ChainLink,chainlink,LINK,1000000000
+1271,Financial,Wings,wings,WINGS,100000000
+1272,Trading,Arbidex,arbidex,ABX,25000000
+1273,Protocol,SmartMesh,smartmesh,SMT,3141592653
+1274,Stablecoin,NuBits,nubits,USNBT,70510851.3915
+1275,Cloud Computing,aelf,aelf,ELF,879999999.9864658
+1276,Virtual Reality,Decentraland,decentraland,MANA,2193966627.320146
+1277,Other,RED,red,RED,200000000
+1278,Investments,DRP Utility,drp-utility,DRPU,3530372.73
+1279,DeFi,Axion,axion,AXN,156630345427
+1280,Healthcare,GreenMed,greenmed,GRMD,14899993
+1281,Platform,Status,status,SNT,6804870174
+1282,Infrastructure,V Systems,v-systems,VSYS,4356354270
+1283,IoT,Ubique Chain Of Things,ubique-chain-of-things,UCT,1050000000
+1284,Trading,Peculium,peculium,PCL,2205023208.2890034
+1285,Exchange,CapdaxToken,capdaxtoken,XCD,2500000000
+1286,DeFi,Dharma,dharma,DHA,
+1287,Stablecoin,Empty Set Dollar,empty-set-dollar,ESD,446012144.97595006
+1288,Transportation,Carlive Chain,carlive-chain,IOV,10000000000
+1289,Financial,Cindicator,cindicator,CND,2000000004.6079144
+1290,Stablecoin,STASIS EURS,stasis-euro,EURS,98825940
+1291,Platform,BOScoin,boscoin,BOS,1248426475
+1292,Platform,Universa,universa,UTNP,4997891952
+1293,Blockchain Service,AMLT Token,amlt,AMLT,400000000
+1294,Marketing,Sharpay,sharpay,S,4000000000
+1295,DeFi,Rai Reflex Index,rai,RAI,25403827.77218422
+1296,Decentralized Exchange,dYdX,dydx,DYDX,1000000000
+1297,Blockchain Network,0chain,0chain,ZCN,200000000
+1298,Exchange,nDEX,ndex,NDEX,15000000000
+1299,Entertainment,YouLive Coin,youlive-coin,UC,10000000000
+1300,Social,Indorse Token,indorse-token,IND,170622046.999999
+1301,Advertising,Basic Attention Token,basic-attention-token,BAT,1500000000
+1302,Virtual Reality,SENSO,senso,SENSO,1715280000
+1303,Platform,Aditus,aditus,ADI,750000000
+1304,Cryptocurrency,Maincoin,maincoin,MNC,374000000
+1305,Privacy,Bulwark,bulwark,BWK,15237644.1329747
+1306,Exchange,Bitpanda,bitpanda-ecosystem-token,BEST,827341460.9
+1307,IoT,ThingsOperatingSystem,thingsoperatingsystem,TOS,1000000000
+1308,Other,TokenClub,tokenclub,TCT,995239500
+1309,Energy,WePower,wepower,WPR,745248183.0967742
+1310,Financial,Swarm,swarm-fund,SWM,99535052.4739791
+1311,Interoperability,Quant,quant,QNT,14612493.080826
+1312,Cryptocurrency,Stakinglab,stakinglab,LABX,4042772.32214405
+1313,Ethereum,B20,b20,B20,10000000
+1314,Cryptocurrency,TENT,tent,TENT,38741780
+1315,DeFi,SuperFarm,superfarm,SUPER,999998077.4169173
+1316,Exchange,Toko Token,tokocrypto,TKO,500000000
+1317,Protocol,Persistence,persistence,XPRT,122487480.911786
+1318,Healthcare,Dentacoin,dentacoin,DCN,7899848965678
+1319,Cloud Computing,SONM,sonm,SNM,444000000
+1320,IoT,IoT Chain,iot-chain,ITC,99999999
+1321,Entertainment,BORA,bora,BORA,1205750000
+1322,DeFi,Rari Governance Token,rari-governance-token,RGT,12500000
+1323,Financial,Atomic Wallet Coin,atomic-wallet-coin,AWC,100000000
+1324,Entertainment,TokenStars,tokenstars,TEAM,17818682.1654
+1325,Financial,PlatonCoin,platoncoin,PLTC,300000000
+1326,Platform,Neblio,neblio,NEBL,18718497.53181262
+1327,Other,Master Contract Token,master-contract-token,MCT,580000000
+1328,,PolygonMatic,p-matic-network,p-matic-network,10000000000
+1329,,stETH (Lido),steth,STETH,1535757.40768996
+1330,,Wrapped BNB,wbnb,WBNB,5500348.25189911
+1331,Other,Incodium,incodium,INCO,10000000000
+1332,Cryptocurrency,HelloGold,hellogold,HGT,1000000000
+1333,Marketplace,Privatix,privatix,PRIX,1275455.31177803
+1334,Entertainment,Muzika,muzika,MZK,1000000000
+1335,Decentralized Exchange,ZKSwap,zkswap,ZKS,1000000000
+1336,Exchange,Tokenomy,tokenomy,TEN,200000000
+1337,Marketing,1World,1world,1WO,37219452.96
+1338,Blockchain Network,Hathor,hathor,HTR,897881376
+1339,Cryptocurrency,SnowGem,snowgem,XSG,30907160
+1340,Data,PikcioChain,pikciochain,PKC,83927273
+1341,Insurance,IXT,ixledger,IXT,65778843.83119764
+1342,Financial,SureRemit,sureremit,RMT,744298152
+1343,,Nestree,nestree,EGG,2994901340
+1344,Other,ValueCyberToken,valuecybertoken,VCT,1000000000
+1345,Other,FansTime,fanstime,FTI,10000000000
+1346,Lending,UniLend,unilend,UFT,100000000
+1347,E-Commerce,Pundi X,pundi-x,NPXS,258498693019.07
+1348,Other,Traceability Chain,traceability-chain,TAC,1000000000
+1349,DeFi,Goose Finance,goose-finance,EGG,1867616.50450207
+1350,Ethereum,NFTX,nftx,NFTX,650000
+1351,,Venus BNB,venus-bnb,vBNB,84327095
+1352,Cryptocurrency,Boolberry,boolberry,BBR,13207453.542509
+1353,Platform,Achain,achain,ACT,1000000000
+1354,Gambling,DecentBet,decent-bet,DBET,188632973.02179232
+1355,Privacy,CloakCoin,cloakcoin,CLOAK,5730294.30261636
+1356,Gaming,IQeon,iqeon,IQN,5491860.1987553
+1357,Binance,Agora,agora,VOTE,1000000000
+1358,Cryptocurrency,eCash,ecash,XEC,18899704673313
+1359,Financial,FintruX Network,fintrux-network,FTX,100000000
+1360,Financial,Banca,banca,BANCA,20000000000
+1361,Blockchain Network,UChain,uchain,UCN,823600646.899701
+1362,,The Tokenized Bitcoin,the-tokenized-bitcoin,imBTC,21000000
+1363,Platform,Mithril,mithril,MITH,1000000000
+1364,Financial,Voyager Token,ethos,VGX,278482214.1856918
+1365,Financial,DAOventures,daoventures,DVG,15070000
+1366,Blockchain Network,Conflux Network,conflux-network,CFX,1154058955.98108
+1367,IoT,IOTA,iota,MIOTA,2779530283
+1368,Entertainment,YOYOW,yoyow,YOYOW,1055147119.35986
+1369,Platform,Bitnation,bitnation,XPAT,42000000000
+1370,Advertising,Thrive,thrive-token,THRT,202027489.6
+1371,Cryptocurrency,Global Currency Reserve,global-currency-reserve,GCR,107024221.63874947
+1372,Media,NewsToken,newstoken,NEWOS,10000000000
+1373,Tokenization,ZrCoin,zrcoin,ZRC,4988893
+1374,Investments,PHI Token,phi-token,PHI,13578190.26911044
+1375,IoT,IoTeX,iotex,IOTX,9626124332.32
+1376,,Synth sBTC,sbtc,SBTC,512.53
+1377,Stablecoin,One Cash,one-cash,ONC,7407
+1378,Stablecoin,Midas Dollar,midas-dollar,MDO,160119
+1379,Trading,Kattana,kattana,KTN,10000000
+1380,Financial,Blox,blox,CDT,1000000000
+1381,Network,Mysterium,mysterium,MYST,32433365
+1382,Cryptocurrency,Rapids,rapids,RPD,16719886.01
+1383,Protocol,Enigma,enigma,ENG,35238560.94940967
+1384,Real Estate,ATLANT,atlant,ATL,54175040.67775495
+1385,Decentralized Exchange,CafeSwap Token,cafeswap-token,BREW,8848608.24808081
+1386,Other,Diamond Platform Token,diamond-platform-token,DPT,10000000
+1387,Financial,Custody Token,custody-token,CUST,10000000000
+1388,DeFi,Structured,structured,STR,
+1389,,Egoras,egoras,EGR,99097732541.23735
+1390,,Huobi BTC,huobi-btc,HBTC,39884.08220474
+1391,Blockchain Network,Nervos Network,nervos-network,CKB,34706840590.13783
+1392,Prediction Market,Bispex,bispex,BPX,40000000000
+1393,Cloud Computing,Golem,golem-network-tokens,GLM,1000000000
+1394,Advertising,yOUcash,youcash,YOUC,11000000000
+1395,Platform,Vesper,vesper,VSP,10000000
+1396,DeFi,DEX.AG,dex-ag,DXG,
+1397,Other,Ormeus Ecosystem,ormeus-ecosystem,ECO,5000000000
+1398,Decentralized Exchange,Mdex,mdex,MDX,1000000000
+1399,Other,Vinci,vinci,VINCI,300000000
+1400,AI,Cortex,cortex,CTXC,299792458
+1401,Trading,CAPITAL X CELL,capital-x-cell,CXC,400552000
+1402,Other,FirmaChain,firmachain,FCT,600000000
+1403,Privacy,suterusu,suterusu,SUTER,10000000000
+1404,Financial,EXMR,exmr,EXMR,18003524.6541
+1405,DeFi,LocalCryptos ,localcryptos,LCR,
+1406,Protocol,HOPR,hopr,HOPR,130200000
+1407,Lending,Liquity,liquity,LQTY,100000000
+1408,Stablecoin,Single Collateral DAI,dai,SAI,6660106.02362148
+1409,Decentralized Exchange,DeFiChain,defichain,DFI,588631840
+1410,Stablecoin,Multi-collateral DAI,multi-collateral-dai,DAI,6474952202.474523
+1411,Marketplace,ShareToken,sharetoken,SHR,6434460139.8
+1412,Marketplace,Safex Token,safex-token,SFT,1885974016
+1413,Trading,Blockium,blockium,BOK,650000000
+1414,DeFi,Connext,connext,CNX,
+1415,Ethereum,Chi Gastoken,chi-gastoken,CHI,1155019
+1416,Ethereum,LIFE,life,LIFE,99999999999.99998
+1417,Real Estate,Fortem Capital,fortem-capital,FCQ,210000000
+1418,Exchange,ZB Token,zb,ZB,2100000000
+1419,,pTokens BTC,ptokens-btc,PBTC,21000000
+1420,Cryptocurrency,Ripple,ripple,XRP,99990075944
+1421,Platform,Nord Finance,nord-finance,NORD,9800000
+1422,Decentralized Exchange,Aphelion,aphelion,APH,70188440
+1423,Bitcoin,BTCPay,btcpay,BCP,
+1424,Exchange,VNX Exchange,vnx-exchange,VNXLU,80000000
+1425,Interoperability,Fusion,fusion,FSN,70292548.92307134
+1426,Data,MVL,mvl,MVL,30000000000
+1427,Blockchain Service,Zebi,zebi,ZCO,450099286.73634
+1428,Cloud Storage,Filenet,filenet,FN,0
+1429,Solana,Star Atlas,star-atlas,ATLAS,36000000000
+1430,Platform,Medium,medium,MDM,1000000000
+1431,DeFi,Lendf,lendf,LFM,
+1432,DeFi,Sablier,sablier,SAB,
+1433,DeFi,Bao Finance,bao-finance,BAO,560270974250
+1434,Privacy,Aidos Kuneen,aidos-kuneen,ADK,25000000
+1435,Social,Rally,rally,RLY,15000000000
+1436,Investments,CoTrader,cotrader,COT,20000000000
+1437,Solana,Star Atlas DAO,star-atlas-polis,POLIS,360000000
+1438,Other,Mogu,mogu,MOGX,1000000000
+1439,DeFi,Portis,portis,PRT,
+1440,DeFi,Alchemix,alchemix,ALCX,1111391.06402991
+1441,DeFi,Komet,komet,KOMET,30000
+1442,Cloud Computing,CONUN,conun,CON,5000000000
+1443,Fund,Xdef Finance,xdef-finance,XDEF2,17000000
+1444,Ethereum,Rakon,rakon,RKN,285714286
+1445,Cryptocurrency,NPCoin,npcoin,NPC,150000000
+1446,Gambling,BetProtocol,betprotocol,BEPRO,10000000000
+1447,Network,Orchid,orchid,OXT,1000000000
+1448,Financial,KickToken,kickico,KICK,1251233467898.1963
+1449,Decentralized Exchange,Sparkswap,sparkswap,SPR,
+1450,Smart Contracts,RSK,rsk,RSK,
+1451,Financial,UltrAlpha,ultralpha,UAT,500000000
+1452,DeFi,Unistake,unistake,UNISTAKE,279999999.9998125
+1453,Other,Davion,davion,DAVP,42000000
+1454,Cryptocurrency,Zynecoin,zynecoin,ZYN,92556125
+1455,Exchange,Coinsbit Token,coinsbit-toke,CNB,1350000000
+1456,Cryptocurrency,Enzo,enzo,NZO,21000000000
+1457,Exchange,ZBG Token,zbg-token,ZT,500000000
+1458,Stablecoin,dForce USDx,usdx-stablecoin,USDX,7079558.7412
+1459,,San Index,sanx,SANX,
+1460,Blockchain Network,Tachyon Protocol,tachyon-protocol,IPX,1000000000
+1461,IoT,INT Chain,internet-node-token,INT,901948162.6726475
+1462,IoT,ROAD,road,ROAD,2000000000
+1463,Lending,Multiplier,bmultiplier,BMXX,1047729.586219
+1464,Decentralized Exchange,Tokenlon Network Token,tokenlon-network-token,LON,114262146.95962387
+1465,,Complete New Commerce Chain,complete-new-commerce-chain,CNCC,
+1466,Ethereum,Immutable X,immutable-x,IMX,2000000000
+1467,Travel,Travala,travala,AVA,61011389
+1468,DeFi,AntiMatter,antimatter,MATTER,100000000
+1469,Media,Audius,audius,AUDIO,1066858974
+1470,DeFi,One Share,one-share,ONS,100001
+1471,Blockchain Network,Ethereum Push Notification Service,epns,PUSH,100000000
+1472,Financial,The Transfer Token,the-transfer-token,TTT,2000000000
+1473,Data,Revolution Populi,revolution-populi,RVP,2000000000
+1474,Exchange,NOW Token,now-token,NOW,199763509.8661694
+1475,Other,Orient Walt,orient-walt,HTDF,96000000
+1476,DeFi,Bounce Token,bounce,AUCTION,2083955.597602
+1477,Financial,3X Short Bitcoin Token,3x-short-bitcoin-token,BEAR,178313.91665
+1478,Blockchain Network,LUKSO,lukso,LYXe,100000000
+1479,Protocol,Ethereum Name Service,ethereum-name-service,ENS,100000000
+1480,DeFi,Visor.Finance,visor-finance,VISR,100000000
+1481,Financial,3X Long Bitcoin Token,3x-long-bitcoin-token,BULL,454.930863
+1482,Stablecoin,Neutrino USD,neutrino-dollar,USDN,560574251.5200654
+1483,Data,BitTorrent,bittorrent,BTT,990000000000
+1484,Trading,TROY,troy,TROY,10000000000
+1485,Marketing,Nexalt,nexalt,XLT,31219322.13098812
+1486,Stablecoin,Tether Gold,tether-gold,XAUT,105549.09
+1487,Platform,DATA,data,DTA,11499999998
+1488,Decentralized Exchange,Curve DAO Token,curve,CRV,1644119982.3058658
+1489,Financial,MATH,math,MATH,200000000
+1490,Media,Keystone of Opportunity & Knowledge,keystone-of-opportunity-knowledge,KOK,5000000000
+1491,Exchange,WazirX,wazirx,WRX,972280002
+1492,Other,ARCS,arcs,ARX,400000000
+1493,Data,Big Data Protocol,big-data-protocol,BDP,64923252.85185185
+1494,DeFi,Lock,lock,LOCK,
+1495,DeFi,Idle,idle,IDL,
+1496,DeFi,Torque,torque,TRQ,
+1497,DeFi,Inverse Finance,inverse-finance,INV,0
+1498,Stablecoin,USDX [Kava],usdx-kava,USDX,145745901
+1499,Ethereum,K21,k21,K21,21000000
+1500,,Hydro,hydro,HYDRO,111111110.9
+1501,Blockchain Network,Orbit Chain,orbit-chain,ORC,982474646.52394
+1502,DeFi,pTokens,ptokens,PTK,
+1503,Ethereum,Hoge Finance,hoge-finance,HOGE,402416202805
+1504,DeFi,HyperDAO,hyperdao,HDAO,
+1505,Other,WETH,weth,WETH,1153916.966737
+1506,Platform,apM Coin,apm-coin,APM,1812500000
+1507,DeFi,Mars,mars,Mars,0
+1508,Blockchain Service,Handshake,handshake,HNS,445273060.551938
+1509,Tokenization,Perth Mint Gold Token,perth-mint-gold-token,PMGT,906.71287
+1510,Platform,Keep3rV1,keep3rv1,KP3R,200001
+1511,Infrastructure,RSK Infrastructure Framework,rif-token,RIF,1000000000
+1512,Gaming,Alien Worlds,alien-worlds,TLM,5189345239.4728
+1513,Protocol,Tokemak,tokemak,TOKE,100000000
+1514,,Incognito,incognito,PRV,
+1515,Protocol,TTC,ttc-protocol,TTC,866531275.933
+1516,Tokenization,Standard Tokenization Protocol,stpt,STPT,1942420283
+1517,Other,Observer,observer,OBSR,14000000000
+1518,,sXAU,sxau,sXAU,
+1519,Lending,Cred,libra-credit,LBA,1000000000
+1520,Blockchain Network,Elixxir,elixxir,XX,
+1521,Exchange,Unizen,unizen,ZCX,0
+1522,Binance,Rupiah Token,rupiah-token,IDRT,130112000000
+1523,Interoperability,Unifi Protocol DAO,unifi-protocol-dao,UNFI,10000000
+1524,Lending,XCredit,xcredit,XFYI,0
+1525,Trading,Aurox,urus,URUS,1000000
+1526,Gaming,Exeedme,exeedme,XED,100000000
+1527,DeFi,merkleX,merklex,MKX,
+1528,Ethereum,Muse,muse,MUSE,508554
+1529,Cryptocurrency,ParallelCoin,parallelcoin,DUO,314718.641345
+1530,Protocol,Radix,radix,EXRD,0
+1531,Trading,Shadows,shadows,DOWS,39500000
+1532,Platform,SparkPoint,sparkpoint,SRK,13656206158.837975
+1533,Ethereum,Tenset,tenset,10SET,203940482
+1534,Financial,UnFederalReserve,unfederalreserve,ERSDL,454278599.6636339
+1535,Blockchain Network,DigiByte,digibyte,DGB,14900468438.463903
+1536,DeFi,Ethereum Yield,ethereum-yield,ETHY,500000
+1537,Blockchain Service,Project Coin,project-coin,PRJ,56834485.351899
+1538,Financial,Bondly,bondly,BONDLY,983620758
+1539,Tokenization,DEUS Finance,deus-finance,DEUS,1793062.577204
+1540,Infrastructure,Kylin,kylin,KYL,1000000000
+1541,Binance,Genesis Shards,genesis-shards,GS,208911248
+1542,Decentralized Exchange,Bancor,bancor,BNT,234963903.99005216
+1543,,PolygonUSDCoin,p-usd-coin,USDC,40937321253.50536
+1544,,PolygonChainLink,p-chainlink,LINK,1000000000
+1545,Interoperability,EasyFi,easyfi,EASY,10000000
+1546,Data,Ocean Protocol,ocean-protocol,OCEAN,613099141
+1547,Decentralized Exchange,1inch,1inch,1INCH,1500000000
+1548,Gaming,MMOCoin,mmocoin,MMO,118993176.77355419
+1549,Platform,PARSIQ,parsiq,PRQ,310256872
+1550,Financial,Paypolitan Token,paypolitan-token,EPAN,94697000
+1551,Ethereum,Paint,paint,PAINT,0
+1552,Financial,BSCPAD,bscpad,BSCPAD,175600000
+1553,,PolygonAave,p-aave,AAVE,16000000
+1554,Financial,Iconiq Lab,iconiq-lab-token,ICNQ,20000000
+1555,Other,Trustlines Network Token,trustlines,TLN,
+1556,DeFi,DEOR,deor,DEOR,0
+1557,Other,Acute Angle Cloud,acute-angle-cloud,AAC,1000000000
+1558,Stablecoin,Frax,frax,FRAX,1259074681.9078815
+1559,Exchange,Huobi Pool Token,huobi-pool-token,HPT,9278385982.206
+1560,Blockchain Network,CasperLabs,casperlabs,CLX,
+1561,Lending,Yield,yield,YLD,0
+1562,Ethereum,DEAPcoin,deapcoin,DEP,30000000000
+1563,Stablecoin,JUST Stablecoin,just-stablecoin,USDJ,4227158.28542326
+1564,Lending,JUST,just,JST,9900000000
+1565,Infrastructure,KardiaChain,kardiachain,KAI,5000000000
+1566,,Uquid Coin,uquid_coin,UQC,40000000
+1567,Interoperability,PCHAIN,pchain,PI,1561546868
+1568,,The Force Protocol,forceprotocol,FOR,1000000000
+1569,Blockchain Network,Seele-N,seele,SEELE,30000000000
+1570,Platform,Revain,revain,REV,85061485689.83401
+1571,Financial,Pundi X[new],pundix-new,PUNDIX,258491637.23
+1572,Ethereum,Minty Art,minty-art,MINTY,0
+1573,DeFi,SURF Finance,surf,SURF,0
+1574,Sports,Paris Saint-Germain Fan Token,paris-saint-germain-fan-token,PSG,20000000
+1575,Cryptocurrency,I/O Coin,iocoin,IOC,19265798.97434563
+1576,Ethereum,Kishu Inu,kishu-inu,KISHU,96889869041250900
+1577,Sports,Juventus Fan Toke,juventus-fan-token,JUV,20000000
+1578,Decentralized Exchange,Switch,switch,ESH,12113793.0641682
+1579,Financial,Flexacoin,flexacoin,FXC,7273713838
+1580,,Compound Dai,compound-dai,CDAI,2025596474
+1581,,Compound USD Coin,compound-usd-coin,CUSDC,9803299805.03644
+1582,,Compound Ether,compound-ether,CETH,0
+1583,Protocol,THORChain,thorchain,RUNE,461668422.2248116
+1584,DeFi,Bifrost,bifrost,BFC,3968584074
+1585,Cryptocurrency,Gold Poker,gold-poker,GPKR,6061848.762569
+1586,Lending,Ruler Protocol,ruler-protocol,RULER,0
+1587,Blockchain Service,Totem,totem,TOTEM,
+1588,DeFi,YVS.Finance,yvs-finance,YVS,1853610.554195
+1589,Gaming,Smooth Love Potion,small-love-potion,SLP,3181842119
+1590,Marketplace,WAX,wax,WAXP,3816687855.4177904
+1591,Blockchain Service,Constellation,constellation,DAG,3711998690.36
+1592,Smart Contracts,Ethereum Classic,ethereum-classic,ETC,210700000
+1593,Financial,FinNexus,finnexus,FNX,176495406.66
+1594,Cloud Computing,Render Token,render-token,RNDR,523723981.24317396
+1595,,Creditcoin,creditcoin,CTC,667469387.33
+1596,Gaming,Yield Guild Games,yield-guild-games,YGG,1000000000
+1597,Decentralized Exchange,Peanut,peanut,NUX,50000000
+1598,,renBTC,renbtc,RENBTC,
+1599,DeFi,Ampleforth Governance Token,ampleforth-governance-token,FORTH,14998897.14455933
+1600,Protocol,Olympus,olympus,OHM,1416029
+1601,Marketplace,StormX,stormx,STMX,10000000000
+1602,Data,Boson Protocol,boson-protocol,BOSON,200000000
+1603,Protocol,Super Zero Protocol,super-zero,SERO,627714351
+1604,Marketplace,RING X PLATFORM,ring-x-platform,RINGX,357117790.3168
+1605,Trading,HEX,hex,HEX,633542658973
+1606,DeFi,KINE,kine,KINE,0
+1607,DeFi,WaykiChain Governance Coin,waykichain-governance-coin,WGRT,21000000000
+1608,Sports,All Sports,all-sports,SOC,1500000000
+1609,Decentralized Exchange,Kyber Network Crystal,kyber-network,KNC,177809349.53012875
+1610,Financial,Morpheus Network,morpheus-network,MNW,47897218
+1611,,Whole Network,whole-network,NODE,10000000000
+1612,Exchange,LCX,lcx,LCX,950000000
+1613,Marketplace,Treecle,treecle,TRCL,2000000000
+1614,Marketplace,Robonomics Web Services,robonomics-web-services,RWS,
+1615,Infrastructure,BitCherry,bitcherry,BCHC,10000000000
+1616,Financial,BTSE,btse,BTSE,165904711
+1617,Gaming,Crowns,crowns,CWS,10000000
+1618,Infrastructure,Radicle,radicle,RAD,99999070
+1619,Decentralized Exchange,Smoothy,smoothy,SMTY,100000000
+1620,Lending,Xend Finance,xend-finance,XEND,200000000
+1621,Interoperability,Popsicle Finance,popsicle-finance,ICE,11248229.1
+1622,Decentralized Exchange,BakeryToken,bakerytoken,BAKE,289770790.80853105
+1623,Platform,Avalanche,avalanche,AVAX,394882031.09652853
+1624,Lending,yearn.finance,yearn-finance,YFI,36666
+1625,DeFi,NEST Protocol,nest-protocol,NEST,9978035000
+1626,Ethereum,Portion,portion,PRT,1500000000
+1627,Trading,Orion Protocol,orion-protocol,ORN,100000000
+1628,DeFi,reflect.finance,reflect-finance,RFI,9444084.30034704
+1629,Cryptocurrency,Dogelon Mars,dogelon,ELON,1000000000000000
+1630,Data,Decentr,decentr,DEC,1000000000
+1631,Decentralized Exchange,MCDex,mcdex,MCB,2268644
+1632,DeFi,Alchemist,alchemist,MIST,1138093
+1633,Lending,PlutusDeFi,plutusdefi,PLT,107790337.524
+1634,Marketing,LunchMoney,lunchmoney,LMY,189000000
+1635,Insurance,Wrapped NXM,wrapped-nxm,WNXM,6893118.05248239
+1636,Protocol,Liquidity Dividends Protocol,liquidity-dividends-protocol,LID,0
+1637,Social,SHIBA INU,shiba-inu,SHIB,589736554848301.4
+1638,Investments,Republic Note,republicnote,RPN,
+1639,DeFi,Method Finance,method-finance,MTHD,100000000
+1640,Exchange,Bitbns,bitbns,BNS,
+1641,Interoperability,Anyswap,anyswap,ANY,100000000
+1642,Marketing,WOM Protocol,wom-protocol,WOM,1000000000
+1643,DeFi,Tendies,tendies,TEND,7896632.18027489
+1644,DeFi,Antiample,antiample,XAMP,
+1645,Gaming,Fear NFTs,fear-nfts,FEAR,65000000
+1646,Sports,Sport and Leisure,sport-and-leisure,SNL,963252000
+1647,Social,Mask Network,mask-network,MASK,100000000
+1648,Supply,SUKU,suku,SUKU,1500000000
+1649,Exchange,AAX Token,aax-token,AAB,25000000.00000028
+1650,Cryptocurrency,Sora,sora,XOR,406615.26391718
+1651,Financial,MobileCoin,mobilecoin,MOB,250000000
+1652,Prediction Market,Spore Finance,spore-finance,SPORE,16495545592621500
+1653,Tron,APENFT,apenft,NFT,999990000000000
+1654,Protocol,Dos Network,dos-network,DOS,949292114.345
+1655,Data,bAlpha,balpha,BALPHA,18000.1
+1656,Lending,DeFiPie,defipie,PIE,0
+1657,Prediction Market,Augur,augur,REP,11000000
+1658,Ethereum,Zap,zap,ZAP,520000000
+1659,Blockchain Service,Truebit,truebit,TRU,279976074
+1660,DeFi,DIA,dia-data,DIA,175583746.1333865
+1661,Lending,YAM,yam,YAM v1,14043655.0207121
+1662,Entertainment,SOMESING,somesing,SSX,5000000000
+1663,Tokenization,Fabric,fabric,FAB,500000000
+1664,DeFi,CBDAO,cbdao,SBREE,1508819
+1665,Gaming,Tacos,tacos,TACO,0
+1666,DeFi,RMPL,rmpl,RMPL,706101
+1667,Gaming,Ethverse,ethverse,ETHV,36968268.00915949
+1668,DeFi,SafeMoon,safemoon,SAFEMOON,1000000000000000
+1669,Platform,Keep4r,keep4r,KP4R,100000
+1670,DeFi,Coin98,coin98,C98,1000000000
+1671,Social,Kiba Inu,kiba-inu,KIBA,0
+1672,Interoperability,Rivex,rivex,RVX,25000000
+1673,Ethereum,Strong,strong,STRONG,523990
+1674,DeFi,DXdao,dxdao,DXD,148977
+1675,DeFi,Plasma Finance,plasma-finance,PPAY,1000000000
+1676,Gaming,Tower,tower-token,TOWER,10000000000
+1677,Platform,NEAR Protocol,near-protocol,NEAR,1000000000
+1678,Verification,VIDT Datalink,v-id,VIDT,57386799
+1679,DeFi,YF Link,yflink,YFL,52000
+1680,Social,UREEQA,ureeqa,URQA,100000000
+1681,Social,DOGEFI,dogefi,DOGEFI,
+1682,Cryptocurrency,Loser Coin,loser-coin,LOWB,60296840158.155594
+1683,,Aave SNX,aave-snx,aSNX,
+1684,Protocol,DSLA Protocol,dsla-protocol,DSLA,5810763023
+1685,Blockchain Network,Waves Enterprise,waves-enterprise,WEST,400000000
+1686,Blockchain Network,Casper,casper,CSPR,10517662043
+1687,Trading,PowerTrade,powertrade-fuel,PTF,400000000
+1688,Blockchain Network,Chia Network,chia-network,XCH,22582025
+1689,DeFi,WingShop,wingshop,WING,10000000
+1690,DeFi,MixTrust,mixtrust,MXT,10000000000
+1691,Platform,XTRABYTES,xtrabytes,XBY,650000000
+1692,Interoperability,Keysians Network,keysians-network,KEN,10000000
+1693,Ethereum,Unisocks,unisocks,SOCKS,302
+1694,Gambling,Meme,degenerator,MEME,28000
+1695,Social,Force For Fast,force-for-fast,FFF,0
+1696,Marketplace,Zelwin,zelwin,ZLW,300000000
+1697,DeFi,DefiDollar DAO,defidollar-dao,DFD,100000000
+1698,IoT,Jasmy,jasmy,JASMY,50000000000
+1699,Exchange,Catex Token,catex-token,CATT,1262219478
+1700,Tron,Bridge Oracle,bridge-oracle,BRG,10000000000
+1701,,Strike,strike,STRK,6540888
+1702,Lending,YAMv2,yam-v2,YAMV2,3726411
+1703,Interoperability,Polkadot,polkadot-new,DOT,1103303471.382273
+1704,Blockchain Service,SingularityNET,singularitynet,AGIX,1000000000
+1705,Lending,YUNo.finance,yuno-finance,YUNO,2648654.44990445
+1706,Financial,Oxygen,oxygen,OXY,10000000000
+1707,Trading,Fox Trading,fox-trading,FOXT,8487614
+1708,DeFi,Raydium,raydium,RAY,555000000
+1709,Stablecoin,Liquity USD,liquity-usd,LUSD,719446094.8060437
+1710,Trading,Quantfury Token,quantfury-token,QTF,100000000
+1711,Infrastructure,Dextoken,dextoken,DEXG,20000
+1712,Interoperability,Axis DeFi,axis-defi,AXIS,24000000
+1713,Platform,YFIEXCHANGE.FINANCE,yfiexchange-finance,YFIE,0
+1714,Infrastructure,Pmeer,pmeer,PMEER,200287810
+1715,Lending,HARD Protocol,hard-protocol,HARD,200000000
+1716,,WebDollar,webdollar,WEBD,17720086128
+1717,Platform,AceD,aced,ACED,250000000
+1718,Platform,DegenVC,degenvc,DGVC,0
+1719,DeFi,Konomi Network,konomi-network,KONO,100000000
+1720,Platform,Growth DeFi,growthdefi,GRO,578703.51345653
+1721,Financial,Everest,everest,ID,0
+1722,DeFi,Lien,lien,LIEN,0
+1723,Platform,Trias Token,trias-token,TRIAS,10000000
+1724,DeFi,UniCrypt,uncx,UNCX,47650
+1725,Interoperability,Darwinia Network,darwinia-network,RING,2098264556.1319175
+1726,Ethereum,Darwinia Commitment Token,darwinia-commitment-token,KTON,82092.29312537
+1727,Polkadot,Native Utility Token,native-utility-token,NUT,9998686
+1728,Marketplace,Robonomics.network,robonomics-network,XRT,9232518.48659066
+1729,Platform,PolkaFoundry,polkafoundry,PKF,200000000
+1730,Financial,Rio DeFi,rio-defi,RFUEL,318019580
+1731,DeFi,MANTRA DAO,mantra-dao,OM,888888888
+1732,Privacy,Automata Network,automata-network,ATA,1000000000
+1733,DeFi,Convex Finance,convex-finance,CVX,77123451.36259611
+1734,Fund,Indexed Finance,indexed-finance,NDX,10000000
+1735,Lending,Venus,venus,XVS,29960733
+1736,Decentralized Exchange,Dextrust,dextrust,DETS,0
+1737,Interoperability,Syscoin,syscoin,SYS,623673627.2271105
+1738,Platform,HUNT,hunt,HUNT,199104720
+1739,Infrastructure,Marlin,marlin,POND,3184000001
+1740,Other,Trade Token X,trade-token-x,TIOX,223534822.66102275
+1741,Marketing,Minter Network,minter-network,BIP,5126268758
+1742,Protocol,HAPI,hapi-one,HAPI,531929.20666767
+1743,Lending,KIMCHI.finance,kimchi-finance,KIMCHI,2767524075
+1744,DeFi,Liquidity Network,liquidity-network,LQD,100000000
+1745,Decentralized Exchange,BambooDeFi,bamboo-defi,BAMBOO,0
+1746,Ethereum,Gitcoin,gitcoin,GTC,100000000
+1747,Blockchain Network,Elrond,elrond-egld,EGLD,22834990
+1748,Social,CVCoin,cvcoin,CVN,15000000
+1749,Interoperability,Raze Network,raze-network,RAZE,120000000
+1750,Platform,DistX,distx,DISTX,50000000
+1751,DeFi,Harvest Finance,harvest-finance,FARM,673739.91
+1752,Marketing,Props,props,PROPS,703259044.9235393
+1753,Lending,OIN Finance,oin-finance,OIN,100000000
+1754,Media,Earneo,earneo,RNO,650000000
+1755,DeFi,Carrot,carrot,CRT,0
+1756,DeFi,YFDAI.FINANCE,yfdai-finance,YF-DAI,21000
+1757,Stablecoin,XSGD,xsgd,XSGD,239638170.83
+1758,Platform,DeFi Bids,defi-bids,BIDS,42632892.83392276
+1759,Blockchain Network,TONToken,tontoken,TON,5047558527.7
+1760,DeFi,xDai,xdai,STAKE,8414858.16547455
+1761,Financial,Celsius ,celsius,CEL,695658160
+1762,DeFi,Swerve,swerve,SWRV,17878213.79741437
+1763,Gaming,Lepricon,lepricon,L3P,777777777
+1764,DeFi,SUN,sun,SUN,19900730
+1765,DeFi,DMD,dmd,DMD,0
+1766,DeFi,YFFS Finance,yffs,YFFS,0
+1767,Exchange,Zeedex,zeedex,ZDEX,10000000
+1768,DeFi,DAFI Protocol,dafi-protocol,DAFI,2250000000
+1769,DeFi,Anchor Protocol,anchor-protocol,ANC,1000000000
+1770,DeFi,JackPool.finance,jackpool-finance,JFI,0
+1771,DeFi,BNSD Finance,bnsd-finance,BNSD,11037567.272727
+1772,Cloud Storage,Aleph.im,aleph-im,ALEPH,500000000
+1773,DeFi,JustLiquidity,justliquidity,JUL,963148.10248
+1774,Platform,DefiBox,defibox,BOX,5000000
+1775,Financial,Alchemy Pay,alchemy-pay,ACH,10000000000
+1776,Infrastructure,Sperax,sperax,SPA,0
+1777,Gaming,MyNeighborAlice,myneighboralice,ALICE,100000000
+1778,Interoperability,Geeq,geeq,GEEQ,100000000
+1779,Interoperability,Swingby,swingby,SWINGBY,975000000
+1780,Interoperability,Ferrum Network,ferrum-network,FRM,167241946.908466
+1781,Marketing,MiL.k,milk-alliance,MLK,1300000000
+1782,DeFi,Hedget,hedget,HGET,1751448
+1783,,Krypton Galaxy,krypton-galaxy-coin,KGC,3000000000
+1784,Decentralized Exchange,Pangolin,pangolin,PNG,538000000
+1785,Ethereum,Base Protocol,base-protocol,BASE,455679.61945696
+1786,Smart Contracts,Phala.Network,phala-network,PHA,1000000000
+1787,,Digital Fantasy Sports,digital-fantasy-sports,DFS,50000000
+1788,Prediction Market,TotemFi,totemfi,TOTM,10000000
+1789,DeFi,Nyan Finance,nyan-finance,NYAN,33000
+1790,DeFi,Tranchess,tranchess,CHESS,300000000
+1791,IoT,Waltonchain,waltonchain,WTC,84008023
+1792,Cryptocurrency,Symbol,symbol,XYM,7967988929.50477
+1793,Masternodes,Peony,peony,PNY,64908887.30401766
+1794,Social,DeXe,dexe,DEXE,96504599.33609451
+1795,Lending,Wing,wing,WING,3269785.72053089
+1796,Trading,Power Index Pool Token,power-index-pool-token,PIPT,199884
+1797,Decentralized Exchange,ApeSwap Finance,apeswap-finance,BANANA,80533394.90969159
+1798,Interoperability,Frontier,frontier,FRONT,100000000
+1799,Trading,DeFi Pulse Index,defi-pulse-index,DPI,558983.42579149
+1800,Social,Hamster,hamster,HAM,10000000000000000
+1801,Smart Contracts,RSK Smart Bitcoin,smart-bitcoin,RBTC,20999763.5577
+1802,Cryptocurrency,New BitShares,new-bitshares,NBS,3600000000
+1803,Decentralized Exchange,PancakeSwap,pancakeswap,CAKE,247271279.7682171
+1804,Interoperability,Linear,linear,LINA,10000000000
+1805,DeFi,Samurai,samurai,SAM,30000
+1806,DeFi,Float Protocol,float-protocol,BANK,171550.41989306
+1807,Cloud Computing,Beowulf,beowulf,BWF,3000000000
+1808,Decentralized Exchange,OneSwap DAO Token,oneswap-dao-token,ONES,99995528
+1809,DeFi,YAM v3,yamv3,YAM,13835135.41090949
+1810,DeFi,yTSLA Finance,ytsla-finance,YTSLA,69590.65623104
+1811,Decentralized Exchange,Leverj,leverj,LEV,1000000000
+1812,DeFi,Rotten,rotten,ROT,124487479.936901
+1813,Interoperability,pNetwork,pnetwork,PNT,82854683.46135317
+1814,Ethereum,NFT,nft,NFT,88888888
+1815,Financial,OMG Network,omisego,OMG,140245398.24513277
+1816,Gaming,Illuvium,illuvium,ILV,7000000
+1817,Decentralized Exchange,Burger Swap,burger-swap,BURGER,17493006.62253049
+1818,Protocol,Covalent,covalent,CQT,1000000000
+1819,Ethereum,Ethernity Chain,ethernity-chain,ERN,30000000
+1820,Trading,Newscrypto,newscrypto,NWC,270050481.2686112
+1821,DeFi,cVault.finance,cvault-finance,CORE,10000
+1822,DeFi,Lua Token,lua-token,LUA,222247193.58270356
+1823,DeFi,Bonded Finance,bonded-finance,BOND,1000000000
+1824,Lending,Stater,stater,STR,0
+1825,Gaming,Eight Hours,eight-hours,EHRT,0
+1826,Mining,Bitcoin Standard Hashrate Token,bitcoin-standard-hashrate-token,BTCST,15000000
+1827,Energy,SunContract,sun-contract,SNC,122707502.69296218
+1828,Stablecoin,USD Coin,usd-coin,USDC,40937321253.50536
+1829,Decentralized Exchange,FOX Token,fox-token,FOX,1000001337
+1830,DeFi,Bidao,bidao,BID,2650000000
+1831,,Netbox Coin,netbox-coin,NBX,79249412.34162112
+1832,Blockchain Network,Mina,mina,MINA,824104972
+1833,,EnterCoin,entercoin,ENTRC,6000000
+1834,DeFi,Deflect,deflect,DEFLCT,0
+1835,Trading,Metaverse Index,metaverse-index,MVI,39602.22521405
+1836,,Venus ETH,venus-eth,vETH,2033994
+1837,,PolygonQuickSwap,p-quickswap,QUICK,1000000
+1838,Trading,Step Finance,step-finance,STEP,4000000
+1839,Ethereum,FM Gallery,fm-gallery,FMG,0
+1840,Decentralized Exchange,Ellipsis,ellipsis,EPS,561832809.268582
+1841,Exchange,KuCoin Token,kucoin-shares,KCS,170118638
+1842,Jobs,Hyve,hyve,HYVE,99207917.48398775
+1843,,PolygonUniswap,p-uniswap,UNI,1000000000
+1844,Decentralized Exchange,0x,0x,ZRX,1000000000
+1845,Gaming,Dawn Protocol,dawn-protocol,DAWN,76588156.82742885
+1846,Gaming,Axie Infinity,axie-infinity,AXS,270000000
+1847,Investments,A2DAO,a2dao,ATD,0
+1848,Financial,Impossible Finance,impossible-finance,IF,15551000
+1849,Blockchain Network,LINK,link,LN,6044999
+1850,Gaming,CryptoBlades,cryptoblades,SKILL,1000000
+1851,DeFi,OctoFi,octofi,OCTO,800000
+1852,DeFi,Niftyx Protocol,shroom-finance,SHROOM,65557424
+1853,Gaming,BitGuild PLAT,bitguild-plat,PLAT,9096679264
+1854,DeFi,Tellor,tellor,TRB,2380735.65412251
+1855,Media,Livepeer,livepeer,LPT,22859012.33252989
+1856,Ethereum,Celer,celer-network,CELR,10000000000
+1857,Interoperability,Wanchain,wanchain,WAN,192690414.62292123
+1858,DeFi,dForce,dforce,DFR,
+1859,DeFi,Synthetix Network Token,synthetix-network-token,SNX,215258834.2449152
+1860,Gaming,Polyient Games Governance Token,polyient-games-governance-token,PGT,20000
+1861,DeFi,Azuki,azuki,AZUKI,11310689.72647731
+1862,,Soverain,soverain,SOVE,8248170.48351179
+1863,,MX Token,mx-token,MX,550000000
+1864,Decentralized Exchange,DDEX,ddex,DDEX,
+1865,DeFi,Keydonix,keydonix,KDN,
+1866,Protocol,Hedera,hedera-hashgraph,HBAR,50000000000
+1867,Cloud Computing,Sparkle,sparkle,SPRKL,70000000
+1868,Financial,Haven Protocol,haven-protocol,XHV,15303231
+1869,Platform,ECC,eccoin,ECC,24999999999.98309
+1870,Cryptocurrency,Zenon,zenon,ZNN,7102886.41835725
+1871,Gaming,eBoost,eboostcoin,EBST,99990001.568832
+1872,DeFi,Hegic,hegic,HEGIC,3012009888
+1873,Blockchain Network,Klaytn,klaytn,KLAY,10738647155.2
+1874,Protocol,Phantasma Protocol,phantasma,SOUL,103033489
+1875,Platform,Commercium,commercium,CMM,44297171.854904
+1876,Cryptocurrency,0xBitcoin,0xbtc,0xBTC,20999984
+1877,Financial,DigixDAO,digixdao,DGD,80865.69826329
+1878,Financial,ZelCash,zelcash,ZEL,86939300
+1879,Cryptocurrency,MicroBitcoin,microbitcoin,MBC,48015783231
+1880,Cryptocurrency,Dogecoin,dogecoin,DOGE,132399926782.53424
+1881,Blockchain Network,Nexus,nexus,NXS,72196316.041751
+1882,Cryptocurrency,Vertcoin,vertcoin,VTC,62962972
+1883,Cryptocurrency,Stellite,stellite,XTL,8302966967
+1884,Sports,ESBC,esbc,ESBC,31123570
+1885,Cryptocurrency,Ravencoin,ravencoin,RVN,10237575000
+1886,Financial,TokenPocket,tokenpocket,TPT,3466457400
+1887,Privacy,Bitcoin Private,bitcoin-private,BTCP,22815307
+1888,Network,Rocket Pool,rocket-pool,RPL,17922514.606585
+1889,Cryptocurrency,Pigeoncoin,pigeoncoin,PGN,7514364865
+1890,Gaming,NeoWorld Cash,neoworld-cash,NASH,100000000000
+1891,Cryptocurrency,SUQA,suqa,SUQA,637719772.761245
+1892,DeFi,SynLev,synlev,SYN,83000000
+1893,Privacy,Pirate Chain,pirate-chain,ARRR,188658313.36109
+1894,Blockchain Network,Semux,semux,SEM,18432369
+1895,Privacy,Grin,grin,GRIN,90809100
+1896,Cryptocurrency,Vipstar Coin,vipstar-coin,VIPS,63499128193.01
+1897,Smart Contracts,Cardano,cardano,ADA,33719282563.077
+1898,Masternodes,Stakenet,stakenet,XSN,126018676.82744744
+1899,Cloud Storage,Siacoin,siacoin,SC,49597582992
+1900,Ethereum,StarLink,star-link,STARL,10000000000000
+1901,DeFi,Poolz Finance,poolz-finance,POOLZ,5000000
+1902,Cryptocurrency,Absolute,absolute,ABS,13454447.9413708
+1903,Financial,Holyheld,holyheld,HOLY,100000000
+1904,DeFi,Value Liquidity,value-defi-protocol,VALUE,0
+1905,Financial,Jarvis Network,jarvis-network,JRT,225861521.29
+1906,Privacy,Bitcoin Diamond,bitcoin-diamond,BCD,189492897.953
+1907,Real Estate,ACRE,acre,ACRE,4516668.74720128
+1908,Financial,Thore Cash,thore-cash,TCH,111111111
+1909,Cryptocurrency,InflationCoin,inflationcoin,IFLT,44790092020.0795
+1910,Blockchain Network,Giant,giant-coin,GIC,19696084.7378533
+1911,Other,smARTOFGIVING,smartofgiving,AOG,2003485057.90082
+1912,DeFi,Doki Doki Finance,doki-doki-finance,DOKI,49999.95337234
+1913,Gaming,My DeFi Pet,my-defi-pet,DPET,100000000
+1914,Blockchain Service,Omnitude,omnitude,ECOM,74413301.337384
+1915,Cryptocurrency,XDNA,xdna,XDNA,8822013.56576023
+1916,Privacy,PRiVCY,privcy,PRIV,22175970.265768
+1917,Financial,XOVBank,xovbank,XOV,150000000
+1918,Ethereum,BitCoin One,bitcoin-one,BTCONE,13757704.8560313
+1919,Cloud Computing,GridCoin,gridcoin,GRC,428788199.40176
+1920,Cryptocurrency,EVOS,evos,EVOS,10606778.39712606
+1921,DeFi,Basis Gold Share,basis-gold-share,BSGS,0
+1922,Stablecoin,sUSD,susd,SUSD,99807701.15192714
+1923,Cryptocurrency,Dimecoin,dimecoin,DIME,555998059584
+1924,Polygon,Bloktopia,p-bloktopia,BLOK,200000000000
+1925,Decentralized Exchange,Zero Exchange,zero-exchange,ZERO,0
+1926,Other,Naka Bodhi Token,naka-bodhi-token,NBOT,100000000
+1927,Privacy,NavCoin,nav-coin,NAV,72341193.81204759
+1928,Cryptocurrency,Shard,shard,SHARD,77160176.76
+1929,Cryptocurrency,Nerva,nerva,XNV,17017723.485
+1930,Cryptocurrency,VerusCoin,veruscoin,VRSC,65644512.80542011
+1931,Trading,MidasProtocol,midasprotocol,MAS,270540521.4758478
+1932,Cryptocurrency,Labh Coin,labh-coin,LABH,13458518714.6272
+1933,Insurance,SafeInsure,safeinsure,SINS,21870963.16
+1934,Financial,Crypto.com,crypto-com,MCO,31587682.363206
+1935,Other,SmartCash,smartcash,SMART,2014903576.72334
+1936,Verification,Bridge Protocol,bridge-protocol,IAM,450000000
+1937,Gaming,Mist,mist,MIST,1000000000
+1938,Cryptocurrency,Amoveo,amoveo,VEO,69838.177447
+1939,Interoperability,Ren,ren,REN,999999632.80375
+1940,Ontology,Ontology Gas,ontology-gas,ONG,1000000000
+1941,Social,Parachute,parachute,PAR,999628334.0000002
+1942,E-Commerce,Cazcoin,cazcoin,CAZ,48540693.0894982
+1943,Financial,Cashaa,cashaa,CAS,1000000000
+1944,Decentralized Exchange,BridgeCoin,bridgecoin,BCO,27000000
+1945,Entertainment,CMITCOIN,cmitcoin,CMIT,50000000000
+1946,Cryptocurrency,eXPerience Chain,experience-chain,XPC,113215461333
+1947,Cryptocurrency,LUXCoin,luxcoin,LUX,13627169.95165698
+1948,Gambling,Edgeless,edgeless,EDG,132046997
+1949,Platform,ProxyNode,proxynode,PRX,189671900.2105253
+1950,Privacy,Verge,verge,XVG,16488060387.83363
+1951,Cloud Storage,Shift,shift,SHIFT,0
+1952,Decentralized Exchange,DODO,dodo,DODO,1000000000
+1953,Gaming,The Abyss,the-abyss,ABYSS,508628132.04107
+1954,Stablecoin,TerraUSD,terrausd,UST,8131128033.779796
+1955,Blockchain Service,Hydrogen,hydrogen,HYDRO,11111111111
+1956,DeFi,Ribbon Finance,ribbon-finance,RBN,1000000000
+1957,Media,SingularDTV,singulardtv,SNGLS,1000000000
+1958,Platform,Skycoin,skycoin,SKY,25000000
+1959,Decentralized Exchange,IDEX,idex,IDEX,1000000000
+1960,Privacy,bitcoin2network,bitcoin2network,B2N,1326415282
+1961,Blockchain Network,Metaverse ETP,metaverse,ETP,81393995.77478294
+1962,Infrastructure,MarcoPolo Protocol,marcopolo-protocol,MAP,10000000000
+1963,Infrastructure,Aion,aion,AION,499012861
+1964,Cryptocurrency,ImageCoin,imagecoin,IMG,11872497.67784412
+1965,Platform,Aragon,aragon,ANT,39609523.80952381
+1966,Smart Contracts,NEO,neo,NEO,100000000
+1967,Ethereum,Terra Virtua Kolect,terra-virtua-kolekt,TVK,1200000000
+1968,Adult,SpankChain,spankchain,SPANK,1000000000
+1969,Other,Mercury,mercury,MER,100000000
+1970,Financial,YIELD App,yield-app,YLD,145871747
+1971,Adult,AdultChain,adultchain,XXX,54917265.9898441
+1972,Ethereum,Blockburn,blockburn,BURN,1977738957.6
+1973,Cryptocurrency,GINcoin,gincoin,GIN,8027008.285193
+1974,Other,NANJCOIN,nanjcoin,NANJ,30000000000
+1975,Financial,Merebel,merebel,MERI,6195344.246828
+1976,Platform,Project Pai,project-pai,PAI,1786766210
+1977,Decentralized Exchange,Kira Network,kira-network,KEX,300000000
+1978,Ethereum,Dora Factory,dora-factory,DORA,10000000
+1979,Smart Contracts,Harmony,harmony,ONE,13268721003.10068
+1980,Gaming,FantasyGold,fantasygold,FGC,177609675
+1981,Privacy,ANON,anon,ANON,8554514
+1982,Gaming,GameCredits,gamecredits,GAME,200000000
+1983,Decentralized Exchange,Bonfida,bonfida,FIDA,998832824.896
+1984,Prediction Market,Delphy,delphy,DPY,100000000
+1985,Smart Contracts,Ubiq,ubiq,UBQ,42609099.353966
+1986,Privacy,PIVX,pivx,PIVX,67732750.41740578
+1987,Decentralized Exchange,win.win,win-win,TWINS,4819635323.7067
+1988,Network,Sentivate,sentivate,SNTVT,4200000000
+1989,Cryptocurrency,OPCoinX,opcoinx,OPCX,163774057.19807637
+1990,Cryptocurrency,Blocknode,blocknode,BND,214926181.030019
+1991,Privacy,Bitcoin Confidential,bitcoin-confidential,BC,7367797268.15
+1992,Decentralized Exchange,Injective Protocol,injective-protocol,INJ,100000000
+1993,DeFi,Yeld Finance,yeld-finance,YELD,60000
+1994,Masternodes,Energi,energi,NRG,47720610.19484988
+1995,Cryptocurrency,Bitcoin Rhodium,bitcoin-rhodium,XRC,1316162.5
+1996,VeChain,VeThor Token,vethor-token,VTHO,43006368204
+1997,DeFi,Alpha Finance Lab,alpha-finance-lab,ALPHA,1000000000
+1998,Smart Contracts,Edgeware,edgeware,EDG,6566777572
+1999,DeFi,Mithril Share,mithril-share,MIS,1000001
+2000,Financial,Monolith,monolith,TKN,39406759.9283204
+2001,Cryptocurrency,Bitblocks,bitblocks,BBK,273203440
+2002,Blockchain Network,TOP,top,TOP,20000000000
+2003,Cryptocurrency,Masari,masari,MSR,16045916.20395019
+2004,Privacy,Iridium,iridium,IRD,23662299.01882577
+2005,Ethereum,STK,stk,STK,500000000
+2006,Other,ROIyal Coin,roiyal-coin,ROCO,2146523.5979893
+2007,Stablecoin,Stably USD,stableusd,USDS,90000238660.96416
+2008,Prediction Market,PlotX,plotx,PlotX,200000000
+2009,,Aegeus,aegeus,AEG,43280999.8597271
+2010,Adult,TABOO TOKEN,taboo-token,TABOO,9782678080
+2011,Cryptocurrency,Lightpaycoin,lightpaycoin,LPC,5803454.93497902
+2012,Stablecoin,Digix Gold Token,digix-gold-token,DGX,58000
+2013,Cryptocurrency,Electra,electra,ECA,29629039786.906555
+2014,Other,Aencoin,aencoin,AEN,4000000000
+2015,Privacy,CUTcoin,cutcoin,CUT,155242496.263
+2016,Gaming,Cocos-BCX,cocos-bcx,COCOS,100000000
+2017,Privacy,Horizen,zencash,ZEN,11752187.5
+2018,Smart Contracts,Kadena,kadena,KDA,1000000000
+2019,DeFi,SafeCapital,safecapital,SCAP,2108509.11
+2020,Privacy,Zcash,zcash,ZEC,13237912.5
+2021,Cryptocurrency,Bitcoin Token,bitcoin-token,BTK,14706517.63794122
+2022,Platform,PegNet,pegnet,PEG,2227955499.0044
+2023,Privacy,Dash,dash,DASH,10465649.93657377
+2024,Platform,Origin Protocol,origin-protocol,OGN,1000000000
+2025,Decentralized Exchange,Leverj Gluon,leverj-gluon,L2,842269761.2079635
+2026,Interoperability,NIX Bridge Token,nix-bridge-token,NBT,0
+2027,Lending,Aave,aave,AAVE,16000000
+2028,Masternodes,PAC Protocol,paccoin,PAC,15799232198.666405
+2029,Stablecoin,TerraKRW,terra-krw,KRT,42703226138.80427
+2030,Cryptocurrency,Nyzo,nyzo,NYZO,100000000
+2031,DeFi,Perlin,perlin,PERL,1033200000
+2032,Cryptocurrency,NewYorkCoin,newyorkcoin,NYC,143761098437.99847
+2033,Blockchain Network,CertiK,certik,CTK,105577294.71694
+2034,DeFi,DeFiZap,defizap,DFZ,
+2035,Lending,88mph,88mph,MPH,418836.62859974
+2036,DeFi,Terra,luna,LUNA,858956988.709086
+2037,Interoperability,Blocknet,blocknet,BLOCK,8253906.86531109
+2038,Cryptocurrency,Ergo,ergo,ERG,35316150
+2039,Stablecoin,MITH Cash,mith-cash,MIC,0
+2040,E-Commerce,Shopping,shopping,SPI,1000000
+2041,Cryptocurrency,Algorand,algorand,ALGO,6743406744.024737
+2042,DeFi,pBTC35A,pbtc35a,pBTC35A,0
+2043,Gaming,PoolTogether,pooltogether,POOL,10000000
+2044,DeFi,UNION Protocol Governance Token,union-protocol-governance-token,UNN,1000000000
+2045,Platform,Tiger King,tiger-king,TKING,710999305800
+2046,Infrastructure,Keep Network,keep-network,KEEP,999848780.8
+2047,Blockchain Service,Cartesi,cartesi,CTSI,1000000000
+2048,DeFi,Badger DAO,badger-dao,BADGER,21000000
+2049,Social,2key.network,2key-network,2KEY,599020418.7745987
+2050,DeFi,YFFII Finance,yffii-finance,YFFII,1000000
+2051,Entertainment,Verasity,verasity,VRA,19400882350.003914
+2052,DeFi,Mirror Protocol,mirror-protocol,MIR,370575000
+2053,Cloud Storage,Arweave,arweave,AR,63190435
+2054,Lending,Compound,compound,COMP,10000000
+2055,Blockchain Service,NuCypher,nucypher,NU,1355563709.1403546
+2056,Ethereum,Monavale,monavale,MONA,10011.52986087
+2057,Financial,Celo,celo,CELO,1000000000
+2058,DeFi,DMM: Governance,dmm-governance,DMG,249511173.3211447
+2059,Marketing,BitTube,bit-tube,TUBE,329042723.898456
+2060,Supply,Ambrosus,amber,AMB,769873000
+2061,Decentralized Exchange,Balancer,balancer,BAL,35725000
+2062,Ethereum,Vectorspace,vectorspace-ai,VXV,50000000
+2063,Insurance,NXM,nexus-mutual,NXM,6893118.05248239
+2064,DeFi,Serum,serum,SRM,1092844982
+2065,Financial,TrustSwap,trustswap,SWAP,99995164.50608125
+2066,Lending,DFI.Money,yearn-finance-ii,YFII,39375
+2067,Lending,Meta,meta,MTA,99995244.58572492
+2068,DeFi,Lido DAO Token,lido-dao,LDO,1000000000
+2069,Interoperability,NerveNetwork,nervenetwork,NVT,1122857486.3837585
+2070,Protocol,Meter,meter,MTRG,40000000
+2071,Verification,Ontology,ontology,ONT,1000000000
+2072,Lending,bZx Protocol,bzx,BZRX,1030000000
+2073,Ethereum,Wilder World,wilder-world,WILD,500000000
+2074,Gaming,Gameswap,gameswap,GSWAP,20000000
+2075,Protocol,FIO Protocol,fio-protocol,FIO,795866582.1134139
+2076,DeFi,Datamine,datamine,DAM,16876778.9
+2077,DeFi,Meridian Network,meridian-network,LOCK,10947704.54242852
+2078,Financial,Proton,proton,XPR,12301862217.163
+2079,Platform,Cream Finance,cream-finance,CREAM,2925000
+2080,Gaming,The Sandbox,the-sandbox,SAND,3000000000
+2081,Protocol,Klima DAO,p-klima-dao,KLIMA,446725.774611
+2082,Stablecoin,Dynamic Set Dollar,dynamic-set-dollar,DSD,35331663
+2083,Interoperability,Bitgear,bitgear,GEAR,91000000
+2084,Platform,Hakka.Finance,hakka-finance,HAKKA,635982513
+2085,Protocol,GET Protocol,get-protocol,GET,23368773.4
+2086,Lending,PROXI,proxi,CREDIT,100000000
+2087,Interoperability,Kusama,kusama,KSM,9651217.45126206
+2088,Prediction Market,Open Predict Token,open-predict-token,OPT,9900000
+2089,Decentralized Exchange,UniLayer,unilayer,LAYER,40000000
+2090,Lending,Xiotri,xiotri,XIOT,5000
+2091,Platform,Rubic,rubic,RBC,124000000
+2092,Cloud Computing,Secret,secret,SCRT,190165060
+2093,Gaming,Vidya,vidya,VIDYA,50000000
+2094,IoT,Machine Xchange Coin,machine-xchange-coin,MXC,2642132373
+2095,Lending,SushiSwap,sushi,SUSHI,238151065.72679263
+2096,Lending,yffi finance,yffi-finance,YFFI,0
+2097,Platform,Cirus Foundation,cirus-foundation,CIRUS,250000000
+2098,Gaming,Chain Games,chain-games,CHAIN,0
+2099,Platform,Fuse Network,fuse-network,FUSE,314655930.553138
+2100,Ethereum,Tokamak Network,tokamak-network,TON,50000000
+2101,Binance,Galaxy Heroes Coin,galaxy-heroes-coin,GHC,1000000000000000
+2102,DeFi,Pearl,pearl,PEARL,35000
+2103,DeFi,Boosted Finance,boosted-finance,BOOST,99118.16852074
+2104,Decentralized Exchange,SalmonSwap,salmonswap,SAL,1000000
+2105,NFT,RMRK,rmrk,RMRK,10000000
+2106,DeFi,Perpetual Protocol,perpetual-protocol,PERP,150000000
+2107,Decentralized Exchange,Unitrade,unitrade,TRADE,50000000
+2108,Insurance,Nsure.Network,nsure-network,NSURE,45000000
+2109,Platform,Golff,golff,GOF,9999337.73
+2110,DeFi,Pickle Finance,pickle-finance,PICKLE,1848976.41477931
+2111,DeFi,PowerPool,powerpool,CVP,100000000
+2112,Ethereum,Spheroid Universe,spheroid-universe,SPH,2110689818.748361
+2113,Gaming,Aavegotchi,aavegotchi-ghst-token,GHST,74278180.18566765
+2114,Protocol,The Graph,the-graph,GRT,10000000000
+2115,DeFi,Zoracles,zoracles,ZORA,10000
+2116,Platform,Bella Protocol,bella-protocol,BEL,100000000
+2117,DeFi,Flamingo,flamingo,FLM,150000000
+2118,Trading,dHedge DAO,dhedge-dao,DHT,100000000
+2119,Energy,Energy Web Token,energy-web-token,EWT,48638535.4433
+2120,DeFi,yieldfarming.insure,yieldfarming-insure,SAFE,80000
+2121,DeFi,Dego Finance,dego-finance,DEGO,8607383
+2122,DeFi,yAxis,yaxis,YAX,954180.59483165
+2123,Ethereum,Rarible,rarible,RARI,25000000
+2124,DeFi,APEcoin,apecoin,APE,10000000
+2125,Cloud Storage,Crust,crust,CRU,20000000
+2126,Privacy,Ethereum Meta,ethereum-meta,ETHM,0
+2127,Cryptocurrency,Sapphire,sapphire,SAPP,555719404.5221562
+2128,DeFi,PieDAO DOUGH v2,piedao-dough-v2,DOUGH,87161996.46257955
+2129,DeFi,SmartKey,smartkey,SKEY,1000000000
+2130,Privacy,Firo,zcoin,XZC,12427854.74033085
+2131,Financial,Crypto.com Coin,crypto-com-coin,CRO,30263013692
+2132,Insurance,Lossless,lossless,LSS,100000000
+2133,Ethereum,Multiverse,multiverse,AI,0
+2134,Smart Contracts,Shiden Network,shiden-network,SDN,71170673.70393759
+2135,Cryptocurrency,Songbird,songbird,SGB,0
+2136,Protocol,Beyond Protocol,beyond-protocol,BP,500000000
+2137,Decentralized Exchange,BabySwap,babyswap,BABY,1000000000
+2138,Decentralized Exchange,OpenOcean,openocean,OOE,1000000000
+2139,Ethereum,Merit Circle,merit-circle,MC,1000000000
+2140,Platform,Alitas,alitas,ALT,1000000000
+2141,Ethereum,Neos Credits,neos-credits,NCR,50000000
+2142,Platform,Impossible Decentralized Incubator Access,impossible-decentralized-incubator-access,IDIA,1000000000
+2143,Blockchain Service,RChain,rchain,REV,870663574
+2144,DeFi,Sovryn,sovryn,SOV,100000000
+2145,,S.C. Corinthians Fan Token,sc-corinthians-fan-token,SCCP,20000000
+2146,Binance,Dvision Network,dvision-network,DVI,1000000000
+2147,Cryptocurrency,XeniosCoin,xenioscoin,XNC,100413374
+2148,,Swarm,ethereum-swarm,BZZ,66297209.93251328
+2149,Polygon,Genesis Worlds,p-genesis-worlds,GENESIS,52291294.72810764
+2150,Entertainment,DeHub,dehub,DEHUB,3916343544.89923
+2151,Cryptocurrency,Darma Cash,darma-cash,DMCH,215964608
+2152,AI,PlatON,platon,LAT,10250000000
+2153,Social,Samoyedcoin,samoyedcoin,SAMO,10308697429
+2154,Decentralized Exchange,DeversiFi,deversifi,DVF,100000000
+2155,Blockchain Network,Saito,saito,SAITO,3000000000
+2156,Cryptocurrency,BitBall,bitball,BTB,0
+2157,Gambling,Lotto,lotto,LOTTO,2000000000
+2158,Binance,CryptoPlanes,cryptoplanes,CPAN,100000000
+2159,Gaming,Defina Finance,defina-finance,FINA,100000000
+2160,Blockchain Network,Everscale,ton-crystal,Ever,2039797242
+2161,Infrastructure,Deeper Network,deeper-network,DPR,10000000000
+2162,Marketing,Bloomzed Loyalty Club Ticket,bloomzed-token,BLCT,100000000
+2163,,StarTerra,starterra,STT,99708685
+2164,Binance,Alpha Quark Token,alpha-quark-token,AQT,30000000
+2165,DeFi,BENQI,benqi,QI,7200000000
+2166,Gaming,DeFi Land,defi-land,DFL,10000000000

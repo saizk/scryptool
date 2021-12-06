@@ -261,12 +261,10 @@ async def Multi(feed, config, conn):
 
                 if config.User_full:
                     logme.debug(__name__ + ':Multi:user-full-Run')
-                    futures.append(loop.run_in_executor(executor, await User(url,
-                                                                             config, conn)))
+                    futures.append(loop.run_in_executor(executor, await User(url, config, conn)))
                 else:
                     logme.debug(__name__ + ':Multi:notUser-full-Run')
-                    futures.append(loop.run_in_executor(executor, await Tweet(url,
-                                                                              config, conn)))
+                    futures.append(loop.run_in_executor(executor, await Tweet(url, config, conn)))
             logme.debug(__name__ + ':Multi:asyncioGather')
             await asyncio.gather(*futures)
     except Exception as e:

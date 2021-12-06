@@ -53,8 +53,7 @@ class LunarCrush(object):
         # results = []
         total = (kwargs.get('end') - kwargs.get('start')).days *\
                 (24 if kwargs.get('interval') == 'hour' else 1)
-        print(total)
-        dates = []
+
 
         # if total > 720:
         #     start = kwargs.get('start')
