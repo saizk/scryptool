@@ -20,10 +20,10 @@ def gen_dashboard_2(sanbot, **kwargs) -> pd.DataFrame:
 
     for idx, coin in enumerate(tickers):
         print(f'{coin}  {idx + 1}/{len(tickers)}')
-        dfs = [sanbot.get_social_volume(coin, platform=plat, **kwargs) for plat in platforms]
-
-        df = pd.concat(dfs, axis='columns')
+        dfs_metrics = [sanbot.get_social_volume(coin, platform=plat, **kwargs) for plat in platforms]
+        df = pd.concat(dfs_metrics, axis='columns')
         df.insert(0, 'asset', [coin] * len(df), True)
+        df['price_usd'] = sanbot.get_price(coin, **kwargs)['price_usd']
         df.to_csv(f'{path}/{coin.lower()}_social_volume.csv')
 
         global_dfs.append(df)

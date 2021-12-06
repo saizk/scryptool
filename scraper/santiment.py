@@ -52,5 +52,5 @@ class Santiment(object):
             coins.to_csv(coins_csv)
 
         df = pd.read_csv(coins_csv)
-        slug = df[df['ticker'] == ticker]['slug'].values[0]
+        slug = df[df['ticker'] == ticker.upper()]['slug'].values[0]
         return slug
