@@ -53,8 +53,9 @@ def lunarcrush_bot():
     bot = LunarCrush('9qjtop453be13yhh6nzmq2j')
     start = datetime.datetime(2021, 9, 1, 0, 0, 0)
     end = datetime.datetime(2021, 10, 1, 0, 0, 0)
-    info = bot.get_assets(symbol=['ETH'],
-                          start=start, end=end, interval='hour')
+
+    info = bot.get_assets(symbol=['ETH'], data_points=91, interval='day')
+    pprint(info)
     data = info['data'][0]
     time_series = data.pop('timeSeries')
     pprint(data)
@@ -96,8 +97,8 @@ def santiment_bot():
 def main():
     # twitter_bot()
     # async_twitter()
-    # lunarcrush_bot()
-    santiment_bot()
+    lunarcrush_bot()
+    # santiment_bot()
 
 
 if __name__ == '__main__':

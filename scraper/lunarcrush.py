@@ -1,12 +1,12 @@
-import datetime
-import json
 import time
+import datetime
+import requests
 import urllib.parse
 import urllib.request
 
 
 class LunarCrush(object):
-    _BASE_URL = 'https://api.lunarcrush.com/v2'
+    _BASE_URL = 'https://api2.lunarcrush.com/v2'
 
     def __init__(self, api_key):
         self._api_key = api_key
@@ -19,7 +19,7 @@ class LunarCrush(object):
     def _request(self, endpoint, **kwargs):
         kwargs = self._parse_kwargs(kwargs)
         url = self._gen_url(endpoint, **kwargs)
-        response = json.loads(urllib.request.urlopen(url).read())
+        response = requests.get(url).json()
         return response
 
     @staticmethod
@@ -49,26 +49,6 @@ class LunarCrush(object):
         :key int end: A unix timestamp (seconds) of the latest time series point to provide. Use in combination with
              data_points to provide the most recent X data points leading up to a certain time.
         """
-        # results = []
-        total = (kwargs.get('end') - kwargs.get('start')).days *\
-                (24 if kwargs.get('interval') == 'hour' else 1)
-
-
-        # if total > 720:
-        #     start = kwargs.get('start')
-        #     while total:
-        #         hours = 720 if total >= 720 else total % 720
-        #         offset = datetime.timedelta(hours=hours)
-        #         dates.append(([start, start + offset], hours))
-        #         start += offset
-        #         total -= hours
-        # pprint(dates)
-        # for (start, end), data_points in dates:
-        #     results = self._request('assets', symbol=symbol, start=start, end=end,
-        #                              data_points=data_points)
-        #     pprint(results['data'][0]['timeSeries'])
-        #     print(len(results['data'][0]['timeSeries']))
-
         return self._request('assets', symbol=symbol, **kwargs)
 
     def get_market(self, **kwargs) -> dict:
