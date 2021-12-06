@@ -78,7 +78,8 @@ class AsyncTwitter(object):
 
     def _parallel_config(self, interval: int) -> List[twint.Config]:
         """
-        Creates a list of twint.Config objects with each respective datetime configurations
+        Creates a list of N twint.Config objects with each respective datetime configurations, where N
+        is the number of cores in the CPU.
         :param interval:
         :return:
         """

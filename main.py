@@ -81,6 +81,7 @@ def santiment_bot():
         from_date=from_date, to_date=to_date,
         interval='1d'
     )
+    display(db2.head())
     print(f'{san.api_calls_made()[0][-1]} out of {san.api_calls_remaining()}')
 
     # DASHBOARD 3
