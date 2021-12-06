@@ -44,23 +44,21 @@ def async_twitter():
 
     async_bot = AsyncTwitter()
     async_bot.search(search=coin, count=None, end_date=start, start_date=end,
-                             show_cashtags=True, output='test.db')
+                     show_cashtags=True, output='test.db')
     # async_bot.run()
     # async_bot.parallel_run()  # not implemented yet
 
 
 def lunarcrush_bot():
-    bot = LunarCrush('9qjtop453be13yhh6nzmq2j')
-    start = datetime.datetime(2021, 9, 1, 0, 0, 0)
-    end = datetime.datetime(2021, 10, 1, 0, 0, 0)
+    bot = LunarCrush()
 
-    info = bot.get_assets(symbol=['ETH'], data_points=91, interval='day')
-    pprint(info)
-    data = info['data'][0]
-    time_series = data.pop('timeSeries')
-    pprint(data)
+    info = bot.get_assets(symbol=list(TICKERS.keys()), data_points=100, interval='day')
 
-    df = pd.DataFrame(data)
+    data = info['data']
+    time_series = [ts.pop('timeSeries') for ts in data]
+    pprint(time_series)
+
+    df = pd.DataFrame(data, index=[i for i in range(len(TICKERS))])
     display(df)
 
 
