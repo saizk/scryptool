@@ -22,18 +22,18 @@ def convertToDateTime(string):
         return ""
 
 
-def Set(until, since):
+def Set(Until, Since):
     logme.debug(__name__+':Set')
     d = Datelock()
 
-    if until:
-        d.until = datetime.datetime.strptime(convertToDateTime(until), "%Y-%m-%d %H:%M:%S")
+    if Until:
+        d.until = datetime.datetime.strptime(convertToDateTime(Until), "%Y-%m-%d %H:%M:%S")
         # d.until = utc_to_local(d.until)
     else:
         d.until = datetime.datetime.today()
 
-    if since:
-        d.since = datetime.datetime.strptime(convertToDateTime(since), "%Y-%m-%d %H:%M:%S")
+    if Since:
+        d.since = datetime.datetime.strptime(convertToDateTime(Since), "%Y-%m-%d %H:%M:%S")
         d._since_def_user = True
     else:
         d.since = datetime.datetime.strptime("2006-03-21 00:00:00", "%Y-%m-%d %H:%M:%S")

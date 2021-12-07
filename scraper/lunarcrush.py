@@ -2,7 +2,6 @@ import time
 import datetime
 import requests
 import urllib.parse
-import urllib.request
 
 
 class LunarCrush(object):
@@ -12,15 +11,15 @@ class LunarCrush(object):
         self._api_key = api_key
 
     def _gen_url(self, endpoint, **kwargs):
-        url = f'{self._BASE_URL}?data={endpoint}'#&key={self._api_key}'
+        url = f'{self._BASE_URL}?data={endpoint}'
+        url += f'&key={self._api_key}' if self._api_key else ''
         url += '&' + urllib.parse.urlencode(kwargs) if kwargs else ''
         return url
 
     def _request(self, endpoint, **kwargs):
         kwargs = self._parse_kwargs(kwargs)
         url = self._gen_url(endpoint, **kwargs)
-        response = requests.get(url).json()
-        return response
+        return requests.get(url).json()
 
     @staticmethod
     def _parse_kwargs(kwargs):

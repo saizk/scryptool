@@ -253,6 +253,7 @@ def tweets(conn, Tweet, config):
     try:
         time_ms = round(time.time() * 1000)
         cursor = conn.cursor()
+
         entry = (Tweet.id,
                  Tweet.id_str,
                  Tweet.tweet,

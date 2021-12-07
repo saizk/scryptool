@@ -109,7 +109,7 @@ def parse_tweets(config, response):
                 rt_id = temp_obj['retweeted_status_id_str']
                 _dt = response['globalObjects']['tweets'][rt_id]['created_at']
                 _dt = datetime.strptime(_dt, '%a %b %d %H:%M:%S %z %Y')
-                _dt = utc_to_local(_dt)
+                # _dt = utc_to_local(_dt)
                 _dt = str(_dt.strftime(Tweet_formats['datetime']))
                 temp_obj['retweet_data'] = {
                     'user_rt_id': response['globalObjects']['tweets'][rt_id]['user_id_str'],

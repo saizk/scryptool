@@ -184,7 +184,7 @@ async def RandomUserAgent(wa=None):
 async def Username(_id, bearer_token, guest_token):
     logme.debug(__name__ + ':Username')
     _dct = {'userId': _id, 'withHighlightedLabel': False}
-    _url = "https://api.twitter.com/graphql/B9FuNQVmyx32rdbIPEZKag/UserByRestId?variables={}".format(dict_to_url(_dct))
+    _url = f"https://api.twitter.com/graphql/B9FuNQVmyx32rdbIPEZKag/UserByRestId?variables={dict_to_url(_dct)}"
     _headers = {
         'authorization': bearer_token,
         'x-guest-token': guest_token,

@@ -1,11 +1,14 @@
+import copy
 import datetime
 import tweepy
 import multiprocessing as mp
 
+from pathlib import Path
 from typing import List
 from concurrent.futures import ProcessPoolExecutor
 
 from scraper import twint
+from scraper.tickers import TICKERS
 
 
 class Twitter(object):
@@ -54,8 +57,10 @@ class AsyncTwitter(object):
                 v = v.strftime("%Y-%m-%d %H:%M:%S")
             if k == 'start_date':
                 params['until'] = v
+                continue
             if k == 'end_date':
                 params['since'] = v
+                continue
             else:
                 params[k] = v
 
@@ -76,34 +81,38 @@ class AsyncTwitter(object):
         elif output.endswith('.json'):
             self.config.Store_json = True
 
-    def _parallel_config(self, interval: int) -> list:
+        if not kwargs.get('coins'):
+            self.config.Coins = list(TICKERS)
+
+    def _parallel_config(self) -> list:
         """
-        Creates a list of N twint.Config objects with each respective datetime configurations, where N
-        is the number of cores in the CPU.
-        :param interval:
+        Creates a list of N twint.Config objects with each respective coin queries
         :return:
         """
-        config_params = [self.config] * interval
-        until = self.config.Until or datetime.datetime.today().strftime("%Y-%m-%d %H:%M:%S")
-        start = datetime.datetime.strptime(until, "%Y-%m-%d %H:%M:%S")
-        end = datetime.datetime.strptime(self.config.Since, "%Y-%m-%d %H:%M:%S")
+        # self.search(**kwargs)
+        base_cfg = self.config
+        path = Path(self.config.Output)
+        config_params = [] * len(base_cfg.Queries)
 
-        diff = (end - start) / interval
+        for coin, query in zip(base_cfg.Coins, base_cfg.Queries):
+            config = copy.deepcopy(base_cfg)
+            config.Search = query
 
-        for i in range(interval):
-            end = (start + diff * (i + 1))
-            config_params[i].Since = start.strftime("%Y-%m-%d %H:%M:%S")  # noqa
-            config_params[i].Until = end.strftime("%Y-%m-%d %H:%M:%S")  # noqa
-            start = end
+            parents, file = path.parent, path.name
+            parents.mkdir(parents=True, exist_ok=True)
+
+            config.Output = rf'{parents}\{coin.lower()}_{file}'
+
+            config_params.append(config)
 
         return config_params
 
-    def parallel_run(self):
-        workers = mp.cpu_count()
-        config_params = self._parallel_config(workers)
-        for i in range(workers):
-            with ProcessPoolExecutor(max_workers=workers) as pool:
-                results = pool.submit(twint.run.Search, config_params[i])
+    def parallel_run(self, n_workers=mp.cpu_count()):
+
+        config_params = self._parallel_config()
+
+        with ProcessPoolExecutor(max_workers=n_workers) as pool:
+            results = pool.map(twint.run.Search, config_params)
 
     def run(self):
         twint.run.Search(self.config)

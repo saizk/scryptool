@@ -37,8 +37,12 @@ class Config:
     Followers: bool = False
     Following: bool = False
     Favorites: bool = False
+
     SaveReplies: bool = False
     SaveRetweets: bool = False
+    SaveMentions: bool = False
+    SaveMeta: bool = False
+
     TwitterSearch: bool = False
     User_full: bool = False
     # Profile_full: bool = False
@@ -87,3 +91,6 @@ class Config:
     Bearer_token: str = None
     Guest_token: str = None
     deleted: list = None
+
+    Queries: list = None
+    Coins: list = None

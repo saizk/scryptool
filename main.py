@@ -23,7 +23,7 @@ def gen_query(query):
 
 
 def twitter_bot():
-    bot = scraper.twitter.Twitter(BEARER_TOKEN)
+    bot = Twitter(BEARER_TOKEN)
 
     coin = gen_query('BTC')
     start = datetime.datetime(2021, 9, 1, 0, 0, 0)
@@ -37,22 +37,30 @@ def twitter_bot():
 
 
 def async_twitter():
-    coin = gen_query('ETH')
-    # coin = 'ETH'
-    end = datetime.datetime(2021, 9, 1, 0, 0, 0)
-    start = datetime.datetime(2021, 12, 1, 0, 0, 0)
+    end = datetime.datetime(2021, 12, 1, 0, 0, 0)
+    start = datetime.datetime(2021, 12, 2, 0, 0, 0)
 
     async_bot = AsyncTwitter()
-    async_bot.search(search=coin, count=None, end_date=start, start_date=end,
-                     show_cashtags=True, output='test.db')
+
+    queries = list(map(gen_query, TICKERS))
+    coins = list(TICKERS)
+
+    # async_bot.search(search=gen_query('ETH'), lang='en',
+    #                  end_date=end, start_date=start,
+    #                  show_cashtags=True, limit=5, output='test.csv')
     # async_bot.run()
-    # async_bot.parallel_run()  # not implemented yet
+
+    async_bot.search(queries=queries, coins=coins, lang='en',
+                     end_date=end, start_date=start,
+                     show_cashtags=True, output=f'data/twitter/tweets.csv')
+
+    async_bot.parallel_run(n_workers=15)
 
 
 def lunarcrush_bot():
     bot = LunarCrush()
 
-    info = bot.get_assets(symbol=list(TICKERS.keys()), data_points=100, interval='day')
+    info = bot.get_assets(symbol=list(TICKERS), data_points=100, interval='day')
 
     data = info['data']
     time_series = [ts.pop('timeSeries') for ts in data]
@@ -94,8 +102,8 @@ def santiment_bot():
 
 def main():
     # twitter_bot()
-    # async_twitter()
-    lunarcrush_bot()
+    async_twitter()
+    # lunarcrush_bot()
     # santiment_bot()
 
 
