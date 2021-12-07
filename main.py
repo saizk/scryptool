@@ -45,16 +45,16 @@ def async_twitter():
     queries = list(map(gen_query, TICKERS))
     coins = list(TICKERS)
 
-    # async_bot.search(search=gen_query('ETH'), lang='en',
-    #                  end_date=end, start_date=start,
-    #                  show_cashtags=True, limit=5, output='test.csv')
-    # async_bot.run()
-
-    async_bot.search(queries=queries, coins=coins, lang='en',
+    async_bot.search(search=gen_query('BTC'), lang='en',
                      end_date=end, start_date=start,
-                     show_cashtags=True, output=f'data/twitter/tweets.csv')
+                     show_cashtags=True, output='btc_test.csv')
+    async_bot.run()
 
-    async_bot.parallel_run(n_workers=15)
+    # async_bot.search(queries=queries, coins=coins, lang='en',
+    #                  end_date=end, start_date=start, lowercase=True,
+    #                  show_cashtags=True, output=f'data/twitter/tweets.csv')
+    #
+    # async_bot.parallel_run()
 
 
 def lunarcrush_bot():

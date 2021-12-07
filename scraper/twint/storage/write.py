@@ -52,7 +52,7 @@ def Csv(obj, config):
         _obj_type = "username"
     fieldnames, row = struct(obj, config.Custom[_obj_type], _obj_type)
 
-    if row.get('lang') != config.Lang:
+    if row.get('language') != config.Lang:
         return
 
     extra_vals = {'trans_dest', 'trans_src', 'translate', 'geo', 'near', 'source', 'mentions',
