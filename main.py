@@ -4,6 +4,7 @@ import json
 import time
 import datetime
 import pandas as pd
+import pickle
 
 from pprint import pprint
 from IPython.display import display
@@ -60,14 +61,36 @@ def async_twitter():
 def lunarcrush_bot():
     bot = LunarCrush()
 
-    info = bot.get_assets(symbol=list(TICKERS), data_points=100, interval='day')
+    info = bot.get_assets(symbol=list(TICKERS), data_points=90, interval='day', change='3m')
 
+
+    #Dashboard2
     data = info['data']
-    time_series = [ts.pop('timeSeries') for ts in data]
-    pprint(time_series)
+    symbols = {s.pop("id"): s.pop("symbol") for s in data}
 
-    df = pd.DataFrame(data, index=[i for i in range(len(TICKERS))])
-    display(df)
+    time_series = [ts.pop('timeSeries') for ts in data]
+    # pprint(time_series)
+
+    # with open("timeseries.pickle", 'wb') as f:
+    #     pickle.dump(time_series, f)
+
+    dashboard2 = pd.concat([pd.DataFrame(ts) for ts in time_series])
+    dashboard2.reset_index()
+    dashboard2['time'] = pd.to_datetime(dashboard2['time'], unit='s')
+    dashboard2['time'] = dashboard2['time'].apply(lambda x: x - datetime.timedelta(days=8))
+    dashboard2.drop(['open', 'close', 'high', 'low', 'volume', 'market_cap', 'reddit_comments', 'reddit_comments_score',
+                     'tweet_spam', 'tweet_quotes', 'tweet_sentiment1', 'tweet_sentiment2', 'tweet_sentiment3',
+                     'tweet_sentiment4', 'tweet_sentiment5', 'tweet_sentiment_impact1', 'tweet_sentiment_impact2',
+                     'tweet_sentiment_impact3', 'tweet_sentiment_impact4', 'tweet_sentiment_impact5',
+                     'sentiment_absolute', 'sentiment_relative', 'search_average', 'price_score', 'social_impact_score',
+                     'alt_rank', 'alt_rank_30d', 'alt_rank_hour_average', 'market_cap_rank', 'percent_change_24h_rank',
+                     'volume_24h_rank', 'social_volume_24h_rank', 'social_score_24h_rank', 'percent_change_24h'],
+                    axis=1, inplace=True)
+
+    dashboard2["asset_id"].replace(symbols, inplace=True)
+
+    dashboard2.to_csv("data\lunarcrush_data.csv")
+    display(dashboard2)
 
 
 def santiment_bot():
@@ -102,8 +125,8 @@ def santiment_bot():
 
 def main():
     # twitter_bot()
-    async_twitter()
-    # lunarcrush_bot()
+    # async_twitter()
+    lunarcrush_bot()
     # santiment_bot()
 
 
