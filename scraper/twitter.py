@@ -13,35 +13,42 @@ from scraper.tickers import TICKERS
 
 class Twitter(object):
 
-    def __init__(self, bearer_token):
-        self.client = tweepy.Client(bearer_token=bearer_token, wait_on_rate_limit=True)
+    def __init__(self, bearer_token, wait_on_rate_limit=True):
+        self.client = tweepy.Client(bearer_token=bearer_token,
+                                    wait_on_rate_limit=wait_on_rate_limit)
 
     @staticmethod
-    def _parse_kwargs(kwargs):
-        for param, value in kwargs.items():
+    def _parse_kwargs(kwargs) -> dict:
+        assert 'query' in kwargs
+        params = {}
+        for key, value in kwargs.items():
             if isinstance(value, datetime.datetime):
-                kwargs[param] = value.strftime("%Y-%m-%dT%H:%M:%SZ")
+                params[key] = value.strftime("%Y-%m-%dT%H:%M:%SZ")
+            elif key == 'lang':
+                params['query'] = f'({params["query"]}) lang:{value}'
+            else:
+                params[key] = value
 
-        return kwargs
+        return params
 
     @staticmethod
-    def _pagination(method, *args, **kwargs):
-        return tweepy.Paginator(method, *args, **kwargs).flatten()
+    def _pagination(method, **kwargs):
+        return tweepy.Paginator(method, **kwargs).flatten()
 
-    def get_user(self, *args, **kwargs):
-        return self.client.get_user(*args, **self._parse_kwargs(kwargs))
+    def get_user(self, **kwargs):
+        return self.client.get_user(**self._parse_kwargs(kwargs))
 
-    def get_all_tweets(self, query: str, *args, **kwargs) -> List[tweepy.Tweet]:
-        return [*self._pagination(self.client.search_all_tweets,    query=query, *args, **self._parse_kwargs(kwargs))]
+    def get_all_tweets(self, **kwargs) -> List[tweepy.Tweet]:
+        return [*self._pagination(self.client.search_all_tweets, **self._parse_kwargs(kwargs))]
 
-    def get_recent_tweets(self, query: str, *args, **kwargs) -> List[tweepy.Tweet]:
-        return [*self._pagination(self.client.search_recent_tweets, query=query, *args, **self._parse_kwargs(kwargs))]
+    def get_recent_tweets(self, **kwargs) -> List[tweepy.Tweet]:
+        return [*self._pagination(self.client.search_recent_tweets, **self._parse_kwargs(kwargs))]
 
-    def get_all_tweets_count(self, query: str, granularity: str, **kwargs) -> tweepy.client.Response:
-        return self.client.get_all_tweets_count(query=query, granularity=granularity, **self._parse_kwargs(kwargs))
+    def get_all_tweets_count(self, **kwargs) -> tweepy.client.Response:
+        return self.client.get_all_tweets_count(**self._parse_kwargs(kwargs))
 
-    def get_recent_tweets_count(self, query: str, granularity: str, **kwargs) -> tweepy.client.Response:
-        return self.client.get_recent_tweets_count(query=query, granularity=granularity, **self._parse_kwargs(kwargs))
+    def get_recent_tweets_count(self, **kwargs) -> tweepy.client.Response:
+        return self.client.get_recent_tweets_count(**self._parse_kwargs(kwargs))
 
 
 class AsyncTwitter(object):
@@ -52,17 +59,15 @@ class AsyncTwitter(object):
     @staticmethod
     def _parse_kwargs(kwargs):
         params = {}
-        for k, v in kwargs.items():
-            if isinstance(v, datetime.datetime):
-                v = v.strftime("%Y-%m-%d %H:%M:%S")
-            if k == 'start_date':
-                params['until'] = v
-                continue
-            if k == 'end_date':
-                params['since'] = v
-                continue
+        for key, value in kwargs.items():
+            if isinstance(value, datetime.datetime):
+                value = value.strftime("%Y-%m-%d %H:%M:%S")
+            if key == 'start_date':
+                params['until'] = value
+            elif key == 'end_date':
+                params['since'] = value
             else:
-                params[k] = v
+                params[key] = value
 
         return params
 
@@ -90,25 +95,23 @@ class AsyncTwitter(object):
         :return:
         """
         # self.search(**kwargs)
-        base_cfg = self.config
         path = Path(self.config.Output)
+        path.parent.mkdir(parents=True, exist_ok=True)
+
+        base_cfg = self.config
         config_params = [] * len(base_cfg.Queries)
 
         for coin, query in zip(base_cfg.Coins, base_cfg.Queries):
             config = copy.deepcopy(base_cfg)
+
             config.Search = query
-
-            parents, file = path.parent, path.name
-            parents.mkdir(parents=True, exist_ok=True)
-
-            config.Output = rf'{parents}\{coin.lower()}_{file}'
+            config.Output = rf'{path.parent}\{coin.lower()}_{path.name}'
 
             config_params.append(config)
 
         return config_params
 
     def parallel_run(self, n_workers=mp.cpu_count()):
-
         config_params = self._parallel_config()
 
         with ProcessPoolExecutor(max_workers=n_workers) as pool:

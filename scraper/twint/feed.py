@@ -100,8 +100,7 @@ def parse_tweets(config, response):
             try:
                 temp_obj = response['globalObjects']['tweets'][_id]
             except KeyError:
-                logme.info('encountered a deleted tweet with id {}'.format(_id))
-
+                logme.info(f'encountered a deleted tweet with id {_id}')
                 config.deleted.append(_id)
                 continue
             temp_obj['user_data'] = response['globalObjects']['users'][temp_obj['user_id_str']]

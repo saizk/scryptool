@@ -23,6 +23,7 @@ class LunarCrush(object):
 
     @staticmethod
     def _parse_kwargs(kwargs):
+        assert kwargs['data_points'] <= 720
         for param, value in kwargs.items():
             if isinstance(value, list):
                 kwargs[param] = ','.join(value)
@@ -43,9 +44,9 @@ class LunarCrush(object):
              the time period before and the percent change.
         :key int data_points: Number of time series data points to include for the asset. Maximum of 720 data points
              accepted, to not use time series data set data_points=0
-        :key int start: A unix timestamp (seconds) of the earliest time series point to provide. Use in combination with
+        :key int start (prohibited): A unix timestamp (seconds) of the earliest time series point to provide. Use in combination with
              data_points to start at a certain hour or day and provide X hours/days of data.
-        :key int end: A unix timestamp (seconds) of the latest time series point to provide. Use in combination with
+        :key int end (prohibited): A unix timestamp (seconds) of the latest time series point to provide. Use in combination with
              data_points to provide the most recent X data points leading up to a certain time.
         """
         return self._request('assets', symbol=symbol, **kwargs)

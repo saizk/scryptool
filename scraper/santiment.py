@@ -1,14 +1,25 @@
-from pathlib import Path
-
 import san
 import time
 import pandas as pd
+
+from pathlib import Path
 
 
 class Santiment(object):
 
     def __init__(self, api_key):
         san.ApiConfig.api_key = api_key
+
+    def _from_ticker_to_slug(self, ticker, coins_csv='data/coins.csv'):
+        Path(Path(coins_csv).parent).mkdir(parents=True, exist_ok=True)
+
+        if not Path(coins_csv).exists():
+            coins = self.list_all_coins()
+            coins.to_csv(coins_csv)
+
+        df = pd.read_csv(coins_csv)
+        slug = df[df['ticker'] == ticker.upper()]['slug'].values[0]
+        return slug
 
     @staticmethod
     def _request(func, *args, **kwargs):
@@ -43,14 +54,3 @@ class Santiment(object):
 
     def get_social_dominance(self, coin: str, platform: str, **kwargs) -> pd.DataFrame:
         return self._request(san.get, f'social_dominance_{platform}/{self._from_ticker_to_slug(coin)}', **kwargs)
-
-    def _from_ticker_to_slug(self, ticker, coins_csv='data/coins.csv'):
-        Path(Path(coins_csv).parent).mkdir(parents=True, exist_ok=True)
-
-        if not Path(coins_csv).exists():
-            coins = self.list_all_coins()
-            coins.to_csv(coins_csv)
-
-        df = pd.read_csv(coins_csv)
-        slug = df[df['ticker'] == ticker.upper()]['slug'].values[0]
-        return slug
