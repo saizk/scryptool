@@ -46,7 +46,11 @@ def createDirIfMissing(dirname):
     if not os.path.exists(dirname):
         os.makedirs(dirname)
 
+global_csv_file = None
+
+
 def Csv(obj, config):
+    global global_csv_file
     _obj_type = obj.__class__.__name__
     if _obj_type == "str":
         _obj_type = "username"
@@ -66,14 +70,18 @@ def Csv(obj, config):
     base = addExt(config.Output, _obj_type, "csv")
     dialect = 'excel-tab' if 'Tabs' in config.__dict__ else 'excel'
 
-    if not os.path.exists(base):
-        with open(base, "w", newline='', encoding="utf-8") as csv_file:
-            writer = csv.DictWriter(csv_file, fieldnames=fieldnames, dialect=dialect)
-            writer.writeheader()
+    if global_csv_file is None:
+        global_csv_file = open(base, "a", newline='', encoding="utf-8")
+        # with open(base, "w", newline='', encoding="utf-8") as csv_file:
 
-    with open(base, "a", newline='', encoding="utf-8") as csv_file:
-        writer = csv.DictWriter(csv_file, fieldnames=fieldnames, dialect=dialect)
-        writer.writerow(row)
+    csv_file = global_csv_file
+    writer = csv.DictWriter(csv_file, fieldnames=fieldnames, dialect=dialect)
+    writer.writeheader()
+    writer.writerow(row)
+
+    # with open(base, "a", newline='', encoding="utf-8") as csv_file:
+    # writer = csv.DictWriter(csv_file, fieldnames=fieldnames, dialect=dialect)
+    # writer.writerow(row)
 
 def Json(obj, config):
     _obj_type = obj.__class__.__name__

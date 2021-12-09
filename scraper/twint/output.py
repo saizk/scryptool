@@ -111,19 +111,19 @@ def _output(obj, output, config, **extra):
             write.Json(obj, config)
             logme.debug(__name__ + ':_output:JSON')
         else:
-            write.Text(output, config.Output)
+            # write.Text(output, config.Output)
             logme.debug(__name__ + ':_output:Text')
 
     if config.Elasticsearch:
         logme.debug(__name__ + ':_output:Elasticsearch')
         print("", end=".", flush=True)
-    else:
-        if not config.Hide_output:
-            try:
-                print(output.replace('\n', ' '))
-            except UnicodeEncodeError:
-                logme.critical(__name__ + ':_output:UnicodeEncodeError')
-                print("unicode error [x] output._output")
+    # else:
+        # if not config.Hide_output:
+        #     try:
+        #         print(output.replace('\n', ' '))
+        #     except UnicodeEncodeError:
+        #         logme.critical(__name__ + ':_output:UnicodeEncodeError')
+        #         print("unicode error [x] output._output")
 
 
 async def checkData(tweet, config, conn):
@@ -134,7 +134,7 @@ async def checkData(tweet, config, conn):
         print("[x] Hidden tweet found, account suspended due to violation of TOS")
         return
     if True:  # if datecheck(tweet.datestamp + " " + tweet.timestamp, config):
-        output = format.Tweet(config, tweet)
+        # output = format.Tweet(config, tweet)
         if config.Database:
             logme.debug(__name__ + ':checkData:Database')
             db.tweets(conn, tweet, config)
@@ -150,7 +150,7 @@ async def checkData(tweet, config, conn):
         if config.Elasticsearch:
             logme.debug(__name__ + ':checkData:Elasticsearch')
             elasticsearch.Tweet(tweet, config)
-        _output(tweet, output, config)
+        _output(tweet, "", config)
     # else:
     #     logme.critical(__name__+':checkData:copyrightedTweet')
 

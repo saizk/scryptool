@@ -1,16 +1,14 @@
-import san
 import csv
 import json
 import time
 import datetime
-import pandas as pd
-import pickle
 
 from pprint import pprint
-from IPython.display import display
-from dataprep.eda import create_report
+# from IPython.display import display
 
+import san
 import dashboards
+
 from scraper._config import *
 from scraper.utils import *
 from scraper.twitter import Twitter, AsyncTwitter
@@ -67,7 +65,7 @@ def async_twitter():
     coins = list(TICKERS)
 
     async_bot.search(search=gen_query('BTC'), lang='en',
-                     end_date=end, start_date=start,
+                     end_date=end, start_date=start, limit=5,
                      show_cashtags=True, output='data/twitter/btc_tweets.csv')
     # async_bot.thread_run()
 
@@ -141,10 +139,10 @@ def dashboard_3():
 
 def main():
     # twitter_bot()
-    # async_twitter()
-    dashboard_1()
-    dashboard_2()
-    dashboard_3()
+    async_twitter()
+    # dashboard_1()
+    # dashboard_2()
+    # dashboard_3()
 
 
 if __name__ == '__main__':
