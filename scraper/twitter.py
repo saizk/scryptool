@@ -98,8 +98,8 @@ class AsyncTwitter(object):
         path = Path(self.config.Output)
         path.parent.mkdir(parents=True, exist_ok=True)
 
+        config_params = []
         base_cfg = self.config
-        config_params = [] * len(base_cfg.Queries)
 
         for coin, query in zip(base_cfg.Coins, base_cfg.Queries):
             config = copy.deepcopy(base_cfg)

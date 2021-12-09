@@ -4,6 +4,7 @@ import pandas as pd
 
 from pathlib import Path
 
+
 class Santiment(object):
 
     def __init__(self, api_key):
@@ -46,47 +47,63 @@ class Santiment(object):
         return self._request(san.get, f'marketcap_usd/{self._from_ticker_to_slug(coin)}', **kwargs)
 
     def get_social_volume(self, coin: str, platform: str, **kwargs) -> pd.DataFrame:
-        return self._request(san.get, f'social_volume_{platform}/{self._from_ticker_to_slug(coin)}', **kwargs)
+        return self._request(
+            san.get,
+            f'social_volume_{platform}/{self._from_ticker_to_slug(coin)}', **kwargs
+        )
 
     def get_sentiment_balance(self, coin: str, platform: str, **kwargs) -> pd.DataFrame:
-        return self._request(san.get, f'sentiment_balance_{platform}/{self._from_ticker_to_slug(coin)}', **kwargs)
+        return self._request(
+            san.get,
+            f'sentiment_balance_{platform}/{self._from_ticker_to_slug(coin)}', **kwargs
+        )
 
     def get_social_dominance(self, coin: str, platform: str, **kwargs) -> pd.DataFrame:
-        return self._request(san.get, f'social_dominance_{platform}/{self._from_ticker_to_slug(coin)}', **kwargs)
+        return self._request(
+            san.get,
+            f'social_dominance_{platform}/{self._from_ticker_to_slug(coin)}', **kwargs)
 
-    def get_sentiment_positive(self, coin: str, **kwargs) -> pd.DataFrame:
-        return self._request(san.get, f'sentiment_positive_total/{self._from_ticker_to_slug(coin)}', **kwargs)
+    def get_sentiment(self, coin: str, bias: str = 'positive', **kwargs) -> pd.DataFrame:
+        return self._request(
+            san.get,
+            f'sentiment_{bias}_total/{self._from_ticker_to_slug(coin)}', **kwargs
+        )
 
-    def get_sentiment_negative(self, coin: str, **kwargs) -> pd.DataFrame:
-        return self._request(san.get, f'sentiment_negative_total/{self._from_ticker_to_slug(coin)}', **kwargs)
+    def get_development_activity(self, coin: str, mode: str = None, **kwargs) -> pd.DataFrame:
+        return self._request(
+            san.get,
+            f'dev_activity{"_" + mode if mode else ""}/{self._from_ticker_to_slug(coin)}', **kwargs
+        )
 
-    def get_developers_activity(self, coin: str, **kwargs) -> pd.DataFrame:
-        return self._request(san.get, f'dev_activity/{self._from_ticker_to_slug(coin)}', **kwargs)
+    def get_github_activity(self, coin: str, mode: str = None, **kwargs) -> pd.DataFrame:
+        return self._request(
+            san.get,
+            f'github_activity{"_" + mode if mode else ""}/{self._from_ticker_to_slug(coin)}', **kwargs
+        )
 
-    def get_developers_activity_change_30d(self, coin: str, **kwargs) -> pd.DataFrame:
-        return self._request(san.get, f'dev_activity_change_30d/{self._from_ticker_to_slug(coin)}', **kwargs)
-
-    def get_developers_activity_contributors_count(self, coin: str, **kwargs) -> pd.DataFrame:
-        return self._request(san.get, f'dev_activity_contributors_count/{self._from_ticker_to_slug(coin)}', **kwargs)
-
-    def get_github_activity_contributors_count(self, coin: str, **kwargs) -> pd.DataFrame:
-        return self._request(san.get, f'github_activity_contributors_count/{self._from_ticker_to_slug(coin)}', **kwargs)
-
-    def get_active_addresses(self, coin: str, **kwargs) -> pd.DataFrame:
-        return self._request(san.get, f'active_addresses_24h/{self._from_ticker_to_slug(coin)}', **kwargs)
+    def get_active_addresses_24h(self, coin: str, change: str = None, **kwargs) -> pd.DataFrame:
+        return self._request(
+            san.get,
+            f'active_addresses_24h_{change}/{self._from_ticker_to_slug(coin)}', **kwargs
+        )
 
     def get_exchange_balance(self, coin: str, **kwargs) -> pd.DataFrame:
-        return self._request(san.get, f'exchange_balance/{self._from_ticker_to_slug(coin)}', **kwargs)
+        return self._request(
+            san.get,
+            f'exchange_balance/{self._from_ticker_to_slug(coin)}', **kwargs
+        )
 
     def get_network_growth(self, coin: str, **kwargs) -> pd.DataFrame:
-        return self._request(san.get, f'network_growth/{self._from_ticker_to_slug(coin)}', **kwargs)
+        return self._request(
+            san.get,
+            f'network_growth/{self._from_ticker_to_slug(coin)}', **kwargs
+        )
 
     def get_transaction_volume(self, coin: str, **kwargs) -> pd.DataFrame:
         return self._request(san.get, f'transaction_volume/{self._from_ticker_to_slug(coin)}', **kwargs)
 
-    def get_bitmex_perpetuals_funding_rate(self, coin: str, **kwargs) -> pd.DataFrame:
+    def get_perpetual_funding_rate(self, coin: str, **kwargs) -> pd.DataFrame:
         return self._request(san.get, f'bitmex_perpetual_funding_rate/{self._from_ticker_to_slug(coin)}', **kwargs)
 
     def get_circulation_1d(self, coin: str, **kwargs) -> pd.DataFrame:
         return self._request(san.get, f'circulation_1d/{self._from_ticker_to_slug(coin)}', **kwargs)
-

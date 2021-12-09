@@ -26,9 +26,8 @@ def gen_query(query):
 def twitter_bot():
     bot = Twitter(BEARER_TOKEN)
 
-    coin = gen_query('BTC')
-    end = datetime.datetime(2021, 12, 3, 0, 0, 0)
-    start = datetime.datetime(2021, 12, 8, 0, 0, 0)
+    start = datetime.datetime(2021, 12, 4, 0, 0, 0)
+    end = datetime.datetime(2021, 12, 5, 0, 0, 0)
     # recent_tweets = bot.get_recent_tweets(
     #     query=coin, lang='en',
     #     start_time=start, end_time=end
@@ -37,19 +36,30 @@ def twitter_bot():
     # all_tweets_count = bot.get_all_tweets_count(
     # query=coin, granularity='day', start_time=start
     # )  # 403 Forbidden :(
-    recent_tweets_count = bot.get_recent_tweets_count(
-        query=gen_query('coin'),
-        granularity='hour', lang='en',
-        start_time=start, end_time=end
-    )
-    # save_json(recent_tweets_count, 'btc_test.json')
-    for tw in recent_tweets_count:
-        pprint(tw)
+    # for coin in TICKERS:
+    #     recent_tweets_count = bot.get_recent_tweets_count(
+    #         query=gen_query(coin),
+    #         granularity='hour', lang='en',
+    #         start_time=start, end_time=end
+    #     )
+    #     save_json(recent_tweets_count, f'data/twitter/{coin.lower()}_count.json')
+    #
+    #     for tw in recent_tweets_count:
+    #         pprint(tw)
+    count = 0
+    resume = {}
+    for coin in TICKERS:
+        with open(f'data/twitter/{coin}_count.json') as f:
+            data = json.load(f)
+            count += data[-1]['total_tweet_count']
+            resume[coin] = data[-1]
+    pprint(resume)
+    print(count)
 
 
 def async_twitter():
-    end = datetime.datetime(2021, 12, 3, 0, 0, 0)
-    start = datetime.datetime(2021, 12, 8, 0, 0, 0)
+    end = datetime.datetime(2021, 12, 4, 16, 38, 22)
+    start = datetime.datetime(2021, 12, 5, 0, 0, 0)
 
     async_bot = AsyncTwitter()
 
@@ -58,7 +68,9 @@ def async_twitter():
 
     async_bot.search(search=gen_query('BTC'), lang='en',
                      end_date=end, start_date=start,
-                     show_cashtags=True, output='btc_test.csv')
+                     show_cashtags=True, output='data/twitter/btc_tweets.csv')
+    # async_bot.thread_run()
+
     async_bot.run()
 
     # async_bot.search(queries=queries, coins=coins, lang='en',
@@ -68,52 +80,71 @@ def async_twitter():
     # async_bot.parallel_run()
 
 
-def lunarcrush_bot():
-    bot = LunarCrush()
+def dashboard_1():
+    sanbot = Santiment(SANTIMENT_API_KEY)
+
+    db1_1 = dashboards.gen_dashboard_1_1(
+        sanbot, TICKERS, save_all=False,
+        from_date='2021-09-01', to_date='2021-12-01',
+        interval='1d'
+    )
+    db1_1.to_csv(f'data/dashboard1/db1_data_1.csv')
+
+    db1_2 = dashboards.gen_dashboard_1_2(
+        sanbot, TICKERS, save_all=False,
+        from_date='2021-09-01', to_date='2021-12-01',
+        interval='1d'
+    )
+    db1_2.to_csv(f'data/dashboard1/db1_data_2.csv')
+    print(f'{san.api_calls_made()[0][-1]} out of {san.api_calls_remaining()}')
+
+
+def dashboard_2():
+    sanbot = Santiment(SANTIMENT_API_KEY)
+    lcbot = LunarCrush()
 
     start = datetime.datetime(2021, 9, 1, 0, 0, 0)
     end = datetime.datetime(2021, 12, 1, 0, 0, 0)
 
-    data_points = (datetime.datetime.today() - start).days + 1
-
-    lcmetrics = bot.get_assets(
-        symbol=list(TICKERS), data_points=data_points,
-        interval='day', change='6m'
-    )
-    df = dashboards.gen_dashboard_2_lunarcrush(lcmetrics, end)
-    df.to_csv('data/dashboard2/lunarcrush_data2.csv')
-
-    display(df)
-
-
-def santiment_bot():
-    sanbot = Santiment(SANTIMENT_API_KEY)
-
-    #DASHBOARD 1
-    print(dashboards.gen_dashboard_1(sanbot, 1))
-    #print(dashboards.gen_dashboard_1(sanbot, 2))
-
-    """
-    platforms = ['twitter', 'reddit', 'telegram', 'bitcointalk']
-
-    # DASHBOARD 2
-    db2 = dashboards.gen_dashboard_2_santiment(
-        sanbot, platforms, TICKERS, save_all=False,
+    # SANTIMENT
+    db2_1 = dashboards.gen_dashboard_2_santiment(
+        sanbot, platforms=['twitter', 'reddit', 'telegram', 'bitcointalk'],
+        tickers=TICKERS, save_all=False,
         from_date='2021-09-01', to_date='2021-12-01',
         interval='1d'
     )
-    db2.to_csv(f'data/dashboard2/santiment_data.csv')
-    display(db2)
-    """
-    #dashboards.gen_dashboard_3(sanbot)
+    db2_1.to_csv(f'data/dashboard2/db2_data_1.csv')
+    print(f'{san.api_calls_made()[0][-1]} out of {san.api_calls_remaining()}')
+
+    # LUNARCRUSH
+    data_points = (datetime.datetime.today() - start).days + 1
+    lcmetrics = lcbot.get_assets(
+        symbol=list(TICKERS), data_points=data_points,
+        interval='day', change='6m'
+    )
+
+    db2_2 = dashboards.gen_dashboard_2_lunarcrush(lcmetrics, end)
+    db2_2.to_csv('data/dashboard2/db2_data_2.csv')
+
+
+def dashboard_3():
+    sanbot = Santiment(SANTIMENT_API_KEY)
+
+    db3 = dashboards.gen_dashboard_3(
+        sanbot, TICKERS, save_all=False,
+        from_date='2021-09-01', to_date='2021-12-01',
+        interval='1d'
+    )
+    db3.to_csv(f'data/dashboard3/db3_data.csv')
     print(f'{san.api_calls_made()[0][-1]} out of {san.api_calls_remaining()}')
 
 
 def main():
     # twitter_bot()
     # async_twitter()
-    #lunarcrush_bot()
-    santiment_bot()
+    dashboard_1()
+    dashboard_2()
+    dashboard_3()
 
 
 if __name__ == '__main__':
