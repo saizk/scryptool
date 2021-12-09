@@ -88,6 +88,12 @@ def lunarcrush_bot():
 
 def santiment_bot():
     sanbot = Santiment(SANTIMENT_API_KEY)
+
+    #DASHBOARD 1
+    print(dashboards.gen_dashboard_1(sanbot, 1))
+    #print(dashboards.gen_dashboard_1(sanbot, 2))
+
+    """
     platforms = ['twitter', 'reddit', 'telegram', 'bitcointalk']
 
     # DASHBOARD 2
@@ -98,14 +104,16 @@ def santiment_bot():
     )
     db2.to_csv(f'data/dashboard2/santiment_data.csv')
     display(db2)
+    """
+    #dashboards.gen_dashboard_3(sanbot)
     print(f'{san.api_calls_made()[0][-1]} out of {san.api_calls_remaining()}')
 
 
 def main():
     # twitter_bot()
     # async_twitter()
-    lunarcrush_bot()
-    # santiment_bot()
+    #lunarcrush_bot()
+    santiment_bot()
 
 
 if __name__ == '__main__':
