@@ -1,6 +1,3 @@
-import csv
-import json
-import time
 import datetime
 
 from pprint import pprint
@@ -10,6 +7,7 @@ import san
 import dashboards
 
 from scraper._config import *
+
 from scraper.utils import *
 from scraper.twitter import Twitter, AsyncTwitter
 from scraper.lunarcrush import LunarCrush
@@ -141,8 +139,8 @@ def main():
     # twitter_bot()
     #async_twitter()
     # dashboard_1()
-    # dashboard_2()
-    dashboard_3()
+    dashboard_2()
+    # dashboard_3()
 
 
 if __name__ == '__main__':
