@@ -94,3 +94,6 @@ class Config:
 
     Queries: list = None
     Coins: list = None
+
+    Tickers: dict = None
+    Users: dict = None

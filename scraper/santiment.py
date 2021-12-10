@@ -48,55 +48,46 @@ class Santiment(object):
 
     def get_social_volume(self, coin: str, platform: str, **kwargs) -> pd.DataFrame:
         return self._request(
-            san.get,
-            f'social_volume_{platform}/{self._from_ticker_to_slug(coin)}', **kwargs
+            san.get, f'social_volume_{platform}/{self._from_ticker_to_slug(coin)}', **kwargs
         )
 
     def get_sentiment_balance(self, coin: str, platform: str, **kwargs) -> pd.DataFrame:
         return self._request(
-            san.get,
-            f'sentiment_balance_{platform}/{self._from_ticker_to_slug(coin)}', **kwargs
+            san.get, f'sentiment_balance_{platform}/{self._from_ticker_to_slug(coin)}', **kwargs
         )
 
     def get_social_dominance(self, coin: str, platform: str, **kwargs) -> pd.DataFrame:
         return self._request(
-            san.get,
-            f'social_dominance_{platform}/{self._from_ticker_to_slug(coin)}', **kwargs)
+            san.get, f'social_dominance_{platform}/{self._from_ticker_to_slug(coin)}', **kwargs)
 
     def get_sentiment(self, coin: str, bias: str = 'positive', **kwargs) -> pd.DataFrame:
         return self._request(
-            san.get,
-            f'sentiment_{bias}_total/{self._from_ticker_to_slug(coin)}', **kwargs
+            san.get, f'sentiment_{bias}_total/{self._from_ticker_to_slug(coin)}', **kwargs
         )
 
     def get_development_activity(self, coin: str, mode: str = None, **kwargs) -> pd.DataFrame:
         return self._request(
-            san.get,
-            f'dev_activity{"_" + mode if mode else ""}/{self._from_ticker_to_slug(coin)}', **kwargs
+            san.get, f'dev_activity{"_" + mode if mode else ""}/{self._from_ticker_to_slug(coin)}', **kwargs
         )
 
     def get_github_activity(self, coin: str, mode: str = None, **kwargs) -> pd.DataFrame:
         return self._request(
-            san.get,
-            f'github_activity{"_" + mode if mode else ""}/{self._from_ticker_to_slug(coin)}', **kwargs
+            san.get, f'github_activity{"_" + mode if mode else ""}/{self._from_ticker_to_slug(coin)}', **kwargs
         )
 
     def get_active_addresses_24h(self, coin: str, change: str = None, **kwargs) -> pd.DataFrame:
         return self._request(
-            san.get,
-            f'active_addresses_24h_{change}/{self._from_ticker_to_slug(coin)}', **kwargs
+            san.get, f'active_addresses_24h_{change}/{self._from_ticker_to_slug(coin)}', **kwargs
         )
 
     def get_exchange_balance(self, coin: str, **kwargs) -> pd.DataFrame:
         return self._request(
-            san.get,
-            f'exchange_balance/{self._from_ticker_to_slug(coin)}', **kwargs
+            san.get, f'exchange_balance/{self._from_ticker_to_slug(coin)}', **kwargs
         )
 
     def get_network_growth(self, coin: str, **kwargs) -> pd.DataFrame:
         return self._request(
-            san.get,
-            f'network_growth/{self._from_ticker_to_slug(coin)}', **kwargs
+            san.get, f'network_growth/{self._from_ticker_to_slug(coin)}', **kwargs
         )
 
     def get_transaction_volume(self, coin: str, **kwargs) -> pd.DataFrame:

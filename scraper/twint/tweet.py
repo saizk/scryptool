@@ -84,6 +84,9 @@ def Tweet(tw, config):
 
     # parsing date to user-friendly format
     _dt = tw['created_at']
+    t.lang = tw['lang']
+    # if t.lang == 'en':
+    #     print(_dt)
     _dt = datetime.strptime(_dt, '%a %b %d %H:%M:%S %z %Y')
     # _dt = utc_to_local(_dt)
     t.datetime = str(_dt.strftime(Tweet_formats['datetime']))
@@ -116,7 +119,6 @@ def Tweet(tw, config):
     except KeyError:
         t.thumbnail = ''
     t.tweet = getText(tw)
-    t.lang = tw['lang']
     # try:
     t.hashtags = [hashtag.get('text') for hashtag in tw['entities']['hashtags']]
     # except KeyError:

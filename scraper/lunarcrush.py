@@ -23,7 +23,8 @@ class LunarCrush(object):
 
     @staticmethod
     def _parse_kwargs(kwargs):
-        assert kwargs['data_points'] <= 720
+        if kwargs.get('data_points'):
+            assert kwargs['data_points'] <= 720
         for param, value in kwargs.items():
             if isinstance(value, list):
                 kwargs[param] = ','.join(value)
@@ -164,8 +165,17 @@ class LunarCrush(object):
         :key int days: Number of days to aggregate stats for
         :key int num_days: Number of days to aggregate from the calculated date using the days parameter.
              Use the value 1 to get the influencers on a single day.
-        :key int limit: Limit number of influencers to return
+        :key int limit (prohibited): Limit number of influencers to return
         :key str order_by: Order by engagement, followers, volume, or influential (influential is a score based on
             engagement, num followers and volume)
         """
         return self._request('influencers', symbol=symbol, **kwargs)
+
+    def get_top_n_influencers_by_coin(self, symbol: list, limit: int = 10, **kwargs):
+        data = {k: [] for k in symbol}
+        for coin in symbol:
+            for idx, infl in enumerate(self.get_influencers([coin], **kwargs)['data']):
+                if idx + 1 > limit:
+                    break
+                data[coin].append(infl.get('twitter_screen_name'))
+        return data

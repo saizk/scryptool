@@ -20,15 +20,19 @@ class Twitter(object):
     @staticmethod
     def _parse_kwargs(kwargs) -> dict:
         assert 'query' in kwargs
-        params = {}
+        params, query_params = {}, ''
+
         for key, value in kwargs.items():
             if isinstance(value, datetime.datetime):
                 params[key] = value.strftime("%Y-%m-%dT%H:%M:%SZ")
+            elif key == 'user':
+                query_params += f' from:{value}'
             elif key == 'lang':
-                params['query'] = f'({params["query"]}) lang:{value}'
+                query_params += f' lang:{value}'
             else:
                 params[key] = value
 
+        params['query'] = f'({params["query"]}){query_params}'
         return params
 
     @staticmethod
@@ -45,7 +49,7 @@ class Twitter(object):
         return [*self._pagination(self.client.search_recent_tweets, **self._parse_kwargs(kwargs))]
 
     def get_all_tweets_count(self, **kwargs) -> tweepy.client.Response:
-        return self.client.get_all_tweets_count(**self._parse_kwargs(kwargs))
+        return self.client.get_all_tweets_count(**self._parse_kwargs(kwargs))  # 403 Forbidden :(
 
     def get_recent_tweets_count(self, **kwargs) -> tweepy.client.Response:
         return self.client.get_recent_tweets_count(**self._parse_kwargs(kwargs))
@@ -58,7 +62,7 @@ class AsyncTwitter(object):
 
     @staticmethod
     def _parse_kwargs(kwargs):
-        params = {}
+        params, query_params = {}, ''
         for key, value in kwargs.items():
             if isinstance(value, datetime.datetime):
                 value = value.strftime("%Y-%m-%d %H:%M:%S")
@@ -66,10 +70,16 @@ class AsyncTwitter(object):
                 params['until'] = value
             elif key == 'end_date':
                 params['since'] = value
+            elif key == 'user':
+                query_params += f' from:{value}'
             else:
                 params[key] = value
-
+        if params.get('search'):
+            params['search'] = f'({params["search"]}){query_params}'
         return params
+
+    def gen_query(self, query: list):
+        return ' OR '.join(query)
 
     def search(self, **kwargs):
         kwargs = self._parse_kwargs(kwargs)
@@ -86,10 +96,7 @@ class AsyncTwitter(object):
         elif output.endswith('.json'):
             self.config.Store_json = True
 
-        if not kwargs.get('coins'):
-            self.config.Coins = list(TICKERS)
-
-    def _parallel_config(self) -> list:
+    def _parallel_config(self, mode: str) -> list:
         """
         Creates a list of N twint.Config objects with each respective coin queries
         :return:
@@ -101,21 +108,45 @@ class AsyncTwitter(object):
         config_params = []
         base_cfg = self.config
 
-        for coin, query in zip(base_cfg.Coins, base_cfg.Queries):
-            config = copy.deepcopy(base_cfg)
+        if mode == 'users':
+            config_params = self._users_config(base_cfg, path)
 
-            config.Search = query
-            config.Output = rf'{path.parent}\{coin.lower()}_{path.name}'
-
-            config_params.append(config)
+        elif mode == 'coins':
+            config_params = self._coin_config(base_cfg, path)
 
         return config_params
 
-    def parallel_run(self, n_workers=mp.cpu_count()):
-        config_params = self._parallel_config()
+    def _coin_config(self, base_cfg, path):
+        config_params = []
+
+        for coin, query in base_cfg.Tickers.items():
+            config = copy.deepcopy(base_cfg)
+
+            config.Search = self.gen_query(query)
+            config.Output = rf'{path.parent}\{coin.lower()}_{path.name}'
+
+            config_params.append(config)
+        return config_params
+
+    def _users_config(self, base_cfg, path):
+        config_params = []
+        path.parent.mkdir(parents=True, exist_ok=True)
+
+        for coin, users in base_cfg.Users.items():
+            for user in users:
+                config = copy.deepcopy(base_cfg)
+                config.Search = f'({self.gen_query(self.config.Tickers[coin])}) from:{user}'
+                config.Output = rf'{path.parent}\{coin}_{user.lower()}_{path.name}'
+                config_params.append(config)
+
+        return config_params
+
+    def parallel_run(self, mode: str, n_workers: int = mp.cpu_count()):
+        config_params = self._parallel_config(mode)
 
         with ProcessPoolExecutor(max_workers=n_workers) as pool:
             results = pool.map(twint.run.Search, config_params)
 
     def run(self):
+        self.config.Tickers = None
         twint.run.Search(self.config)

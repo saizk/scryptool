@@ -57,7 +57,7 @@ class Token:
             self.config.Guest_token = None
             raise RefreshTokenException(msg)
 
-    def refresh(self):
+    def refresh(self, retries=10):
         logme.debug('Retrieving guest token')
         res = self._request()
         match = re.search(r'\("gt=(\d+);', res.text)
@@ -66,4 +66,7 @@ class Token:
             self.config.Guest_token = str(match.group(1))
         else:
             self.config.Guest_token = None
+            if retries:
+                print('retrying')
+                self.refresh(retries - 1)
             raise RefreshTokenException('Could not find the Guest token in HTML')
