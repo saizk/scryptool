@@ -105,5 +105,5 @@ class Santiment(object):
     def get_perpetual_funding_rate(self, coin: str, **kwargs) -> pd.DataFrame:
         return self._request(san.get, f'bitmex_perpetual_funding_rate/{self._from_ticker_to_slug(coin)}', **kwargs)
 
-    def get_circulation_1d(self, coin: str, **kwargs) -> pd.DataFrame:
-        return self._request(san.get, f'circulation_1d/{self._from_ticker_to_slug(coin)}', **kwargs)
+    def get_circulation(self, coin: str, **kwargs) -> pd.DataFrame:
+        return self._request(san.get, f'circulation/{self._from_ticker_to_slug(coin)}', **kwargs)

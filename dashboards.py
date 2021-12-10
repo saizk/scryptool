@@ -127,8 +127,8 @@ def gen_dashboard_3(sanbot: scraper.santiment.Santiment, tickers, save_all, **kw
         print(f'Dashboard 3: {coin}  {idx + 1}/{len(tickers)}')
 
         metrics = [sanbot.get_price(coin, **kwargs),
-                   sanbot.get_volume(coin, **kwargs),
-                   sanbot.get_circulation_1d(coin, **kwargs)]
+                   sanbot.get_marketcap(coin, **kwargs),
+                   sanbot.get_circulation(coin, **kwargs)]
 
         df = gen_santiment_dashboard('dashboard3', coin, metrics, tickers, save_all)
         coin_dfs.append(df)

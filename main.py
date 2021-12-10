@@ -139,10 +139,10 @@ def dashboard_3():
 
 def main():
     # twitter_bot()
-    async_twitter()
+    #async_twitter()
     # dashboard_1()
     # dashboard_2()
-    # dashboard_3()
+    dashboard_3()
 
 
 if __name__ == '__main__':
