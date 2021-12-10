@@ -1,3 +1,6 @@
+import csv
+import json
+import time
 import datetime
 
 from pprint import pprint
@@ -7,7 +10,6 @@ import san
 import dashboards
 
 from scraper._config import *
-
 from scraper.utils import *
 from scraper.twitter import Twitter, AsyncTwitter
 from scraper.lunarcrush import LunarCrush
@@ -21,59 +23,56 @@ def gen_query(query):
 
 def twitter_bot():
     bot = Twitter(BEARER_TOKEN)
+    lcbot = LunarCrush()
+
+    data = lcbot.get_top_n_influencers_by_coin(list(TICKERS), limit=5)
+    influencers = [infl for coin in data.values() for infl in coin]
+    unique_influencers = set(influencers)
 
     start = datetime.datetime(2021, 12, 4, 0, 0, 0)
     end = datetime.datetime(2021, 12, 5, 0, 0, 0)
-    # recent_tweets = bot.get_recent_tweets(
-    #     query=coin, lang='en',
-    #     start_time=start, end_time=end
-    # )
-    # print(recent_tweets)
-    # all_tweets_count = bot.get_all_tweets_count(
-    # query=coin, granularity='day', start_time=start
-    # )  # 403 Forbidden :(
-    # for coin in TICKERS:
-    #     recent_tweets_count = bot.get_recent_tweets_count(
-    #         query=gen_query(coin),
-    #         granularity='hour', lang='en',
-    #         start_time=start, end_time=end
-    #     )
-    #     save_json(recent_tweets_count, f'data/twitter/{coin.lower()}_count.json')
-    #
-    #     for tw in recent_tweets_count:
-    #         pprint(tw)
-    count = 0
-    resume = {}
-    for coin in TICKERS:
-        with open(f'data/twitter/{coin}_count.json') as f:
-            data = json.load(f)
-            count += data[-1]['total_tweet_count']
-            resume[coin] = data[-1]
-    pprint(resume)
-    print(count)
+
+    total_tweets = 0
+    for coin, users in data.items():
+        for user in users:
+            recent_tweets_count = bot.get_recent_tweets_count(
+                query=gen_query(coin), user=user,
+                granularity='day',
+                start_time=start, end_time=end
+            )
+            # save_json(recent_tweets_count, f'data/twitter/{user.lower()}_count.json')
+
+            total_tweets += recent_tweets_count[-1]['total_tweet_count']
+            for tw in recent_tweets_count:
+                print(tw, user)
+    print(total_tweets)
 
 
 def async_twitter():
-    end = datetime.datetime(2021, 12, 4, 16, 38, 22)
-    start = datetime.datetime(2021, 12, 5, 0, 0, 0)
+    end = datetime.datetime(2021, 9, 1, 0, 0, 0)
+    start = datetime.datetime(2021, 12, 1, 0, 0, 0)
 
     async_bot = AsyncTwitter()
+    lcbot = LunarCrush()
 
-    queries = list(map(gen_query, TICKERS))
-    coins = list(TICKERS)
+    if not Path('data/influencers.json').exists():
+        data = lcbot.get_top_n_influencers_by_coin(list(TICKERS), limit=5)
+        save_json(data, 'data/influencers.json')
+    else:
+        data = json.load(open('data/influencers.json'))
 
-    async_bot.search(search=gen_query('BTC'), lang='en',
-                     end_date=end, start_date=start, limit=5,
-                     show_cashtags=True, output='data/twitter/btc_tweets.csv')
-    # async_bot.thread_run()
+    async_bot.search(users=data, tickers=TICKERS,
+                     lang='en',
+                     end_date=end, start_date=start,
+                     show_cashtags=True, output='data/twitter/tweets.csv')
 
-    async_bot.run()
+    async_bot.parallel_run('users')
 
-    # async_bot.search(queries=queries, coins=coins, lang='en',
+    # async_bot.search(tickers=TICKERS, lang='en',
     #                  end_date=end, start_date=start, lowercase=True,
     #                  show_cashtags=True, output=f'data/twitter/tweets.csv')
     #
-    # async_bot.parallel_run()
+    # async_bot.parallel_run('coins')
 
 
 def dashboard_1():
@@ -104,7 +103,7 @@ def dashboard_2():
 
     # SANTIMENT
     db2_1 = dashboards.gen_dashboard_2_santiment(
-        sanbot, platforms=['twitter', 'reddit', 'telegram', 'bitcointalk'],
+        sanbot, platforms=['telegram', 'bitcointalk'],
         tickers=TICKERS, save_all=False,
         from_date='2021-09-01', to_date='2021-12-01',
         interval='1d'
@@ -137,9 +136,9 @@ def dashboard_3():
 
 def main():
     # twitter_bot()
-    #async_twitter()
-    # dashboard_1()
-    dashboard_2()
+    # async_twitter()
+    dashboard_1()
+    # dashboard_2()
     # dashboard_3()
 
 
