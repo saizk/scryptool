@@ -77,7 +77,12 @@ def async_twitter():
 
 def dashboard_1():
     sanbot = Santiment(SANTIMENT_API_KEY)
+    lcbot = LunarCrush()
 
+    start = datetime.datetime(2021, 9, 1, 0, 0, 0)
+    end = datetime.datetime(2021, 12, 1, 0, 0, 0)
+
+    # SANTIMENT
     db1_1 = dashboards.gen_dashboard_1_1(
         sanbot, TICKERS, save_all=False,
         from_date='2021-09-01', to_date='2021-12-01',
@@ -92,6 +97,18 @@ def dashboard_1():
     )
     db1_2.to_csv(f'data/dashboard1/db1_data_2.csv')
     print(f'{san.api_calls_made()[0][-1]} out of {san.api_calls_remaining()}')
+
+
+    # LUNARCRUSH
+    data_points = (datetime.datetime.today() - start).days + 1
+    lcmetrics = lcbot.get_global(
+        symbol=list(TICKERS), data_points=data_points,
+        interval='day', change='6m'
+    )
+
+    db1_3 = dashboards.gen_dashboard_1_lunarcrush(lcmetrics, end)
+    db1_3.to_csv('data/dashboard1/db1_data_3.csv')
+    print(db1_3)
 
 
 def dashboard_2():

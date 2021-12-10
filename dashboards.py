@@ -66,6 +66,34 @@ def gen_dashboard_1_2(sanbot: scraper.santiment.Santiment, tickers, save_all, **
 
     return db1
 
+def gen_dashboard_1_lunarcrush(lcmetrics, end):
+    path = Path('data/dashboard2')
+    print(f'Dashboard 1.3:')
+
+    data = lcmetrics['data']
+    # bearish =
+    symbols = {s.pop('id'): s.pop('symbol') for s in data}
+
+    df = pd.concat([pd.DataFrame(s) for s in symbols])
+    df.reset_index()
+    # df['time'] = pd.to_datetime(df['time'], unit='s')
+    # additional_points = (datetime.datetime.today() - end).days
+    # df.drop(df.tail(additional_points).index,
+    #         inplace=True)  # remove additional data (> 1/12/21)
+    # df.drop(
+    #     ['open', 'close', 'high', 'low', 'volume', 'market_cap', 'reddit_comments', 'reddit_comments_score',
+    #      'tweet_spam', 'tweet_quotes', 'tweet_sentiment1', 'tweet_sentiment2', 'tweet_sentiment3',
+    #      'tweet_sentiment4', 'tweet_sentiment5', 'tweet_sentiment_impact1', 'tweet_sentiment_impact2',
+    #      'tweet_sentiment_impact3', 'tweet_sentiment_impact4', 'tweet_sentiment_impact5',
+    #      'sentiment_absolute', 'sentiment_relative', 'search_average', 'price_score', 'social_impact_score',
+    #      'alt_rank', 'alt_rank_30d', 'alt_rank_hour_average', 'market_cap_rank', 'percent_change_24h_rank',
+    #      'volume_24h_rank', 'social_volume_24h_rank', 'social_score_24h_rank', 'percent_change_24h'],
+    #     axis=1, inplace=True
+    # )
+    # df['asset_id'].replace(symbols, inplace=True)
+    # df = df.rename(columns={'asset_id': 'asset'})
+    return df
+
 
 def gen_dashboard_2_santiment(sanbot, platforms, tickers, save_all, **kwargs) -> pd.DataFrame:
     coin_dfs = []
