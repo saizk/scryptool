@@ -118,9 +118,15 @@ def gen_dashboard_2_santiment(sanbot, platforms, tickers, save_all, **kwargs) ->
     return merged_df
 
 
-def gen_dashboard_2_lunarcrush(lcmetrics, end):
+def gen_dashboard_2_lunarcrush(lcbot, tickers, start, end):
     path = Path('data/dashboard2')
     print(f'Dashboard 2.2:')
+
+    data_points = (datetime.datetime.today() - start).days + 1
+    lcmetrics = lcbot.get_assets(
+        symbol=tickers, data_points=data_points,
+        interval='day', change='6m'
+    )
 
     data = lcmetrics['data']
     symbols = {s.pop('id'): s.pop('symbol') for s in data}

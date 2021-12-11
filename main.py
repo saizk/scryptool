@@ -129,13 +129,7 @@ def dashboard_2():
     print(f'{san.api_calls_made()[0][-1]} out of {san.api_calls_remaining()}')
 
     # LUNARCRUSH
-    data_points = (datetime.datetime.today() - start).days + 1
-    lcmetrics = lcbot.get_assets(
-        symbol=list(TICKERS), data_points=data_points,
-        interval='day', change='6m'
-    )
-
-    db2_2 = dashboards.gen_dashboard_2_lunarcrush(lcmetrics, end)
+    db2_2 = dashboards.gen_dashboard_2_lunarcrush(lcbot, list(TICKERS), start, end)
     db2_2.to_csv('data/dashboard2/db2_data_2.csv')
 
 

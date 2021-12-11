@@ -78,7 +78,8 @@ class AsyncTwitter(object):
             params['search'] = f'({params["search"]}){query_params}'
         return params
 
-    def gen_query(self, query: list):
+    @staticmethod
+    def gen_query(query: list):
         return ' OR '.join(query)
 
     def search(self, **kwargs):
@@ -101,40 +102,38 @@ class AsyncTwitter(object):
         Creates a list of N twint.Config objects with each respective coin queries
         :return:
         """
-        # self.search(**kwargs)
         path = Path(self.config.Output)
         path.parent.mkdir(parents=True, exist_ok=True)
 
         config_params = []
-        base_cfg = self.config
 
         if mode == 'users':
-            config_params = self._users_config(base_cfg, path)
+            config_params = self._users_config(path)
 
         elif mode == 'coins':
-            config_params = self._coin_config(base_cfg, path)
+            config_params = self._coin_config(path)
 
         return config_params
 
-    def _coin_config(self, base_cfg, path):
+    def _coin_config(self, path):
         config_params = []
 
-        for coin, query in base_cfg.Tickers.items():
-            config = copy.deepcopy(base_cfg)
+        for coin, query in self.config.Tickers.items():
+            config = copy.deepcopy(self.config)
 
             config.Search = self.gen_query(query)
             config.Output = rf'{path.parent}\{coin.lower()}_{path.name}'
-
             config_params.append(config)
+
         return config_params
 
-    def _users_config(self, base_cfg, path):
+    def _users_config(self, path):
         config_params = []
-        path.parent.mkdir(parents=True, exist_ok=True)
 
-        for coin, users in base_cfg.Users.items():
+        for coin, users in self.config.Users.items():
             for user in users:
-                config = copy.deepcopy(base_cfg)
+                config = copy.deepcopy(self.config)
+
                 config.Search = f'({self.gen_query(self.config.Tickers[coin])}) from:{user}'
                 config.Output = rf'{path.parent}\{coin}_{user.lower()}_{path.name}'
                 config_params.append(config)
