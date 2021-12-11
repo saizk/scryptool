@@ -6,16 +6,16 @@ import datetime
 
 from pprint import pprint
 # from IPython.display import display
-import pandas as pd
 import san
+import pandas as pd
 import dashboards
 
 from scraper._config import *
 from scraper.utils import *
-from scraper.twitter import Twitter, AsyncTwitter
-from scraper.lunarcrush import LunarCrush
-from scraper.santiment import Santiment
 from scraper.tickers import *
+from scraper import Twitter, AsyncTwitter
+from scraper import LunarCrush
+from scraper import Santiment
 
 
 def gen_query(query):
