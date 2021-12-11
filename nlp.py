@@ -5,6 +5,13 @@ import glob
 
 import pandas as pd
 
+# dashboard 4.1
+
+def sentiment(tweet):
+    pass
+
+def create_sentiment_df():
+    pass
 
 # nltk.download('words')
 # words = set(nltk.corpus.words.words())
@@ -33,15 +40,25 @@ import pandas as pd
 #
 #     return
 
-def create_coin_df(input_directory, output_directory, ticker):
-    merged_df = pd.concat(
-            [pd.read_csv(f) for f in glob.glob(input_directory)],
-            axis='index'
-        )
-    merged_df["coin"] = ticker
-    merged_df.to_csv(output_directory, index=False)
+
+
+# DASHBOARD 4.2
+def create_coin_df(TICKERS):
+    for ticker in list(TICKERS):
+        merged_df = pd.concat(
+                [pd.read_csv(f) for f in glob.glob(f'data/twitter/{ticker}*.csv')],
+                axis='index'
+            )
+        merged_df["coin"] = ticker
+        merged_df.to_csv(f'data/twitter/nlp/{ticker}_all_tweets.csv', index=False)
     return
 
+def read_all_csv():
+    df = pd.concat(
+        [pd.read_csv(f) for f in glob.glob(input_directory)],
+        axis='index'
+    )
+    return df
 
 def create_top5_df(input_directory, output_directory):
     df = pd.concat(

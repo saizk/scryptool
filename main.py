@@ -9,7 +9,7 @@ from IPython.display import display
 import san
 import pandas as pd
 import dashboards
-from nlp.nlp import create_top5_df, create_coin_df
+import nlp
 
 from scraper._config import *
 from scraper.utils import *
@@ -148,13 +148,18 @@ def dashboard_3():
     print(f'{san.api_calls_made()[0][-1]} out of {san.api_calls_remaining()}')
 
 
-def nlp():
+def dashboard_4():
+
+    # DASHBOARD 4.1 SENTIMENT ANALYSIS
+    # create_sentiment_df
     # tweet_parser("data/influencers_tweets.csv")
 
-    for ticker in list(TICKERS):
-        create_coin_df(f'data/twitter/{ticker}*.csv', f'data/twitter/nlp/{ticker}_all_tweets.csv',ticker)
+    #DASHBOARD 4.2 TOP5 TWEETS
+    nlp.create_coin_df(TICKERS)
+    nlp.create_top5_df(f'data/twitter/nlp/*.csv', f'data/twitter/nlp/top5/top5.csv')
 
-    create_top5_df(f'data/twitter/nlp/*.csv', f'data/twitter/nlp/top5/top5.csv')
+    #DASHBOARD 4.3 CLOUD WORD
+    # tweet_parser("data/influencers_tweets.csv")
 
     return
 
@@ -162,10 +167,10 @@ def nlp():
 def main():
     # twitter_bot()
     # async_twitter()
-    dashboard_1()
+    # dashboard_1()
     # dashboard_2()
     # dashboard_3()
-    # nlp()
+    dashboard_4()
 
 
 if __name__ == '__main__':
