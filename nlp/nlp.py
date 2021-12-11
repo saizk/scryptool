@@ -1,5 +1,4 @@
 import re
-import emoji
 import nltk
 import preprocessor as p
 import glob
@@ -49,8 +48,8 @@ def create_top5_df(input_directory, output_directory):
         [pd.read_csv(f) for f in glob.glob(input_directory)],
         axis='index'
     )
-
-
+    df["tweet_score"] = df["retweets_count"] + df["likes_count"] * 0.25
+    df = df.sort_values(['tweet_score'], ascending=False).groupby('coin').head(5).reset_index(drop=True)
     df.to_csv(output_directory, index=False)
     return df
 
