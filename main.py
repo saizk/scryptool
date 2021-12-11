@@ -9,6 +9,7 @@ from pprint import pprint
 import san
 import pandas as pd
 import dashboards
+from nlp import afunc
 
 from scraper._config import *
 from scraper.utils import *
@@ -157,14 +158,17 @@ def dashboard_3():
     db3.to_csv(f'data/dashboard3/db3_data.csv')
     print(f'{san.api_calls_made()[0][-1]} out of {san.api_calls_remaining()}')
 
+def nlp():
+    afunc("data/influencers_tweets.csv")
+    return
 
 def main():
     # twitter_bot()
     # async_twitter()
-    dashboard_1()
+    # dashboard_1()
     # dashboard_2()
     # dashboard_3()
-
+    nlp()
 
 if __name__ == '__main__':
     main()

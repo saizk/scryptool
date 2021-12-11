@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 .idea
 
-_*.py
+_c*.py
