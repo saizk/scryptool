@@ -1,11 +1,11 @@
-id,created_at,tweet,cashtags,username,retweets_count,likes_count,language,replies_count,name,hashtags
-1464194257393045504,2021-11-26 11:28:09 UTC,@0xtuba Normally would say it’s because I use AVAX,[],kyled116,0,126,en,7,Kyle Davies,[]
-1462911088505221125,2021-11-22 22:29:17 UTC,Bear market? Never heard of her.   $AVAX SZN  https://t.co/HVOGjpdDcx,['avax'],kyled116,22,482,en,56,Kyle Davies,[]
-1461987885775667200,2021-11-20 09:20:49 UTC,"@FigoETH @zhusu @kaiynne As you described, I agree there are tradeoffs. I hold all (that I'm aware of) of my NFT's on ETH L1. For DEX trading, for me it's on ETH L2 Starkware or other L1's like Avalanche. For games, it's mixed, some have their own chain others on other L1's or L2's.",[],kyled116,4,17,en,2,Kyle Davies,[]
-1461935123914362881,2021-11-20 05:51:09 UTC,"Lmfao I’m locked up in $AVAX for years. If I want to take a dump, I’ll take it later thx.",['avax'],kyled116,37,903,en,38,Kyle Davies,[]
-1461650762832834568,2021-11-19 11:01:12 UTC,Zero confusion what season it is  $AVAX  https://t.co/8uAF3LZusT,['avax'],kyled116,30,590,en,32,Kyle Davies,[]
-1460825165223190535,2021-11-17 04:20:34 UTC,$SOL for summer  $AVAX for winter   Know your seasons,"['sol', 'avax']",kyled116,227,2807,en,178,Kyle Davies,[]
-1452777592549826565,2021-10-25 23:22:24 UTC,Fat thesis on L1’s getting fatter  $SOL $AVAX $ALGO,"['sol', 'avax', 'algo']",kyled116,48,836,en,65,Kyle Davies,[]
-1442631765567234054,2021-09-27 23:26:30 UTC,"The smart contract chain race is seeing some pull ahead of the peloton. $AVAX, $SOL, #Starkware","['avax', 'sol']",kyled116,12,280,en,19,Kyle Davies,['starkware']
-1441347588909723655,2021-09-24 10:23:38 UTC,"I am reasonably confident that the next big crypto wave is gaming. I am equally reasonably confident that this will be on Avalanche, Solana, and ETH L2's.",[],kyled116,259,2726,en,335,Kyle Davies,[]
-1438304170197405696,2021-09-16 00:50:11 UTC,$AVAX is how #ETHEREUM scales,['avax'],kyled116,131,1194,en,121,Kyle Davies,['ethereum']
+created_at,tweet,username,hashtags,cashtags,retweets_count,likes_count,replies_count
+2021-11-26 11:28:09 UTC,Normally would say it’s because I use AVAX,kyled116,[],[],0,126,7
+2021-11-22 22:29:17 UTC,Bear market? Never heard of her.   $AVAX SZN  https://t.co/HVOGjpdDcx,kyled116,[],['avax'],22,482,56
+2021-11-20 09:20:49 UTC,"As you described, I agree there are tradeoffs. I hold all (that I'm aware of) of my NFT's on ETH L1. For DEX trading, for me it's on ETH L2 Starkware or other L1's like Avalanche. For games, it's mixed, some have their own chain others on other L1's or L2's.",kyled116,[],[],4,17,2
+2021-11-20 05:51:09 UTC,"Lmfao I’m locked up in $AVAX for years. If I want to take a dump, I’ll take it later thx.",kyled116,[],['avax'],37,903,38
+2021-11-19 11:01:12 UTC,Zero confusion what season it is  $AVAX  https://t.co/8uAF3LZusT,kyled116,[],['avax'],30,589,32
+2021-11-17 04:20:34 UTC,$SOL for summer  $AVAX for winter   Know your seasons,kyled116,[],"['sol', 'avax']",227,2805,178
+2021-10-25 23:22:24 UTC,Fat thesis on L1’s getting fatter  $SOL $AVAX $ALGO,kyled116,[],"['sol', 'avax', 'algo']",48,836,65
+2021-09-27 23:26:30 UTC,"The smart contract chain race is seeing some pull ahead of the peloton. $AVAX, $SOL, #Starkware",kyled116,['starkware'],"['avax', 'sol']",12,280,19
+2021-09-24 10:23:38 UTC,"I am reasonably confident that the next big crypto wave is gaming. I am equally reasonably confident that this will be on Avalanche, Solana, and ETH L2's.",kyled116,[],[],259,2728,335
+2021-09-16 00:50:11 UTC,$AVAX is how #ETHEREUM scales,kyled116,['ethereum'],['avax'],131,1194,121

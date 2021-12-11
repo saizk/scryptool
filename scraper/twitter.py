@@ -82,11 +82,17 @@ class AsyncTwitter(object):
     def gen_query(query: list):
         return ' OR '.join(query)
 
+    @staticmethod
+    def _from_snake_to_camel(snake_str):  # PEP8 :(
+        init, *temp = snake_str.split('_')
+        camel_str = ''.join([init.title(), *map(str.title, temp)])
+        return camel_str
+
     def search(self, **kwargs):
         kwargs = self._parse_kwargs(kwargs)
 
         for k, v in kwargs.items():
-            setattr(self.config, k.capitalize(), v)
+            setattr(self.config, self._from_snake_to_camel(k), v)
 
         output = kwargs.get('output')
 

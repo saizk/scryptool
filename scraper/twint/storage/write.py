@@ -3,12 +3,14 @@ import csv
 import json
 import os
 
+
 def outputExt(objType, fType):
     if objType == "str":
         objType = "username"
     outExt = f"/{objType}s.{fType}"
 
     return outExt
+
 
 def addExt(base, objType, fType):
     if len(base.split('.')) == 1:
@@ -17,8 +19,10 @@ def addExt(base, objType, fType):
 
     return base
 
+
 def Text(entry, f):
     print(entry.replace('\n', ' '), file=open(f, "a", encoding="utf-8"))
+
 
 def Type(config):
     if config.User_full:
@@ -29,6 +33,7 @@ def Type(config):
         _type = "tweet"
 
     return _type
+
 
 def struct(obj, custom, _type):
     if custom:
@@ -42,15 +47,13 @@ def struct(obj, custom, _type):
 
     return fieldnames, row
 
+
 def createDirIfMissing(dirname):
     if not os.path.exists(dirname):
         os.makedirs(dirname)
 
-global_csv_file = None
-
 
 def Csv(obj, config):
-
     _obj_type = obj.__class__.__name__
     if _obj_type == "str":
         _obj_type = "username"
@@ -59,45 +62,41 @@ def Csv(obj, config):
     if config.Lang is not None and row.get('language') != config.Lang:
         return
 
-    write_header = False
-    extra_vals = {'user_rt', 'user_rt_id', 'trans_dest', 'trans_src', 'translate', 'geo', 'near', 'source', 'mentions',
-                  'video', 'quote_url', 'thumbnail', 'photos', 'urls', 'reply_to', 'link',
-                  'retweet_id', 'retweet_date', 'date', 'user_id', 'conversation_id', 'retweet',
-                  'timezone', 'time', 'place'}
-
     if not config.SaveMeta:
-        fieldnames = set(fieldnames) - extra_vals
-        for key in extra_vals:
-            row.pop(key)
+        fieldnames = ('created_at', 'tweet', 'username', 'hashtags', 'cashtags',
+                      'retweets_count', 'likes_count', 'replies_count')
+        row = dict((k, row[k]) for k in fieldnames if k in row)
 
     dialect = 'excel-tab' if 'Tabs' in config.__dict__ else 'excel'
 
-    global_csv(config, fieldnames, dialect, row, write_header)
+    # global_csv(config, fieldnames, dialect, row, write_header)
     slow_csv(config, fieldnames, dialect, row)
 
 
-def global_csv(config, fieldnames, dialect, row, write_header):
+global_csv_file = None
+
+def global_csv(config, fieldnames, dialect, row):
     global global_csv_file
     if global_csv_file is None:
+    # if not os.path.exists(config.Output):
         global_csv_file = open(config.Output, "a", newline='', encoding="utf-8")
-        write_header = True
+        writer = csv.DictWriter(global_csv_file, fieldnames=fieldnames, dialect=dialect)
+        writer.writeheader()
 
     csv_file = global_csv_file
     writer = csv.DictWriter(csv_file, fieldnames=fieldnames, dialect=dialect)
-    if write_header:
-        writer.writeheader()
-
     writer.writerow(row)
 
 
 def slow_csv(config, fieldnames, dialect, row):
-    if not (os.path.exists(config.Output)):
-        with open(config.Output, "w", newline='', encoding="utf-8") as csv_file:
-            writer = csv.DictWriter(csv_file, fieldnames=fieldnames, dialect=dialect)
-            writer.writeheader()
+    write_header = False
+    if not os.path.exists(config.Output):
+        write_header = True
 
     with open(config.Output, "a", newline='', encoding="utf-8") as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames, dialect=dialect)
+        if write_header:
+            writer.writeheader()
         writer.writerow(row)
 
 

@@ -1,15 +1,15 @@
-likes_count,name,created_at,retweets_count,id,replies_count,hashtags,language,cashtags,tweet,username
-159,TraderSZ,2021-11-27 12:46:55 UTC,17,1464576468340596745,10,[],en,['chart'],"For those asking where i chart coins that aren't on exchanges, I've been using ChartEx to do TA on my Avalanche, BSC and Polygon shitcoins for a while now.   @ChartExPro $CHART   https://t.co/ffmnxPW9c8",trader1sz
-712,TraderSZ,2021-11-26 21:22:27 UTC,65,1464343820091502597,54,[],en,['avax'],$AVAX - will be bidding 80-85 IF we get there  https://t.co/vcXX6fu0n3,trader1sz
-65,TraderSZ,2021-11-24 16:34:01 UTC,5,1463546459547217927,6,[],en,"['cra', 'avax']",$CRA - Lets see if that's the low with $AVAX also bouncing  https://t.co/2ltiiEfPPw,trader1sz
-207,TraderSZ,2021-11-21 16:01:45 UTC,1,1462451172367900676,12,[],en,['avax'],Shoutout to @ericjuta for giving me heads up on $AVAX below $5,trader1sz
-537,TraderSZ,2021-11-20 22:59:18 UTC,62,1462193867814539264,42,[],en,"['avax', 'xava']",GN   290 $AVAX soon imo thats when i'll be taking some off $XAVA  https://t.co/iGHooQfkYN,trader1sz
-5,TraderSZ,2021-11-20 22:47:50 UTC,0,1462190979725807625,1,[],en,[],@kapilnandwana @crypto_iso @Trader_XO @satsdart yes he's a great follow. been in avax sub $5,trader1sz
-168,TraderSZ,2021-11-04 14:56:38 UTC,15,1456274194308550659,15,[],en,"['avax', 'xava']","$AVAX has alot further to go imo, should get $XAVA to atleast $10-$12 imo before a decent correction  https://t.co/GTCKj5v8sd",trader1sz
-84,TraderSZ,2021-10-26 11:11:13 UTC,7,1452955975930060800,12,[],en,"['xava', 'avax']",$XAVA should go up to with $AVAX  https://t.co/Ksj9DFsXA5,trader1sz
-97,TraderSZ,2021-10-26 10:23:28 UTC,11,1452943956019404809,13,[],en,['avax'],$AVAX update. close enough to first target  https://t.co/ReJcZYykj2,trader1sz
-555,TraderSZ,2021-10-16 11:19:00 UTC,45,1449334052587249668,38,[],en,['avax'],$AVAX reclaim above 60 and i'd expect push to 74 and then 91  https://t.co/VVex2KLwoS,trader1sz
-222,TraderSZ,2021-09-18 19:56:40 UTC,22,1439317468640694274,22,[],en,['avax'],74 capping upside for now. See how deep the dip is before stepping in again. Mapped out few level to level scenarios. Most likely will wait for next week. Need a break. $AVAX  https://t.co/ZSpF2im52L,trader1sz
-398,TraderSZ,2021-09-18 00:22:10 UTC,12,1439021897728073729,39,[],en,['avax'],$AVAX  nearly there  https://t.co/aqcFPnZSc6,trader1sz
-355,TraderSZ,2021-09-17 23:41:03 UTC,28,1439011549864251393,36,['bitcoin'],en,"['avax', 'xava', 'xava']",Alot of $avax and $xava hype lately. Will be joined by @AvalaunchApp founder Mark Stanwyck who runs the show with $xava to break it all down on Monday's #Bitcoin for Ledges live stream,trader1sz
-63,TraderSZ,2021-09-05 18:04:20 UTC,1,1434578156476846086,11,[],en,[],@Captain_Kole1 Sir when avax?,trader1sz
+created_at,tweet,username,hashtags,cashtags,retweets_count,likes_count,replies_count
+2021-11-27 12:46:55 UTC,"For those asking where i chart coins that aren't on exchanges, I've been using ChartEx to do TA on my Avalanche, BSC and Polygon shitcoins for a while now.    $CHART   https://t.co/ffmnxPW9c8",trader1sz,[],['chart'],17,159,10
+2021-11-26 21:22:27 UTC,$AVAX - will be bidding 80-85 IF we get there  https://t.co/vcXX6fu0n3,trader1sz,[],['avax'],63,711,54
+2021-11-24 16:34:01 UTC,$CRA - Lets see if that's the low with $AVAX also bouncing  https://t.co/2ltiiEfPPw,trader1sz,[],"['cra', 'avax']",5,65,6
+2021-11-21 16:01:45 UTC,Shoutout to  for giving me heads up on $AVAX below $5,trader1sz,[],['avax'],1,207,12
+2021-11-20 22:59:18 UTC,GN   290 $AVAX soon imo thats when i'll be taking some off $XAVA  https://t.co/iGHooQfkYN,trader1sz,[],"['avax', 'xava']",62,537,42
+2021-11-20 22:47:50 UTC,yes he's a great follow. been in avax sub $5,trader1sz,[],[],0,5,1
+2021-11-04 14:56:38 UTC,"$AVAX has alot further to go imo, should get $XAVA to atleast $10-$12 imo before a decent correction  https://t.co/GTCKj5v8sd",trader1sz,[],"['avax', 'xava']",15,168,15
+2021-10-26 11:11:13 UTC,$XAVA should go up to with $AVAX  https://t.co/Ksj9DFsXA5,trader1sz,[],"['xava', 'avax']",7,84,12
+2021-10-26 10:23:28 UTC,$AVAX update. close enough to first target  https://t.co/ReJcZYykj2,trader1sz,[],['avax'],11,97,13
+2021-10-16 11:19:00 UTC,$AVAX reclaim above 60 and i'd expect push to 74 and then 91  https://t.co/VVex2KLwoS,trader1sz,[],['avax'],45,555,38
+2021-09-18 19:56:40 UTC,74 capping upside for now. See how deep the dip is before stepping in again. Mapped out few level to level scenarios. Most likely will wait for next week. Need a break. $AVAX  https://t.co/ZSpF2im52L,trader1sz,[],['avax'],22,222,22
+2021-09-18 00:22:10 UTC,$AVAX  nearly there  https://t.co/aqcFPnZSc6,trader1sz,[],['avax'],12,398,39
+2021-09-17 23:41:03 UTC,Alot of $avax and $xava hype lately. Will be joined by  founder Mark Stanwyck who runs the show with $xava to break it all down on Monday's #Bitcoin for Ledges live stream,trader1sz,['bitcoin'],"['avax', 'xava', 'xava']",28,355,36
+2021-09-05 18:04:20 UTC,Sir when avax?,trader1sz,[],[],1,63,11

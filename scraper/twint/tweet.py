@@ -1,3 +1,4 @@
+import re
 from time import strftime, localtime
 from datetime import datetime, timezone
 
@@ -48,11 +49,10 @@ def _get_mentions(tw):
 
 def _get_reply_to(tw):
     try:
-        reply_to = [
-            {
-                'screen_name': _mention['screen_name'],
-                'name': _mention['name'],
-                'id': _mention['id_str'],
+        reply_to = [{
+             'screen_name': _mention['screen_name'],
+             'name': _mention['name'],
+             'id': _mention['id_str'],
             } for _mention in tw['entities']['user_mentions']
             if tw['display_text_range'][0] > _mention['indices'][1]
         ]
@@ -61,7 +61,7 @@ def _get_reply_to(tw):
     return reply_to
 
 
-def getText(tw):
+def getText(tw, config):
     """Replace some text
     """
     logme.debug(__name__ + ':getText')
@@ -69,6 +69,8 @@ def getText(tw):
     text = text.replace("http", " http")
     text = text.replace("pic.twitter", " pic.twitter")
     text = text.replace("\n", " ")
+    if config.RemoveMentions:
+        text = re.sub("@[A-Za-z0-9_]+", "", text).strip()
 
     return text
 
@@ -101,10 +103,17 @@ def Tweet(tw, config):
     t.timezone = strftime("%z", localtime())
     t.mentions = _get_mentions(tw)
     t.reply_to = _get_reply_to(tw)
-    try:
-        t.urls = [_url['expanded_url'] for _url in tw['entities']['urls']]
-    except KeyError:
-        t.urls = []
+    t.urls = [_url.get('expanded_url', []) for _url in tw['entities']['urls']]
+
+    t.tweet = getText(tw, config)
+
+    t.hashtags = [hashtag.get('text', []) for hashtag in tw['entities']['hashtags']]
+    t.cashtags = [cashtag.get('text', []) for cashtag in tw['entities']['symbols']]
+
+    t.replies_count = tw['reply_count']
+    t.retweets_count = tw['retweet_count']
+    t.likes_count = tw['favorite_count']
+    t.link = f"https://twitter.com/{t.username}/status/{t.id}"
     try:
         t.photos = [_img['media_url_https'] for _img in tw['entities']['media'] if _img['type'] == 'photo' and
                     _img['expanded_url'].find('/photo/') != -1]
@@ -118,20 +127,7 @@ def Tweet(tw, config):
         t.thumbnail = tw['extended_entities']['media'][0]['media_url_https']
     except KeyError:
         t.thumbnail = ''
-    t.tweet = getText(tw)
-    # try:
-    t.hashtags = [hashtag.get('text') for hashtag in tw['entities']['hashtags']]
-    # except KeyError:
-    #     t.hashtags = []
-    try:
-        t.cashtags = [cashtag['text'] for cashtag in tw['entities']['symbols']]
-    except KeyError:
-        t.cashtags = []
-    t.replies_count = tw['reply_count']
-    t.retweets_count = tw['retweet_count']
-    t.likes_count = tw['favorite_count']
-    t.link = f"https://twitter.com/{t.username}/status/{t.id}"
-    if config.SaveMeta or True:
+    if True:  # config.SaveMeta <- causes future errors
         try:
             if 'user_rt_id' in tw['retweet_data']:
                 t.retweet = True
@@ -148,8 +144,7 @@ def Tweet(tw, config):
         try:
             t.quote_url = tw['quoted_status_permalink']['expanded'] if tw['is_quote_status'] else ''
         except KeyError:
-            # means that the quoted tweet have been deleted
-            t.quote_url = 0
+            t.quote_url = 0  # means that the quoted tweet have been deleted
         t.near = config.Near if config.Near else ""
         t.geo = config.Geo if config.Geo else ""
         t.source = config.Source if config.Source else ""

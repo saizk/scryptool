@@ -97,3 +97,5 @@ class Config:
 
     Tickers: dict = None
     Users: dict = None
+
+    RemoveMentions: bool = False

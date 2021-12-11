@@ -1,11 +1,12 @@
 import csv
+import glob
 import json
 import time
 import datetime
 
 from pprint import pprint
 # from IPython.display import display
-
+import pandas as pd
 import san
 import dashboards
 
@@ -49,24 +50,36 @@ def twitter_bot():
 
 
 def async_twitter():
-    end = datetime.datetime(2021, 9, 1, 0, 0, 0)
-    start = datetime.datetime(2021, 12, 1, 0, 0, 0)
 
     async_bot = AsyncTwitter()
     lcbot = LunarCrush()
 
-    if not Path('data/influencers.json').exists():
-        data = lcbot.get_top_n_influencers_by_coin(list(TICKERS), limit=5)
-        save_json(data, 'data/influencers.json')
-    else:
-        data = json.load(open('data/influencers.json'))
+    end = datetime.datetime(2021, 9, 1, 0, 0, 0)
+    start = datetime.datetime(2021, 12, 1, 0, 0, 0)
 
-    async_bot.search(users=data, tickers=TICKERS,
-                     lang='en',
-                     end_date=end, start_date=start,
-                     show_cashtags=True, output='data/twitter/tweets.csv')
+    n_influencers_per_coin = 10
+    if not Path('data/influencers.json').exists():
+        influencers = lcbot.get_top_n_influencers_by_coin(
+            list(TICKERS), limit=n_influencers_per_coin
+        )
+        save_json(influencers, 'data/influencers.json')
+    influencers = json.load(open('data/influencers.json'))
+
+    async_bot.search(
+        users=influencers,
+        tickers=TICKERS, lang='en',
+        end_date=end, start_date=start,
+        remove_mentions=True,
+        show_cashtags=True, output='data/twitter/tweets.csv'
+    )
 
     async_bot.parallel_run('users')
+
+    merged_df = pd.concat(
+        [pd.read_csv(f) for f in glob.glob('data/twitter/*.csv')],
+        axis='index'
+    ).drop("Unnamed: 0", axis=1)
+    merged_df.to_csv('data/influencers_tweets.csv')
 
     # async_bot.search(tickers=TICKERS, lang='en',
     #                  end_date=end, start_date=start, lowercase=True,

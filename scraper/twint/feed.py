@@ -74,12 +74,20 @@ def Json(response):
     return feed, json_response["min_position"]
 
 
-def parse_tweets(config, response):
+def check_response(response):
+    return bool(len(response))
+
+
+def parse_tweets(config, response, retries=5):
     logme.debug(__name__ + ':parse_tweets')
     response = loads(response)
-    if len(response['globalObjects']['tweets']) == 0:
-        msg = 'No more data!'
-        raise NoMoreTweetsException(msg)
+    while retries:
+        if check_response(response['globalObjects']['tweets']):
+            break
+        time.sleep(.5)
+        retries -= 1
+    if not retries:
+        raise NoMoreTweetsException('No more data!')
     feed = []
     for timeline_entry in response['timeline']['instructions'][0]['addEntries']['entries']:
         # this will handle the cases when the timeline entry is a tweet

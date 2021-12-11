@@ -1,12 +1,12 @@
-cashtags,created_at,tweet,name,language,id,retweets_count,replies_count,hashtags,username,likes_count
-['cro'],2021-11-29 14:55:52 UTC,Need a quick pullback on $CRO. #cro,David Gokhshtein,en,1465333697020841993,22,90,['cro'],davidgokhshtein,378
-['cro'],2021-11-26 19:06:09 UTC,I’m just watching $CRO. 🥷,David Gokhshtein,en,1464309517525700611,92,409,[],davidgokhshtein,1136
-['cro'],2021-11-26 15:48:50 UTC,I’m looking for $CRO to pull back a bit more.   #cro,David Gokhshtein,en,1464259861835886595,30,118,['cro'],davidgokhshtein,361
-['cro'],2021-11-24 11:43:40 UTC,"Jesus, $CRO don’t care what the market is doing right now.   This thing is chasing greatness.   #CRO",David Gokhshtein,en,1463473387225985026,67,119,['cro'],davidgokhshtein,571
-"['sol', 'cro']",2021-11-22 13:36:09 UTC,"Some@might be frustrated, but there will be other $SOL ‘s and $CRO ‘s to have the opportunity to get into.   Matter of fact, I’m pretty sure someone is building them now.   Be patient. Get a game-plan together and DON’T chase green candles.",David Gokhshtein,en,1462776920119070726,41,225,[],davidgokhshtein,496
-['cro'],2021-11-22 03:27:58 UTC,Only those who grew up in NYC or know the meaning of sarcasm understand this tweet.   Too lazy to look over the rest of my tweets on the topic of $CRO.,David Gokhshtein,en,1462623866543558656,6,50,[],davidgokhshtein,88
-['cro'],2021-11-22 02:49:31 UTC,@StockNinjaDD @FeggyKrueger2 @VrachiaD Who said I didn’t have $CRO is the better question.,David Gokhshtein,en,1462614189529305096,0,11,[],davidgokhshtein,5
-['cro'],2021-11-22 00:30:21 UTC,What does $CRO do?   You : 👀,David Gokhshtein,en,1462579168638611460,6,172,[],davidgokhshtein,127
-['cro'],2021-11-22 00:23:35 UTC,People just aping into $CRO and have absolutely no clue what it is or what it does.   #cro,David Gokhshtein,en,1462577464677384193,52,335,['cro'],davidgokhshtein,661
-['cro'],2021-11-21 16:29:34 UTC,So I should get $CRO?   #cro,David Gokhshtein,en,1462458172522827786,92,605,['cro'],davidgokhshtein,1248
-"['cro', 'bnb']",2021-11-17 16:37:05 UTC,I think it’s time to look into $CRO. 🥷  Could pull a $BNB. 🥷  NFA — just personal opinion.,David Gokhshtein,en,1461010512309858315,178,478,[],davidgokhshtein,1332
+created_at,tweet,username,hashtags,cashtags,retweets_count,likes_count,replies_count
+2021-11-29 14:55:52 UTC,Need a quick pullback on $CRO. #cro,davidgokhshtein,['cro'],['cro'],22,378,90
+2021-11-26 19:06:09 UTC,I’m just watching $CRO. 🥷,davidgokhshtein,[],['cro'],92,1136,409
+2021-11-26 15:48:50 UTC,I’m looking for $CRO to pull back a bit more.   #cro,davidgokhshtein,['cro'],['cro'],30,360,118
+2021-11-24 11:43:40 UTC,"Jesus, $CRO don’t care what the market is doing right now.   This thing is chasing greatness.   #CRO",davidgokhshtein,['cro'],['cro'],67,571,119
+2021-11-22 13:36:09 UTC,"Some be frustrated, but there will be other $SOL ‘s and $CRO ‘s to have the opportunity to get into.   Matter of fact, I’m pretty sure someone is building them now.   Be patient. Get a game-plan together and DON’T chase green candles.",davidgokhshtein,[],"['sol', 'cro']",41,496,225
+2021-11-22 03:27:58 UTC,Only those who grew up in NYC or know the meaning of sarcasm understand this tweet.   Too lazy to look over the rest of my tweets on the topic of $CRO.,davidgokhshtein,[],['cro'],6,88,50
+2021-11-22 02:49:31 UTC,Who said I didn’t have $CRO is the better question.,davidgokhshtein,[],['cro'],0,5,11
+2021-11-22 00:30:21 UTC,What does $CRO do?   You : 👀,davidgokhshtein,[],['cro'],6,127,172
+2021-11-22 00:23:35 UTC,People just aping into $CRO and have absolutely no clue what it is or what it does.   #cro,davidgokhshtein,['cro'],['cro'],52,661,335
+2021-11-21 16:29:34 UTC,So I should get $CRO?   #cro,davidgokhshtein,['cro'],['cro'],92,1247,605
+2021-11-17 16:37:05 UTC,I think it’s time to look into $CRO. 🥷  Could pull a $BNB. 🥷  NFA — just personal opinion.,davidgokhshtein,[],"['cro', 'bnb']",178,1335,478
