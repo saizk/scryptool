@@ -4,11 +4,13 @@ import pandas as pd
 
 from pathlib import Path
 
+import pycoingecko
+
 import scraper.santiment
 from scraper.tickers import *
 
 
-def gen_santiment_dashboard(dashboard, coin, metrics, tickers, save_all):
+def gen_santiment_dashboard(dashboard, coin, metrics, save_all):
     path = Path(f'data/{dashboard}/santiment')
 
     df = pd.concat(metrics, axis='columns')
@@ -21,7 +23,7 @@ def gen_santiment_dashboard(dashboard, coin, metrics, tickers, save_all):
     return df
 
 
-def gen_dashboard_1_1(sanbot: scraper.santiment.Santiment, tickers, save_all, **kwargs) -> pd.DataFrame:
+def gen_dashboard_1_1(sanbot: scraper.Santiment, tickers, save_all, **kwargs) -> pd.DataFrame:
     coin_dfs = []
 
     for idx, coin in enumerate(tickers):
@@ -35,7 +37,7 @@ def gen_dashboard_1_1(sanbot: scraper.santiment.Santiment, tickers, save_all, **
                    sanbot.get_github_activity(coin, 'contributors_count', **kwargs),
                    sanbot.get_marketcap(coin, **kwargs)]
 
-        df = gen_santiment_dashboard('dashboard1', coin, metrics, tickers, save_all)
+        df = gen_santiment_dashboard('dashboard1', coin, metrics, save_all)
         coin_dfs.append(df)
 
     db1 = pd.concat(coin_dfs, axis='index').reset_index()
@@ -43,59 +45,31 @@ def gen_dashboard_1_1(sanbot: scraper.santiment.Santiment, tickers, save_all, **
     return db1
 
 
-def gen_dashboard_1_2(sanbot: scraper.santiment.Santiment, tickers, save_all, **kwargs):
+def gen_dashboard_1_2(
+        sanbot: scraper.Santiment,
+        geckobot: pycoingecko.CoinGeckoAPI,
+        tickers, save_all, **kwargs
+):
     coin_dfs = []
     path = Path('data/dashboard1/santiment')
 
     for idx, coin in enumerate(tickers):
         print(f'Dashboard 1.2: {coin}  {idx + 1}/{len(tickers)}')
 
-        metrics = [sanbot.get_active_addresses_24h(coin, **kwargs),
-                   sanbot.get_exchange_balance(coin, **kwargs),
-                   sanbot.get_network_growth(coin, **kwargs),
-                   sanbot.get_transaction_volume(coin, **kwargs),
-                   sanbot.get_perpetual_funding_rate(coin, **kwargs),
+        metrics = [
                    sanbot.get_price(coin, **kwargs),
                    sanbot.get_marketcap(coin, **kwargs),
                    sanbot.get_volume(coin, **kwargs)]
 
-        df = gen_santiment_dashboard('dashboard1', coin, metrics, tickers, save_all)
+        df = gen_santiment_dashboard('dashboard1', coin, metrics, save_all)
         coin_dfs.append(df)
 
     db1 = pd.concat(coin_dfs, axis='index').reset_index()
 
     return db1
 
-def gen_dashboard_1_lunarcrush(lcmetrics, end):
-    path = Path('data/dashboard2')
-    print(f'Dashboard 1.3:')
 
-    data = lcmetrics['data']
-    # bearish =
-    symbols = {s.pop('id'): s.pop('symbol') for s in data}
-
-    df = pd.concat([pd.DataFrame(s) for s in symbols])
-    df.reset_index()
-    # df['time'] = pd.to_datetime(df['time'], unit='s')
-    # additional_points = (datetime.datetime.today() - end).days
-    # df.drop(df.tail(additional_points).index,
-    #         inplace=True)  # remove additional data (> 1/12/21)
-    # df.drop(
-    #     ['open', 'close', 'high', 'low', 'volume', 'market_cap', 'reddit_comments', 'reddit_comments_score',
-    #      'tweet_spam', 'tweet_quotes', 'tweet_sentiment1', 'tweet_sentiment2', 'tweet_sentiment3',
-    #      'tweet_sentiment4', 'tweet_sentiment5', 'tweet_sentiment_impact1', 'tweet_sentiment_impact2',
-    #      'tweet_sentiment_impact3', 'tweet_sentiment_impact4', 'tweet_sentiment_impact5',
-    #      'sentiment_absolute', 'sentiment_relative', 'search_average', 'price_score', 'social_impact_score',
-    #      'alt_rank', 'alt_rank_30d', 'alt_rank_hour_average', 'market_cap_rank', 'percent_change_24h_rank',
-    #      'volume_24h_rank', 'social_volume_24h_rank', 'social_score_24h_rank', 'percent_change_24h'],
-    #     axis=1, inplace=True
-    # )
-    # df['asset_id'].replace(symbols, inplace=True)
-    # df = df.rename(columns={'asset_id': 'asset'})
-    return df
-
-
-def gen_dashboard_2_santiment(sanbot, platforms, tickers, save_all, **kwargs) -> pd.DataFrame:
+def gen_dashboard_2_santiment(sanbot: scraper.Santiment, platforms, tickers, save_all, **kwargs) -> pd.DataFrame:
     coin_dfs = []
     path = Path('data/dashboard2/santiment')
 
@@ -118,7 +92,7 @@ def gen_dashboard_2_santiment(sanbot, platforms, tickers, save_all, **kwargs) ->
     return merged_df
 
 
-def gen_dashboard_2_lunarcrush(lcbot, tickers, start, end):
+def gen_dashboard_2_lunarcrush(lcbot: scraper.LunarCrush, tickers, start, end):
     path = Path('data/dashboard2')
     print(f'Dashboard 2.2:')
 
@@ -153,7 +127,7 @@ def gen_dashboard_2_lunarcrush(lcbot, tickers, start, end):
     return df
 
 
-def gen_dashboard_3(sanbot: scraper.santiment.Santiment, tickers, save_all, **kwargs) -> pd.DataFrame:
+def gen_dashboard_3(sanbot: scraper.Santiment, tickers, save_all, **kwargs) -> pd.DataFrame:
     coin_dfs = []
     path = Path('data/dashboard3/santiment')
 
@@ -164,7 +138,7 @@ def gen_dashboard_3(sanbot: scraper.santiment.Santiment, tickers, save_all, **kw
                    sanbot.get_marketcap(coin, **kwargs),
                    sanbot.get_circulation(coin, **kwargs)]
 
-        df = gen_santiment_dashboard('dashboard3', coin, metrics, tickers, save_all)
+        df = gen_santiment_dashboard('dashboard3', coin, metrics, save_all)
         coin_dfs.append(df)
 
     db3 = pd.concat(coin_dfs, axis='index').reset_index()

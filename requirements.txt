@@ -13,3 +13,4 @@ schedule
 geopy
 fake-useragent
 googletransx
+pycoingecko

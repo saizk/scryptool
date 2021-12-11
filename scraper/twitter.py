@@ -67,9 +67,9 @@ class AsyncTwitter(object):
             if isinstance(value, datetime.datetime):
                 value = value.strftime("%Y-%m-%d %H:%M:%S")
             if key == 'start_date':
-                params['until'] = value
-            elif key == 'end_date':
                 params['since'] = value
+            elif key == 'end_date':
+                params['until'] = value
             elif key == 'user':
                 query_params += f' from:{value}'
             else:

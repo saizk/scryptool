@@ -5,7 +5,7 @@ import time
 import datetime
 
 from pprint import pprint
-# from IPython.display import display
+from IPython.display import display
 import san
 import pandas as pd
 import dashboards
@@ -14,9 +14,9 @@ from nlp import afunc
 from scraper._config import *
 from scraper.utils import *
 from scraper.tickers import *
-from scraper import Twitter, AsyncTwitter
-from scraper import LunarCrush
-from scraper import Santiment
+from scraper import GlassNode, Santiment, LunarCrush, Twitter, AsyncTwitter
+from pycoingecko import CoinGeckoAPI
+
 
 
 def gen_query(query):
@@ -55,8 +55,8 @@ def async_twitter():
     async_bot = AsyncTwitter()
     lcbot = LunarCrush()
 
-    end = datetime.datetime(2021, 9, 1, 0, 0, 0)
-    start = datetime.datetime(2021, 12, 1, 0, 0, 0)
+    start = datetime.datetime(2021, 9, 1, 0, 0, 0)
+    end = datetime.datetime(2021, 12, 1, 0, 0, 0)
 
     n_influencers_per_coin = 10
     if not Path('data/influencers.json').exists():
@@ -90,12 +90,13 @@ def async_twitter():
 
 
 def dashboard_1():
-    sanbot = Santiment(SANTIMENT_API_KEY)
-    lcbot = LunarCrush()
-
     start = datetime.datetime(2021, 9, 1, 0, 0, 0)
     end = datetime.datetime(2021, 12, 1, 0, 0, 0)
 
+    sanbot = Santiment(SANTIMENT_API_KEY)
+    geckobot = CoinGeckoAPI()
+
+    df = geckobot.get_coin_market_chart_range_by_id()
     # SANTIMENT
     db1_1 = dashboards.gen_dashboard_1_1(
         sanbot, TICKERS, save_all=False,
@@ -105,24 +106,13 @@ def dashboard_1():
     db1_1.to_csv(f'data/dashboard1/db1_data_1.csv')
 
     db1_2 = dashboards.gen_dashboard_1_2(
-        sanbot, TICKERS, save_all=False,
+        sanbot, geckobot,
+        TICKERS, save_all=False,
         from_date='2021-09-01', to_date='2021-12-01',
         interval='1d'
     )
     db1_2.to_csv(f'data/dashboard1/db1_data_2.csv')
     print(f'{san.api_calls_made()[0][-1]} out of {san.api_calls_remaining()}')
-
-
-    # LUNARCRUSH
-    data_points = (datetime.datetime.today() - start).days + 1
-    lcmetrics = lcbot.get_global(
-        symbol=list(TICKERS), data_points=data_points,
-        interval='day', change='6m'
-    )
-
-    db1_3 = dashboards.gen_dashboard_1_lunarcrush(lcmetrics, end)
-    db1_3.to_csv('data/dashboard1/db1_data_3.csv')
-    print(db1_3)
 
 
 def dashboard_2():
@@ -158,17 +148,20 @@ def dashboard_3():
     db3.to_csv(f'data/dashboard3/db3_data.csv')
     print(f'{san.api_calls_made()[0][-1]} out of {san.api_calls_remaining()}')
 
+
 def nlp():
     afunc("data/influencers_tweets.csv")
     return
 
+
 def main():
     # twitter_bot()
     # async_twitter()
-    # dashboard_1()
+    dashboard_1()
     # dashboard_2()
     # dashboard_3()
-    nlp()
+    # nlp()
+
 
 if __name__ == '__main__':
     main()
