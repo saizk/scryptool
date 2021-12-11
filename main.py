@@ -14,9 +14,7 @@ from nlp.nlp import create_top5_df, create_coin_df
 from scraper._config import *
 from scraper.utils import *
 from scraper.tickers import *
-from scraper import GlassNode, Santiment, LunarCrush, Twitter, AsyncTwitter
-from pycoingecko import CoinGeckoAPI
-
+from scraper import GlassNode, Santiment, LunarCrush, Twitter, AsyncTwitter, Kraken
 
 
 def gen_query(query):
@@ -94,21 +92,20 @@ def dashboard_1():
     end = datetime.datetime(2021, 12, 1, 0, 0, 0)
 
     sanbot = Santiment(SANTIMENT_API_KEY)
-    geckobot = CoinGeckoAPI()
+    krakenbot = Kraken()
 
-    # df = geckobot.get_coin_market_chart_range_by_id()
     # SANTIMENT
     db1_1 = dashboards.gen_dashboard_1_1(
         sanbot, TICKERS, save_all=False,
-        from_date='2021-09-01', to_date='2021-12-01',
+        start=start, end=end,
         interval='1d'
     )
     db1_1.to_csv(f'data/dashboard1/db1_data_1.csv')
 
     db1_2 = dashboards.gen_dashboard_1_2(
-        sanbot, geckobot,
+        sanbot, krakenbot,
         TICKERS, save_all=False,
-        from_date='2021-09-01', to_date='2021-12-01',
+        start=start, end=end,
         interval='1d'
     )
     db1_2.to_csv(f'data/dashboard1/db1_data_2.csv')
@@ -126,7 +123,7 @@ def dashboard_2():
     db2_1 = dashboards.gen_dashboard_2_santiment(
         sanbot, platforms=['telegram', 'bitcointalk'],
         tickers=TICKERS, save_all=False,
-        from_date='2021-09-01', to_date='2021-12-01',
+        start=start, end=end,
         interval='1d'
     )
     db2_1.to_csv(f'data/dashboard2/db2_data_1.csv')
@@ -139,10 +136,12 @@ def dashboard_2():
 
 def dashboard_3():
     sanbot = Santiment(SANTIMENT_API_KEY)
+    start = datetime.datetime(2021, 9, 1, 0, 0, 0)
+    end = datetime.datetime(2021, 12, 1, 0, 0, 0)
 
     db3 = dashboards.gen_dashboard_3(
         sanbot, TICKERS, save_all=False,
-        from_date='2021-09-01', to_date='2021-12-01',
+        start=start, end=end,
         interval='1d'
     )
     db3.to_csv(f'data/dashboard3/db3_data.csv')
@@ -163,10 +162,10 @@ def nlp():
 def main():
     # twitter_bot()
     # async_twitter()
-    # dashboard_1()
+    dashboard_1()
     # dashboard_2()
     # dashboard_3()
-    nlp()
+    # nlp()
 
 
 if __name__ == '__main__':

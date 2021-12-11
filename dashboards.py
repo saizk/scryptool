@@ -1,10 +1,7 @@
 import datetime
-
 import pandas as pd
 
 from pathlib import Path
-
-import pycoingecko
 
 import scraper
 from scraper.tickers import *
@@ -47,7 +44,7 @@ def gen_dashboard_1_1(sanbot: scraper.Santiment, tickers, save_all, **kwargs) ->
 
 def gen_dashboard_1_2(
         sanbot: scraper.Santiment,
-        geckobot: pycoingecko.CoinGeckoAPI,
+        krakenbot: scraper.Kraken,
         tickers, save_all, **kwargs
 ):
     coin_dfs = []
@@ -56,12 +53,14 @@ def gen_dashboard_1_2(
     for idx, coin in enumerate(tickers):
         print(f'Dashboard 1.2: {coin}  {idx + 1}/{len(tickers)}')
 
-        metrics = [
-                   sanbot.get_price(coin, **kwargs),
+        metrics = [sanbot.get_price(coin, **kwargs),
                    sanbot.get_marketcap(coin, **kwargs),
                    sanbot.get_volume(coin, **kwargs)]
 
         df = gen_santiment_dashboard('dashboard1', coin, metrics, save_all)
+        # frates = krakenbot.get_historical_funding_rate(symbol=coin, **kwargs)
+        # df['h_funding_rate'] = [k['fundingRate'] for k in frates]
+
         coin_dfs.append(df)
 
     db1 = pd.concat(coin_dfs, axis='index').reset_index()

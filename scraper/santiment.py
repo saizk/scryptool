@@ -1,3 +1,5 @@
+import datetime
+
 import san
 import time
 import pandas as pd
@@ -20,6 +22,20 @@ class Santiment(object):
         df = pd.read_csv(coins_csv)
         slug = df[df['ticker'] == ticker.upper()]['slug'].values[0]
         return slug
+
+    @staticmethod
+    def parse_kwargs(kwargs):
+        params = {}
+        for key, value in kwargs.items():
+            if isinstance(value, datetime.datetime):
+                value = value.strftime("%Y-%m-%d")
+            if key == 'start':
+                params['from_date'] = value
+            elif key == 'end':
+                params['to_date'] = value
+            else:
+                params[key] = value
+        return params
 
     @staticmethod
     def _request(func, *args, **kwargs):
