@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pycoingecko
 
-import scraper.santiment
+import scraper
 from scraper.tickers import *
 
 

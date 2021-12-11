@@ -9,7 +9,7 @@ from IPython.display import display
 import san
 import pandas as pd
 import dashboards
-from nlp import afunc
+from nlp.nlp import create_top5_df, create_coin_df
 
 from scraper._config import *
 from scraper.utils import *
@@ -96,7 +96,7 @@ def dashboard_1():
     sanbot = Santiment(SANTIMENT_API_KEY)
     geckobot = CoinGeckoAPI()
 
-    df = geckobot.get_coin_market_chart_range_by_id()
+    # df = geckobot.get_coin_market_chart_range_by_id()
     # SANTIMENT
     db1_1 = dashboards.gen_dashboard_1_1(
         sanbot, TICKERS, save_all=False,
@@ -150,17 +150,23 @@ def dashboard_3():
 
 
 def nlp():
-    afunc("data/influencers_tweets.csv")
+    # tweet_parser("data/influencers_tweets.csv")
+
+    for ticker in list(TICKERS):
+        create_coin_df(f'data/twitter/{ticker}*.csv', f'data/twitter/nlp/{ticker}_all_tweets.csv',ticker)
+
+    create_top5_df(f'data/twitter/nlp/*.csv', f'data/twitter/nlp/top5/top5.csv')
+
     return
 
 
 def main():
     # twitter_bot()
     # async_twitter()
-    dashboard_1()
+    # dashboard_1()
     # dashboard_2()
     # dashboard_3()
-    # nlp()
+    nlp()
 
 
 if __name__ == '__main__':
