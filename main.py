@@ -146,12 +146,11 @@ def dashboard_4():
     parsed_tweets_df = nlp.tweet_parser(df, rf'data\nlp\parsed_tweets.csv')
 
     # DASHBOARD 4.1 SENTIMENT ANALYSIS
-    sentiment_df = nlp.create_sentiment_df(parsed_tweets_df)
-    sentiment_df.to_csv(rf'data\nlp\sentiment_df2.csv', index=False)
+    # sentiment_df = nlp.create_sentiment_df(parsed_tweets_df)
+    # sentiment_df.to_csv(rf'data\nlp\sentiment_df2.csv', index=False)
 
-    exit()
     influencer_sent_df = nlp.create_influencer_sentiment_df(pd.read_csv(rf'data/nlp/sentiment_df.csv', index_col=False))
-    # influencer_sent_df.to_csv(rf'data\dashboard4\influencer_sentiment_df.csv', index=False)
+    influencer_sent_df.to_csv(rf'data\dashboard4\db4_data1.csv', index=False)
 
     # DASHBOARD 4.2 TOP5 TWEETS
 
