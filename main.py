@@ -69,13 +69,13 @@ def async_twitter():
         tickers=TICKERS, lang='en',
         end_date=end, start_date=start,
         remove_mentions=True,
-        show_cashtags=True, output='data/twitter/tweets.csv'
+        show_cashtags=True, output='data/twitter/raw_tweets/tweets.csv'
     )
 
     async_bot.parallel_run('users')
 
     merged_df = pd.concat(
-        [pd.read_csv(f) for f in glob.glob('data/twitter/*.csv')],
+        [pd.read_csv(f) for f in glob.glob('data/twitter/raw_tweets/*.csv')],
         axis='index'
     ).drop("Unnamed: 0", axis=1)
     merged_df.to_csv('data/influencers_tweets.csv')
@@ -155,8 +155,10 @@ def dashboard_4():
     # tweet_parser("data/influencers_tweets.csv")
 
     #DASHBOARD 4.2 TOP5 TWEETS
-    nlp.create_coin_df(TICKERS)
-    nlp.create_top5_df(f'data/twitter/nlp/*.csv', f'data/twitter/nlp/top5/top5.csv')
+    nlp.group_tweets_df(f'data/twitter', TICKERS)
+    top_5 = nlp.create_top5_df(f'data/twitter')
+    top_5.to_csv(f'data/top_5.csv', index=False)
+
 
     #DASHBOARD 4.3 CLOUD WORD
     # tweet_parser("data/influencers_tweets.csv")
