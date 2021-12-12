@@ -20,5 +20,5 @@ def save_csv(my_dict, file='results.csv'):
 
 
 def save_json(data, file='results.json'):
-    with open(file, "w") as f:
+    with open(file, "a") as f:
         json.dump(data, f)

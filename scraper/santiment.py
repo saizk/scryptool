@@ -91,9 +91,9 @@ class Santiment(object):
             san.get, f'github_activity{"_" + mode if mode else ""}/{self._from_ticker_to_slug(coin)}', **kwargs
         )
 
-    def get_active_addresses_24h(self, coin: str, change: str = None, **kwargs) -> pd.DataFrame:
+    def get_active_addresses_24h(self, coin: str, **kwargs) -> pd.DataFrame:
         return self._request(
-            san.get, f'active_addresses_24h_{change}/{self._from_ticker_to_slug(coin)}', **kwargs
+            san.get, f'active_addresses_24h/{self._from_ticker_to_slug(coin)}', **kwargs
         )
 
     def get_exchange_balance(self, coin: str, **kwargs) -> pd.DataFrame:

@@ -12,7 +12,7 @@ import dashboards
 import nlp
 
 from scraper._config import *
-from scraper.utils import *
+from utils import *
 from scraper.tickers import *
 from scraper import GlassNode, Santiment, LunarCrush, Twitter, AsyncTwitter, Kraken
 
@@ -146,9 +146,10 @@ def dashboard_4():
     parsed_tweets_df = nlp.tweet_parser(df, rf'data\nlp\parsed_tweets.csv')
 
     # DASHBOARD 4.1 SENTIMENT ANALYSIS
-    # sentiment_df = nlp.create_sentiment_df(parsed_tweets_df)
-    # sentiment_df.to_csv(rf'data\nlp\sentiment_df.csv', index=False)
+    sentiment_df = nlp.create_sentiment_df(parsed_tweets_df)
+    sentiment_df.to_csv(rf'data\nlp\sentiment_df2.csv', index=False)
 
+    exit()
     influencer_sent_df = nlp.create_influencer_sentiment_df(pd.read_csv(rf'data/nlp/sentiment_df.csv', index_col=False))
     # influencer_sent_df.to_csv(rf'data\dashboard4\influencer_sentiment_df.csv', index=False)
 

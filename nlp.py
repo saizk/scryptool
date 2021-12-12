@@ -1,13 +1,17 @@
 import re
+from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
 from pathlib import Path
 
 import nltk
+import numpy as np
 import preprocessor as p
+import multiprocessing as mp
 import glob
 
 import pandas as pd
 
 import transformers
+from IPython.core.display import display
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 # Tweet parser
@@ -42,16 +46,21 @@ def tweet_parser(raw_tweets_df, path):
 def sentiment(tweet_list):
     tokenizer = AutoTokenizer.from_pretrained("finiteautomata/beto-sentiment-analysis")
     model = AutoModelForSequenceClassification.from_pretrained("finiteautomata/beto-sentiment-analysis")
-    classifier = transformers.pipeline("sentiment-analysis", model=model, tokenizer = tokenizer)
+    classifier = transformers.pipeline("sentiment-analysis", model=model, tokenizer=tokenizer)
+
+    # with ThreadPoolExecutor() as pool:
+    #     santiment = pool.map(classifier, tweet_list)
 
     santiment = classifier(tweet_list)
-    santiment_list = [s["label"] for s in santiment]
-
-    return santiment_list
+    return santiment
 
 
 def create_sentiment_df(parsed_tweets_df):
-    parsed_tweets_df["sentiment"] = sentiment(list(parsed_tweets_df["clean_tweets"]))
+    tweet_list = list(parsed_tweets_df["clean_tweets"])
+    santiment = sentiment(tweet_list)
+
+    parsed_tweets_df["sentiment"] = [s["label"] for s in santiment]
+
     return parsed_tweets_df
 
 def create_influencer_sentiment_df(df):
