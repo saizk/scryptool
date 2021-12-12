@@ -21,16 +21,13 @@ def gen_query(query):
     return ' OR '.join(TICKERS[query])
 
 
-def twitter_bot():
+def twitter_bot(start, end):
     bot = Twitter(BEARER_TOKEN)
     lcbot = LunarCrush()
 
     data = lcbot.get_top_n_influencers_by_coin(list(TICKERS), limit=5)
     influencers = [infl for coin in data.values() for infl in coin]
     unique_influencers = set(influencers)
-
-    start = datetime.datetime(2021, 12, 4, 0, 0, 0)
-    end = datetime.datetime(2021, 12, 5, 0, 0, 0)
 
     total_tweets = 0
     for coin, users in data.items():
@@ -48,13 +45,10 @@ def twitter_bot():
     print(total_tweets)
 
 
-def async_twitter():
+def async_twitter(start, end):
 
     async_bot = AsyncTwitter()
     lcbot = LunarCrush()
-
-    start = datetime.datetime(2021, 9, 1, 0, 0, 0)
-    end = datetime.datetime(2021, 12, 1, 0, 0, 0)
 
     n_influencers_per_coin = 10
     if not Path('data/influencers.json').exists():
@@ -68,11 +62,10 @@ def async_twitter():
         users=influencers,
         tickers=TICKERS, lang='en',
         end_date=end, start_date=start,
-        remove_mentions=True,
-        show_cashtags=True, output='data/twitter/raw_tweets/tweets.csv'
+        remove_mentions=True, show_cashtags=True,
+        output='data/twitter/raw_tweets/tweets.csv'
     )
-
-    async_bot.parallel_run('users')
+    async_bot.parallel_run()
 
     merged_df = pd.concat(
         [pd.read_csv(f) for f in glob.glob('data/twitter/raw_tweets/*.csv')],
@@ -80,16 +73,16 @@ def async_twitter():
     ).drop("Unnamed: 0", axis=1)
     merged_df.to_csv('data/influencers_tweets.csv')
 
-    # async_bot.search(tickers=TICKERS, lang='en',
-    #                  end_date=end, start_date=start, lowercase=True,
-    #                  show_cashtags=True, output=f'data/twitter/tweets.csv')
-    #
-    # async_bot.parallel_run('coins')
+    # async_bot.search(
+    #     tickers=TICKERS, lang='en',
+    #     end_date=end, start_date=start,
+    #     lowercase=True, show_cashtags=True,
+    #     output=f'data/twitter/tweets.csv'
+    # )
+    # async_bot.parallel_run()
 
 
-def dashboard_1():
-    start = datetime.datetime(2021, 9, 1, 0, 0, 0)
-    end = datetime.datetime(2021, 12, 1, 0, 0, 0)
+def dashboard_1(start, end):
 
     sanbot = Santiment(SANTIMENT_API_KEY)
     krakenbot = Kraken()
@@ -112,12 +105,9 @@ def dashboard_1():
     print(f'{san.api_calls_made()[0][-1]} out of {san.api_calls_remaining()}')
 
 
-def dashboard_2():
+def dashboard_2(start, end):
     sanbot = Santiment(SANTIMENT_API_KEY)
     lcbot = LunarCrush()
-
-    start = datetime.datetime(2021, 9, 1, 0, 0, 0)
-    end = datetime.datetime(2021, 12, 1, 0, 0, 0)
 
     # SANTIMENT
     db2_1 = dashboards.gen_dashboard_2_santiment(
@@ -134,10 +124,8 @@ def dashboard_2():
     db2_2.to_csv('data/dashboard2/db2_data_2.csv')
 
 
-def dashboard_3():
+def dashboard_3(start, end):
     sanbot = Santiment(SANTIMENT_API_KEY)
-    start = datetime.datetime(2021, 9, 1, 0, 0, 0)
-    end = datetime.datetime(2021, 12, 1, 0, 0, 0)
 
     db3 = dashboards.gen_dashboard_3(
         sanbot, TICKERS, save_all=False,
@@ -155,10 +143,10 @@ def dashboard_4():
     # tweet_parser("data/influencers_tweets.csv")
 
     #DASHBOARD 4.2 TOP5 TWEETS
-    nlp.group_tweets_df(f'data/twitter', TICKERS)
-    top_5 = nlp.create_top5_df(f'data/twitter')
-    top_5.to_csv(f'data/top_5.csv', index=False)
-
+    dfs = dashboards.group_tweets_dfs(f'data/twitter/raw_tweets',
+                                      list(TICKERS))
+    df = dashboards.get_top_n_tweets(dfs, n=5)
+    df.to_csv(f'data/top_5.csv', index=False)
 
     #DASHBOARD 4.3 CLOUD WORD
     # tweet_parser("data/influencers_tweets.csv")
@@ -167,11 +155,13 @@ def dashboard_4():
 
 
 def main():
-    # twitter_bot()
-    # async_twitter()
-    # dashboard_1()
-    # dashboard_2()
-    # dashboard_3()
+    start = datetime.datetime(2021, 9, 1, 0, 0, 0)
+    end = datetime.datetime(2021, 12, 1, 0, 0, 0)
+    # twitter_bot(start, end)
+    # async_twitter(start, end)
+    # dashboard_1(start, end)
+    # dashboard_2(start, end)
+    # dashboard_3(start, end)
     dashboard_4()
 
 

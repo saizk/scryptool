@@ -1,4 +1,6 @@
 import re
+from pathlib import Path
+
 import nltk
 import preprocessor as p
 import glob
@@ -44,22 +46,3 @@ def create_sentiment_df():
 
 
 # DASHBOARD 4.2
-def group_tweets_df(path, tickers):
-    for ticker in tickers:
-        merged_df = pd.concat(
-                [pd.read_csv(f) for f in glob.glob(f'{path}/{ticker}*.csv')],
-                axis='index'
-            )
-        merged_df["coin"] = ticker
-        merged_df.to_csv(f'data/twitter/{ticker}_all_tweets.csv', index=False)
-    return
-
-
-def create_top5_df(df_path):
-    df = pd.concat(
-        [pd.read_csv(f) for f in glob.glob(f'{df_path}/*.csv')],
-        axis='index'
-    )
-    df["tweet_score"] = df["retweets_count"] + df["likes_count"] * 0.25
-    df = df.sort_values(['tweet_score'], ascending=False).groupby('coin').head(5).reset_index(drop=True)
-    return df

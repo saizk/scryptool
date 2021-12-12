@@ -1,4 +1,6 @@
 import datetime
+import glob
+
 import pandas as pd
 
 from pathlib import Path
@@ -145,6 +147,26 @@ def gen_dashboard_3(sanbot: scraper.Santiment, tickers, save_all, **kwargs) -> p
     return db3
 
 
-def gen_dashboard_4(bot, **kwargs) -> pd.DataFrame:
-    for coin in TICKERS.keys():
-        pass
+def group_tweets_dfs(path: str, tickers: list) -> list:
+    merged_dfs = []
+    path = Path(path)
+    for ticker in tickers:
+        merged_df = pd.concat(
+            [pd.read_csv(f) for f in glob.glob(rf'{path}\{ticker}*.csv')],
+            axis='index'
+        )
+        merged_df["coin"] = ticker
+        merged_df.to_csv(rf'{path.parent}\{ticker}_all_tweets.csv', index=False)
+
+        merged_dfs.append(merged_df)
+
+    return merged_dfs
+
+
+def get_top_n_tweets(tweets_dfs: list, n: int = 5) -> pd.DataFrame:
+    df = pd.concat(tweets_dfs, axis='index')
+    df["tweet_score"] = df["retweets_count"] + df["likes_count"] * 0.25
+    df = df.sort_values(
+        ['tweet_score'], ascending=False
+    ).groupby('coin').head(n).reset_index(drop=True)
+    return df

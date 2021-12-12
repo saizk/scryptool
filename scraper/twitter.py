@@ -103,7 +103,7 @@ class AsyncTwitter(object):
         elif output.endswith('.json'):
             self.config.Store_json = True
 
-    def _parallel_config(self, mode: str) -> list:
+    def _parallel_config(self) -> list:
         """
         Creates a list of N twint.Config objects with each respective coin queries
         :return:
@@ -111,12 +111,9 @@ class AsyncTwitter(object):
         path = Path(self.config.Output)
         path.parent.mkdir(parents=True, exist_ok=True)
 
-        config_params = []
-
-        if mode == 'users':
+        if self.config.Users is not None:
             config_params = self._users_config(path)
-
-        elif mode == 'coins':
+        else:
             config_params = self._coin_config(path)
 
         return config_params
@@ -146,8 +143,8 @@ class AsyncTwitter(object):
 
         return config_params
 
-    def parallel_run(self, mode: str, n_workers: int = mp.cpu_count()):
-        config_params = self._parallel_config(mode)
+    def parallel_run(self, n_workers: int = mp.cpu_count()):
+        config_params = self._parallel_config()
 
         with ProcessPoolExecutor(max_workers=n_workers) as pool:
             results = pool.map(twint.run.Search, config_params)

@@ -1,6 +1,5 @@
 import datetime
 import urllib.parse
-
 import requests
 
 
@@ -28,15 +27,16 @@ class Kraken(object):
         start, end = kwargs.get('start'), kwargs.get('end')
         params = self._parse_kwargs(kwargs)
         res = self._request('/historicalfundingrates', params)
-        if not start or end:
-            return res
-        return self.check_date_range(res, start, end, kwargs.get('interval'))
+        if start and end:
+            return self.filter_by_date(res, start, end, kwargs.get('interval'))
+        return res
 
     @staticmethod
-    def check_date_range(data, start, end, interval):
+    def filter_by_date(data, start, end, interval):
         results = []
         for entry in reversed(data.get('rates')):
             dt = datetime.datetime.strptime(entry['timestamp'], '%Y-%m-%dT%H:%M:%S.%fZ')
+
             if start <= dt <= end:
 
                 if interval == '1d':
