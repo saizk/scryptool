@@ -16,11 +16,11 @@ words = set(nltk.corpus.words.words())
 
 
 def tweet_cleaner(tweet):
-    p.set_options(p.OPT.URL, p.OPT.EMOJI, p.OPT.MENTION)
+    p.set_options(p.OPT.URL, p.OPT.EMOJI, p.OPT.MENTION, p.OPT.NUMBER)
     tweet = p.clean(tweet)  # Remove URLs, Emojis and Mentions
     tweet = tweet.lower()
 
-    remove_characters = [".", ",", ";", "/", ":", "-", "?", "!"]
+    remove_characters = [".", ",", ";", "/", "|" ":", "-", "+", "?", "!"]
     for character in remove_characters:
         tweet = tweet.replace(character, "")
     tweet = re.sub(r'#\S+', '', tweet).strip()
