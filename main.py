@@ -89,12 +89,12 @@ def dashboard_1(start, end):
     sanbot = Santiment(PRO_SANTIMENT_API_KEY)
 
     # SANTIMENT
-    # db1_1 = dashboards.gen_dashboard_1_1(
-    #     sanbot, TICKERS, save_all=False,
-    #     start=start, end=end,
-    #     interval='1d'
-    # )
-    # db1_1.to_csv(f'data/dashboard1/db1_data_1.csv')
+    db1_1 = dashboards.gen_dashboard_1_1(
+        sanbot, TICKERS, save_all=False,
+        start=start, end=end,
+        interval='1d'
+    )
+    db1_1.to_csv(f'data/dashboard1/db1_data_1.csv')
 
     db1_2 = dashboards.gen_dashboard_1_2(
         sanbot, TICKERS, save_all=False,
@@ -142,11 +142,13 @@ def dashboard_4():
                                      list(TICKERS))
     df.to_csv(rf'data\all_tweets_coin.csv', index_label=False)
     # Parse tweets for future dashboards
-    parsed_tweets_df = nlp.tweet_parser(df, rf'nlp\parsed_tweets.csv')
+    parsed_tweets_df = nlp.tweet_parser(df, rf'nlp\parsed_tweets2.csv')
 
     # DASHBOARD 4.1 SENTIMENT ANALYSIS
-    sentiment_df = nlp.create_sentiment_df(parsed_tweets_df)
-    sentiment_df.to_csv(f'nlp/sentiment_df.csv', index=False)
+    # nlp.sentiment("This restaurant is awesome")
+    # sentiment_df = nlp.create_sentiment_df(parsed_tweets_df)
+    # print(sentiment_df)
+
 
     # DASHBOARD 4.2 TOP5 TWEETS
     top_5 = dashboards.get_top_n_tweets(df, n=5)
@@ -162,10 +164,10 @@ def main():
     end = datetime.datetime(2021, 12, 1, 0, 0, 0)
     # twitter_bot(start, end)
     # async_twitter(start, end)
-    # dashboard_1(start, end)
+    dashboard_1(start, end)
     # dashboard_2(start, end)
     # dashboard_3(start, end)
-    dashboard_4()
+    # dashboard_4()
 
 
 if __name__ == '__main__':

@@ -24,7 +24,7 @@ class Santiment(object):
         return slug
 
     @staticmethod
-    def parse_kwargs(kwargs):
+    def _parse_kwargs(kwargs):
         params = {}
         for key, value in kwargs.items():
             if isinstance(value, datetime.datetime):
@@ -37,11 +37,11 @@ class Santiment(object):
                 params[key] = value
         return params
 
-    @staticmethod
-    def _request(func, *args, **kwargs):
+    def _request(self, func, *args, **kwargs):
         try:
             col_name = args[0].split('/')[0]
-            df = func(*args, **kwargs).rename(columns={'value': col_name})
+            params = self._parse_kwargs(kwargs)
+            df = func(*args, **params).rename(columns={'value': col_name})
             return df
 
         except Exception as e:
