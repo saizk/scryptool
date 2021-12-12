@@ -87,9 +87,8 @@ class Config:
     Guest_token: str = None
     deleted: list = None
 
-    Queries: dict = None
-    Coins: list = None
     Users: dict = None
+    Queries: dict = None
 
     Save_replies: bool = False
     Save_retweets: bool = False

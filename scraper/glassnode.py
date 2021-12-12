@@ -37,7 +37,7 @@ class GlassNode(object):
         url = self._BASE_URL + endpoint
         params = self._parse_kwargs(kwargs)
         params['api_key'] = self._api_key
-        res = requests.get(url, params=kwargs)
+        res = requests.get(url, params=params)
         return res
 
     def get_active_addresses(self, **kwargs):

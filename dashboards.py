@@ -55,18 +55,18 @@ def gen_dashboard_1_2(
 
     for idx, coin in enumerate(tickers):
         print(f'Dashboard 1.2: {coin}  {idx + 1}/{len(tickers)}')
-
-        metrics = [sanbot.get_active_addresses_24h(coin, **kwargs),
-                   sanbot.get_exchange_balance(coin, **kwargs),
-                   sanbot.get_transaction_volume(coin, **kwargs),
-                   sanbot.get_network_growth(coin, **kwargs),
-                   sanbot.get_perpetual_funding_rate(coin, **kwargs),
-                   sanbot.get_velocity(coin, **kwargs),
-                   sanbot.get_withdrawal_transactions(coin, **kwargs),
-                   sanbot.get_price(coin, **kwargs),
-                   sanbot.get_marketcap(coin, **kwargs),
-                   sanbot.get_volume(coin, **kwargs)]
-
+        metrics = [
+            sanbot.get_active_addresses_24h(coin, **kwargs),
+            sanbot.get_exchange_balance(coin, **kwargs),
+            sanbot.get_transaction_volume(coin, **kwargs),
+            sanbot.get_velocity(coin, **kwargs),
+            # sanbot.get_network_growth(coin, **kwargs),
+            # sanbot.get_withdrawal_transactions(coin, **kwargs),
+            sanbot.get_perpetual_funding_rate(coin, **kwargs),
+            sanbot.get_price(coin, **kwargs),
+            sanbot.get_marketcap(coin, **kwargs),
+            sanbot.get_volume(coin, **kwargs)
+        ]
         df = gen_santiment_dashboard('dashboard1', coin, metrics, save_all)
         coin_dfs.append(df)
 

@@ -136,7 +136,6 @@ def dashboard_3(start, end):
     print(f'{san.api_calls_made()[0][-1]} out of {san.api_calls_remaining()}')
 
 
-
 def dashboard_4():
     # All tweets with coin label
     df = dashboards.group_tweets_dfs(f'data/twitter/raw_tweets',
@@ -155,12 +154,8 @@ def dashboard_4():
     top_5.to_csv(f'data/top_5.csv', index=False)
 
 
-
     # DASHBOARD 4.3 CLOUD WORD
     # tweet_parser("data/influencers_tweets.csv")
-
-    return
-
 
 
 def main():
@@ -168,10 +163,10 @@ def main():
     end = datetime.datetime(2021, 12, 1, 0, 0, 0)
     # twitter_bot(start, end)
     # async_twitter(start, end)
-    # dashboard_1(start, end)
+    dashboard_1(start, end)
     # dashboard_2(start, end)
     # dashboard_3(start, end)
-    dashboard_4()
+    # dashboard_4()
 
 
 if __name__ == '__main__':

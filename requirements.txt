@@ -15,4 +15,4 @@ fake-useragent
 googletransx
 tweet-preprocessor
 transformers
-pytorch
+torch
