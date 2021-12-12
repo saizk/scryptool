@@ -19,17 +19,17 @@ def tweet_cleaner(tweet):
     tweet = p.clean(tweet)  # Remove URLs, Emojis and Mentions
     tweet = tweet.lower()
 
-    remove_characters = [".", ",", "/", ":", "-", "?", "!"]
+    remove_characters = [".", ",", ";", "/", ":", "-", "?", "!"]
     for character in remove_characters:
         tweet = tweet.replace(character, "")
     tweet = re.sub(r'#\S+', '', tweet).strip()
-    tweet = re.sub(r'\$\S+', '', tweet).strip()
+    tweet = re.sub(rf'\$\S+', '', tweet).strip()
+    tweet = re.sub(rf'\&\S+', '', tweet).strip()
 
     return tweet
 
 
 def tweet_parser(raw_tweets_df, path):
-
     raw_tweets_df["clean_tweets"] = raw_tweets_df["tweet"]
     raw_tweets_df["clean_tweets"] = raw_tweets_df["clean_tweets"].apply(lambda x: tweet_cleaner(x))
 
@@ -38,18 +38,18 @@ def tweet_parser(raw_tweets_df, path):
 
 
 # dashboard 4.1
-def sentiment(tweet):
-    pipe = transformers.pipeline("text-classification")
-    print(pipe(tweet))
+def sentiment(tweet_list):
+
+    classifier = transformers.pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english" )
+    santiment = classifier(tweet_list)
+    santiment_list = [s["label"] for s in santiment]
+
+    return santiment_list
 
 
 def create_sentiment_df(parsed_tweets_df):
-
-    # parsed_tweets_df["sentiment"] = list(parsed_tweets_df["clean_tweets"].apply(lambda x: sentiment(x)))
-    pass
-
-
-
+    parsed_tweets_df["sentiment"] = sentiment(list(parsed_tweets_df["clean_tweets"]))
+    return parsed_tweets_df
 
 
 # DASHBOARD 4.2
