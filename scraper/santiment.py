@@ -55,7 +55,7 @@ class Santiment(object):
 
     def get_price(self, coin: str, change: str = None, **kwargs) -> pd.DataFrame:
         return self._request(
-            san.get, f'price_usd{"_change" + change if change else ""}/{self._from_ticker_to_slug(coin)}', **kwargs
+            san.get, f'price_usd{"_change_" + change if change else ""}/{self._from_ticker_to_slug(coin)}', **kwargs
         )
 
     def get_volume(self, coin: str, **kwargs) -> pd.DataFrame:

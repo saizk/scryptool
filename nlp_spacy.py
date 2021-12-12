@@ -90,7 +90,9 @@ def main():
     coin_typos = [word.lower() for words in TICKERS.values() for word in words]
     typos = ['nt', 'tj', 'm', 'tg', 's', 'el', 'rt', '00', 'th', '2', '$', '|',
              'utc', 'crypto', 'vs', 'coin', 'token', 'currency', 'cryptocurrency',
-             'currency', 'inu', 'hrs', '24hrs', 'usd'] + list(string.ascii_lowercase) + coin_typos
+             'currency', 'inu', 'hrs', '24hrs', 'usd', 'new', 'tokens', 'day',
+             'tokens', 'projects'] + \
+            list(string.ascii_lowercase) + coin_typos
 
     nlp_pipeline = NLPPipeline(
         model_name=model,
