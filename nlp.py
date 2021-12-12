@@ -1,17 +1,14 @@
 import re
-from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
-from pathlib import Path
-
 import nltk
-import numpy as np
-import preprocessor as p
-import multiprocessing as mp
-import glob
-
 import pandas as pd
+import preprocessor as p
+import glob
+import numpy as np
 
 import transformers
+from pathlib import Path
 from IPython.core.display import display
+from concurrent.futures import ThreadPoolExecutor
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 # Tweet parser
@@ -27,6 +24,7 @@ def tweet_cleaner(tweet):
     remove_characters = [".", ",", ";", "/", "|" ":", "-", "+", "?", "!"]
     for character in remove_characters:
         tweet = tweet.replace(character, "")
+
     tweet = re.sub(r'#\S+', '', tweet).strip()
     tweet = re.sub(rf'\$\S+', '', tweet).strip()
     tweet = re.sub(rf'\&\S+', '', tweet).strip()
@@ -60,8 +58,8 @@ def create_sentiment_df(parsed_tweets_df):
     santiment = sentiment(tweet_list)
 
     parsed_tweets_df["sentiment"] = [s["label"] for s in santiment]
-
     return parsed_tweets_df
+
 
 def create_influencer_sentiment_df(df):
 
@@ -84,8 +82,3 @@ def create_influencer_sentiment_df(df):
     sentiment_df = sentiment_df.fillna(0)
 
     return sentiment_df
-
-
-
-
-

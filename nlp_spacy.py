@@ -1,8 +1,6 @@
-import json
 import os
 import string
-import time
-from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
+from concurrent.futures import ThreadPoolExecutor
 
 import pandas as pd
 import spacy
@@ -42,7 +40,6 @@ class NLPPipeline(object):
 
     def count_words(self, remove_words=None):
         docs = self.get_docs()
-
         global_counter = {coin: Counter() for coin in set(self.data['coin'])}
 
         for coin, doc in zip(self.data['coin'], docs):
@@ -99,14 +96,13 @@ def main():
         data=pd.read_csv("data/nlp/parsed_tweets.csv")
     )
     common_words = nlp_pipeline.count_words(remove_words=typos)
-    all_words_count = nlp_pipeline.get_most_n_common(common_words, n=20)
+    all_words_count = nlp_pipeline.get_most_n_common(common_words, n=50)
 
-    save_json(all_words_count, 'data/nlp/all_words_count.json')
+    # save_json(all_words_count, 'data/nlp/all_words_count.json')
     # all_words_count = json.load(open('data/nlp/all_words_count.json'))
 
     df_all_words = from_counter_to_df(all_words_count)
-
-    df_all_words.to_csv('data/nlp/all_words_count.csv')
+    df_all_words.to_csv('data/nlp/all_words_count_50.csv')
 
 
 if __name__ == '__main__':

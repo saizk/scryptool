@@ -137,27 +137,27 @@ def dashboard_3(start, end):
     print(f'{san.api_calls_made()[0][-1]} out of {san.api_calls_remaining()}')
 
 
+def dashboard_4(start, end):
 
-def dashboard_4():
+    # async_twitter(start, end)  # scrape tweets
+
     # All tweets with coin label
     df = dashboards.group_tweets_dfs(f'data/twitter/raw_tweets',
                                      list(TICKERS))
     df.to_csv(rf'data\all_tweets_coin.csv', index_label=False)
-    # Parse tweets for future dashboards
-    parsed_tweets_df = nlp.tweet_parser(df, rf'data\nlp\parsed_tweets.csv')
 
     # DASHBOARD 4.1 SENTIMENT ANALYSIS
+    # parsed_tweets_df = nlp.tweet_parser(df, rf'data\nlp\parsed_tweets.csv')  # Parse tweets for future dashboards
     # sentiment_df = nlp.create_sentiment_df(parsed_tweets_df)
-    # sentiment_df.to_csv(rf'data\nlp\sentiment_df2.csv', index=False)
+    # sentiment_df.to_csv(rf'data\nlp\sentiment_df.csv', index=False)
 
-    influencer_sent_df = nlp.create_influencer_sentiment_df(pd.read_csv(rf'data/nlp/sentiment_df.csv', index_col=False))
+    sentiment_df = pd.read_csv(rf'data/nlp/sentiment_df.csv', index_col=False)
+    influencer_sent_df = nlp.create_influencer_sentiment_df(sentiment_df)
     influencer_sent_df.to_csv(rf'data\dashboard4\db4_data1.csv', index=False)
 
-    # DASHBOARD 4.2 TOP5 TWEETS
-
-    top_5 = dashboards.get_top_n_tweets(pd.read_csv("data/nlp/sentiment_df.csv", index_col=False), n=5)
+    # DASHBOARD 4.2 TOP 5 TWEETS
+    top_5 = dashboards.get_top_n_tweets(sentiment_df, n=5)
     top_5.to_csv(f'data/dashboard4/db4_data_2.csv', index=False)
-
 
     # DASHBOARD 4.3 CLOUD WORD
     # tweet_parser("data/influencers_tweets.csv")
@@ -167,11 +167,10 @@ def main():
     start = datetime.datetime(2021, 9, 1, 0, 0, 0)
     end = datetime.datetime(2021, 12, 1, 0, 0, 0)
     # twitter_bot(start, end)
-    # async_twitter(start, end)
     dashboard_1(start, end)
     # dashboard_2(start, end)
     # dashboard_3(start, end)
-    # dashboard_4()
+    # dashboard_4(start, end)
 
 
 if __name__ == '__main__':
