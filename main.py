@@ -136,22 +136,31 @@ def dashboard_3(start, end):
     print(f'{san.api_calls_made()[0][-1]} out of {san.api_calls_remaining()}')
 
 
+
 def dashboard_4():
+    # All tweets with coin label
+    df = dashboards.group_tweets_dfs(f'data/twitter/raw_tweets',
+                                     list(TICKERS))
+    df.to_csv(rf'data\all_tweets_coin.csv', index_label=False)
+    # Parse tweets for future dashboards
+    parsed_tweets_df = nlp.tweet_parser(df, rf'nlp\parsed_tweets.csv')
 
     # DASHBOARD 4.1 SENTIMENT ANALYSIS
-    # create_sentiment_df
-    # tweet_parser("data/influencers_tweets.csv")
+    nlp.sentiment("This restaurant is awesome")
+    # sentiment_df = nlp.create_sentiment_df(parsed_tweets_df)
 
-    #DASHBOARD 4.2 TOP5 TWEETS
-    dfs = dashboards.group_tweets_dfs(f'data/twitter/raw_tweets',
-                                      list(TICKERS))
-    df = dashboards.get_top_n_tweets(dfs, n=5)
-    df.to_csv(f'data/top_5.csv', index=False)
 
-    #DASHBOARD 4.3 CLOUD WORD
+    # DASHBOARD 4.2 TOP5 TWEETS
+    top_5 = dashboards.get_top_n_tweets(df, n=5)
+    top_5.to_csv(f'data/top_5.csv', index=False)
+
+
+
+    # DASHBOARD 4.3 CLOUD WORD
     # tweet_parser("data/influencers_tweets.csv")
 
     return
+
 
 
 def main():
@@ -159,10 +168,10 @@ def main():
     end = datetime.datetime(2021, 12, 1, 0, 0, 0)
     # twitter_bot(start, end)
     # async_twitter(start, end)
-    dashboard_1(start, end)
+    # dashboard_1(start, end)
     # dashboard_2(start, end)
     # dashboard_3(start, end)
-    # dashboard_4()
+    dashboard_4()
 
 
 if __name__ == '__main__':
