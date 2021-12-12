@@ -54,6 +54,8 @@ def create_sentiment_df(parsed_tweets_df):
     parsed_tweets_df["sentiment"] = sentiment(list(parsed_tweets_df["clean_tweets"]))
     return parsed_tweets_df
 
+def create_influencer_sentiment_df(df):
+    pass
 
 # DASHBOARD 4.2
 

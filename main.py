@@ -143,16 +143,19 @@ def dashboard_4():
                                      list(TICKERS))
     df.to_csv(rf'data\all_tweets_coin.csv', index_label=False)
     # Parse tweets for future dashboards
-    parsed_tweets_df = nlp.tweet_parser(df, rf'data\nlp\parsed_tweets.csv')
+    parsed_tweets_df = nlp.tweet_parser(df, rf'data\dashboard4\parsed_tweets.csv')
 
     # DASHBOARD 4.1 SENTIMENT ANALYSIS
     # sentiment_df = nlp.create_sentiment_df(parsed_tweets_df)
     # sentiment_df.to_csv(rf'data\nlp\sentiment_df.csv', index=False)
 
+    influencer_sent_df = nlp.create_influencer_sentiment_df(pd.read_csv(rf'data/dashboard4/sentiment_df.csv', index_col=False))
+    # influencer_sent_df.to_csv(rf'data\dashboard4\influencer_sentiment_df.csv', index=False)
+
     # DASHBOARD 4.2 TOP5 TWEETS
 
-    top_5 = dashboards.get_top_n_tweets(pd.read_csv("data/nlp/sentiment_df.csv", index_col=False), n=5)
-    top_5.to_csv(f'data/top_5.csv', index=False)
+    top_5 = dashboards.get_top_n_tweets(pd.read_csv("data/dashboard4/sentiment_df.csv", index_col=False), n=5)
+    top_5.to_csv(f'data/dashboard4/top_5db4_data_2.csv', index=False)
 
 
     # DASHBOARD 4.3 CLOUD WORD
