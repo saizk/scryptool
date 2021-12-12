@@ -53,11 +53,19 @@ class Santiment(object):
     def list_all_coins(self) -> pd.DataFrame:
         return self._request(san.get, 'projects/all')
 
-    def get_price(self, coin: str, **kwargs) -> pd.DataFrame:
-        return self._request(san.get, f'price_usd/{self._from_ticker_to_slug(coin)}', **kwargs)
+    def get_price(self, coin: str, change: str = None, **kwargs) -> pd.DataFrame:
+        return self._request(
+            san.get, f'price_usd{"_change" + change if change else ""}/{self._from_ticker_to_slug(coin)}', **kwargs
+        )
 
     def get_volume(self, coin: str, **kwargs) -> pd.DataFrame:
         return self._request(san.get, f'volume_usd/{self._from_ticker_to_slug(coin)}', **kwargs)
+
+    def get_daily_trading_volume(self, coin: str, **kwargs) -> pd.DataFrame:
+        return self._request(
+            san.get,
+            f'daily_trading_volume_usd/{self._from_ticker_to_slug(coin)}', **kwargs
+        )
 
     def get_marketcap(self, coin: str, **kwargs) -> pd.DataFrame:
         return self._request(san.get, f'marketcap_usd/{self._from_ticker_to_slug(coin)}', **kwargs)

@@ -63,9 +63,9 @@ def gen_dashboard_1_2(
             # sanbot.get_network_growth(coin, **kwargs),
             # sanbot.get_withdrawal_transactions(coin, **kwargs),
             sanbot.get_perpetual_funding_rate(coin, **kwargs),
-            sanbot.get_price(coin, **kwargs),
+            sanbot.get_price(coin, change='1d', **kwargs),
             sanbot.get_marketcap(coin, **kwargs),
-            sanbot.get_volume(coin, **kwargs)
+            sanbot.get_daily_trading_volume(coin, **kwargs)
         ]
         df = gen_santiment_dashboard('dashboard1', coin, metrics, save_all)
         coin_dfs.append(df)
@@ -124,7 +124,8 @@ def gen_dashboard_2_lunarcrush(lcbot: scraper.LunarCrush, tickers, start, end):
          'tweet_sentiment_impact3', 'tweet_sentiment_impact4', 'tweet_sentiment_impact5',
          'sentiment_absolute', 'sentiment_relative', 'search_average', 'price_score', 'social_impact_score',
          'alt_rank', 'alt_rank_30d', 'alt_rank_hour_average', 'market_cap_rank', 'percent_change_24h_rank',
-         'volume_24h_rank', 'social_volume_24h_rank', 'social_score_24h_rank', 'percent_change_24h'],
+         'volume_24h_rank', 'social_volume_24h_rank', 'social_score_24h_rank', 'percent_change_24h',
+         'price_usd', 'marketcap_usd'],
         axis=1, inplace=True
     )
     df['asset_id'].replace(symbols, inplace=True)
