@@ -117,8 +117,8 @@ async def RequestUrl(config, init):
     if config.Profile:
         logme.debug(__name__ + ':RequestUrl:Profile')
         _url, params, _serialQuery = url.SearchProfile(config, init)
-    elif config.TwitterSearch:
-        logme.debug(__name__ + ':RequestUrl:TwitterSearch')
+    elif config.Twitter_search:
+        logme.debug(__name__ + ':RequestUrl:Twitter_search')
         _url, params, _serialQuery = await url.Search(config, init)
     else:
         if config.Following:

@@ -17,8 +17,8 @@ from scraper.tickers import *
 from scraper import GlassNode, Santiment, LunarCrush, Twitter, AsyncTwitter, Kraken
 
 
-def gen_query(query):
-    return ' OR '.join(TICKERS[query])
+def gen_query(query: list):
+    return ' OR '.join(query)
 
 
 def twitter_bot(start, end):
@@ -58,9 +58,11 @@ def async_twitter(start, end):
         save_json(influencers, 'data/influencers.json')
     influencers = json.load(open('data/influencers.json'))
 
+    queries = {t: gen_query(TICKERS[t]) for t in TICKERS}
+
     async_bot.search(
         users=influencers,
-        tickers=TICKERS, lang='en',
+        queries=queries, lang='en',
         end_date=end, start_date=start,
         remove_mentions=True, show_cashtags=True,
         output='data/twitter/raw_tweets/tweets.csv'
@@ -74,7 +76,7 @@ def async_twitter(start, end):
     merged_df.to_csv('data/influencers_tweets.csv')
 
     # async_bot.search(
-    #     tickers=TICKERS, lang='en',
+    #     queries=queries, lang='en',
     #     end_date=end, start_date=start,
     #     lowercase=True, show_cashtags=True,
     #     output=f'data/twitter/tweets.csv'

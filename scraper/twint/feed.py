@@ -91,8 +91,8 @@ def parse_tweets(config, response, retries=5):
     feed = []
     for timeline_entry in response['timeline']['instructions'][0]['addEntries']['entries']:
         # this will handle the cases when the timeline entry is a tweet
-        if (config.TwitterSearch or config.Profile) and (timeline_entry['entryId'].startswith('sq-I-t-') or
-                                                         timeline_entry['entryId'].startswith('tweet-')):
+        if (config.Twitter_search or config.Profile) and (timeline_entry['entryId'].startswith('sq-I-t-') or
+                                                          timeline_entry['entryId'].startswith('tweet-')):
             if 'tweet' in timeline_entry['content']['item']['content']:
                 _id = timeline_entry['content']['item']['content']['tweet']['id']
                 # skip the ads

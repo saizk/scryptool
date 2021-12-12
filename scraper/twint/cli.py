@@ -140,7 +140,7 @@ def initialize(args):
     c.Members_list = args.members_list
     c.Filter_retweets = args.filter_retweets
     c.Translate = args.translate
-    c.TranslateDest = args.translate_dest
+    c.Translate_dest = args.translate_dest
     c.Backoff_exponent = args.backoff_exponent
     c.Min_wait_time = args.min_wait_time
     return c

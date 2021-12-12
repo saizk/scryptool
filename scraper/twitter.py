@@ -78,21 +78,11 @@ class AsyncTwitter(object):
             params['search'] = f'({params["search"]}){query_params}'
         return params
 
-    @staticmethod
-    def gen_query(query: list):
-        return ' OR '.join(query)
-
-    @staticmethod
-    def _from_snake_to_camel(snake_str):  # PEP8 :(
-        init, *temp = snake_str.split('_')
-        camel_str = ''.join([init.title(), *map(str.title, temp)])
-        return camel_str
-
     def search(self, **kwargs):
         kwargs = self._parse_kwargs(kwargs)
 
         for k, v in kwargs.items():
-            setattr(self.config, self._from_snake_to_camel(k), v)
+            setattr(self.config, k.capitalize(), v)
 
         output = kwargs.get('output')
 
@@ -111,20 +101,20 @@ class AsyncTwitter(object):
         path = Path(self.config.Output)
         path.parent.mkdir(parents=True, exist_ok=True)
 
-        if self.config.Users is not None:
-            config_params = self._users_config(path)
-        else:
+        if self.config.Users is None:
             config_params = self._coin_config(path)
+        else:
+            config_params = self._users_config(path)
 
         return config_params
 
     def _coin_config(self, path):
         config_params = []
 
-        for coin, query in self.config.Tickers.items():
+        for coin, query in self.config.Queries.items():
             config = copy.deepcopy(self.config)
 
-            config.Search = self.gen_query(query)
+            config.Search = query
             config.Output = rf'{path.parent}\{coin.lower()}_{path.name}'
             config_params.append(config)
 
@@ -137,7 +127,7 @@ class AsyncTwitter(object):
             for user in users:
                 config = copy.deepcopy(self.config)
 
-                config.Search = f'({self.gen_query(self.config.Tickers[coin])}) from:{user}'
+                config.Search = f'({self.config.Queries[coin]}) from:{user}'
                 config.Output = rf'{path.parent}\{coin}_{user.lower()}_{path.name}'
                 config_params.append(config)
 

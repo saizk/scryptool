@@ -69,7 +69,7 @@ def getText(tw, config):
     text = text.replace("http", " http")
     text = text.replace("pic.twitter", " pic.twitter")
     text = text.replace("\n", " ")
-    if config.RemoveMentions:
+    if config.Remove_mentions:
         text = re.sub("@[A-Za-z0-9_]+", "", text).strip()
 
     return text
@@ -153,12 +153,12 @@ def Tweet(tw, config):
         t.trans_dest = ''
     if config.Translate:
         try:
-            ts = translator.translate(text=t.tweet, dest=config.TranslateDest)
+            ts = translator.translate(text=t.tweet, dest=config.Translate_dest)
             t.translate = ts.text
             t.trans_src = ts.src
             t.trans_dest = ts.dest
         # ref. https://github.com/SuniTheFish/ChainTranslator/blob/master/ChainTranslator/__main__.py#L31
         except ValueError as e:
             logme.debug(__name__ + ':Tweet:translator.translate:' + str(e))
-            raise Exception("Invalid destination language: {} / Tweet: {}".format(config.TranslateDest, t.tweet))
+            raise Exception("Invalid destination language: {} / Tweet: {}".format(config.Translate_dest, t.tweet))
     return t

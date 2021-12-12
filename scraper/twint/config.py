@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from typing import Optional
 
+
 @dataclass
 class Config:
     Username: Optional[str] = None
@@ -37,13 +38,7 @@ class Config:
     Followers: bool = False
     Following: bool = False
     Favorites: bool = False
-
-    SaveReplies: bool = False
-    SaveRetweets: bool = False
-    SaveMentions: bool = False
-    SaveMeta: bool = False
-
-    TwitterSearch: bool = False
+    Twitter_search: bool = False
     User_full: bool = False
     # Profile_full: bool = False
     Store_object: bool = False
@@ -84,18 +79,20 @@ class Config:
     Members_list: Optional[str] = None
     Filter_retweets: bool = False
     Translate: bool = False
-    TranslateSrc: str = "en"
-    TranslateDest: str = "en"
+    Translate_src: str = "en"
+    Translate_dest: str = "en"
     Backoff_exponent: float = 3.0
     Min_wait_time: int = 0
     Bearer_token: str = None
     Guest_token: str = None
     deleted: list = None
 
-    Queries: list = None
+    Queries: dict = None
     Coins: list = None
-
-    Tickers: dict = None
     Users: dict = None
 
-    RemoveMentions: bool = False
+    Save_replies: bool = False
+    Save_retweets: bool = False
+    Save_mentions: bool = False
+    Save_meta: bool = False
+    Remove_mentions: bool = False

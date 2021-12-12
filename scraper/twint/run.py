@@ -18,7 +18,7 @@ bearer = 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs' \
 class Twint:
     def __init__(self, config):
         logme.debug(__name__ + ':Twint:__init__')
-        if config.Resume is not None and (config.TwitterSearch or config.Followers or config.Following):
+        if config.Resume is not None and (config.Twitter_search or config.Followers or config.Following):
             logme.debug(__name__ + ':Twint:__init__:Resume')
             self.init = self.get_resume(config.Resume)
         else:
@@ -89,7 +89,7 @@ class Twint:
                     self.feed, self.init = feed.Follow(response)
                     if not self.count % 40:
                         time.sleep(5)
-                elif self.config.Profile or self.config.TwitterSearch:
+                elif self.config.Profile or self.config.Twitter_search:
                     try:
                         self.feed, self.init = feed.parse_tweets(self.config, response)
                     except NoMoreTweetsException as e:
@@ -235,7 +235,7 @@ class Twint:
         await task
 
     async def run(self):
-        if self.config.TwitterSearch:
+        if self.config.Twitter_search:
             self.user_agent = await get.RandomUserAgent(wa=True)
         else:
             self.user_agent = await get.RandomUserAgent()
@@ -253,7 +253,7 @@ class Twint:
                 raise ValueError("Cannot find twitter account with name = " + self.config.Username)
 
         # TODO : will need to modify it to work with the new endpoints
-        if self.config.TwitterSearch and self.config.Since and self.config.Until:
+        if self.config.Twitter_search and self.config.Since and self.config.Until:
             logme.debug(__name__ + ':Twint:main:search+since+until')
             while self.d.since < self.d.until:
                 self.config.Since = datetime.datetime.strftime(self.d.since, "%Y-%m-%d %H:%M:%S")
@@ -281,7 +281,7 @@ class Twint:
                     elif self.config.Profile:
                         logme.debug(__name__ + ':Twint:main:profile')
                         await self.profile()
-                    elif self.config.TwitterSearch:
+                    elif self.config.Twitter_search:
                         logme.debug(__name__ + ':Twint:main:twitter-search')
                         await self.tweets()
                 else:
@@ -335,7 +335,7 @@ def Favorites(config):
     config.Following = False
     config.Followers = False
     config.Profile = False
-    config.TwitterSearch = False
+    config.Twitter_search = False
     run(config)
     if config.Pandas_au:
         storage.panda._autoget("tweet")
@@ -347,7 +347,7 @@ def Followers(config):
     config.Following = False
     config.Profile = False
     config.Favorites = False
-    config.TwitterSearch = False
+    config.Twitter_search = False
     run(config)
     if config.Pandas_au:
         storage.panda._autoget("followers")
@@ -364,7 +364,7 @@ def Following(config):
     config.Followers = False
     config.Profile = False
     config.Favorites = False
-    config.TwitterSearch = False
+    config.Twitter_search = False
     run(config)
     if config.Pandas_au:
         storage.panda._autoget("following")
@@ -382,7 +382,7 @@ def Lookup(config):
     config.Favorites = False
     config.FOllowing = False
     config.Followers = False
-    config.TwitterSearch = False
+    config.Twitter_search = False
     run(config)
     if config.Pandas_au:
         storage.panda._autoget("user")
@@ -394,7 +394,7 @@ def Profile(config):
     config.Favorites = False
     config.Following = False
     config.Followers = False
-    config.TwitterSearch = False
+    config.Twitter_search = False
     run(config)
     if config.Pandas_au:
         storage.panda._autoget("tweet")
@@ -402,7 +402,7 @@ def Profile(config):
 
 def Search(config, callback=None):
     logme.debug(__name__ + ':Search')
-    config.TwitterSearch = True
+    config.Twitter_search = True
     config.Favorites = False
     config.Following = False
     config.Followers = False

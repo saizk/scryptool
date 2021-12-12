@@ -108,7 +108,7 @@ def init(cfg, db):
                     CONSTRAINT tweet_id_fk FOREIGN KEY(tweet_id) REFERENCES tweets(id)
                 );
         """
-        if cfg.SaveRetweets:
+        if cfg.Save_retweets:
             cursor.execute(table_retweets)
 
         table_reply_to = """
@@ -121,7 +121,7 @@ def init(cfg, db):
                     CONSTRAINT tweet_id_fk FOREIGN KEY (tweet_id) REFERENCES tweets(id)
                 );
         """
-        if cfg.SaveReplies:
+        if cfg.Save_replies:
             cursor.execute(table_reply_to)
 
         table_favorites = """

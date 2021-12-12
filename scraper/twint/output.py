@@ -161,8 +161,8 @@ async def Tweets(tweets, config, conn):
         logme.debug(__name__ + ':Tweets:fav+full+loc')
         for tw in tweets:
             await checkData(tw, config, conn)
-    elif config.TwitterSearch or config.Profile:
-        logme.debug(__name__ + ':Tweets:TwitterSearch')
+    elif config.Twitter_search or config.Profile:
+        logme.debug(__name__ + ':Tweets:Twitter_search')
         await checkData(tweets, config, conn)
     else:
         logme.debug(__name__ + ':Tweets:else')
