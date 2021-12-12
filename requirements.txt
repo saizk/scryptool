@@ -15,4 +15,5 @@ fake-useragent
 googletransx
 tweet-preprocessor
 transformers
+pysentimiento
 torch

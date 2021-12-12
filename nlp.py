@@ -8,6 +8,7 @@ import glob
 import pandas as pd
 
 import transformers
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 # Tweet parser
 nltk.download('words')
@@ -39,8 +40,10 @@ def tweet_parser(raw_tweets_df, path):
 
 # dashboard 4.1
 def sentiment(tweet_list):
+    tokenizer = AutoTokenizer.from_pretrained("finiteautomata/beto-sentiment-analysis")
+    model = AutoModelForSequenceClassification.from_pretrained("finiteautomata/beto-sentiment-analysis")
+    classifier = transformers.pipeline("sentiment-analysis", model=model, tokenizer = tokenizer)
 
-    classifier = transformers.pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english" )
     santiment = classifier(tweet_list)
     santiment_list = [s["label"] for s in santiment]
 
