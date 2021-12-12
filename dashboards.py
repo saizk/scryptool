@@ -5,6 +5,8 @@ import pandas as pd
 
 from pathlib import Path
 
+from IPython.core.display import display
+
 import scraper
 from scraper.tickers import *
 
@@ -46,7 +48,6 @@ def gen_dashboard_1_1(sanbot: scraper.Santiment, tickers, save_all, **kwargs) ->
 
 def gen_dashboard_1_2(
         sanbot: scraper.Santiment,
-        krakenbot: scraper.Kraken,
         tickers, save_all, **kwargs
 ):
     coin_dfs = []
@@ -55,18 +56,21 @@ def gen_dashboard_1_2(
     for idx, coin in enumerate(tickers):
         print(f'Dashboard 1.2: {coin}  {idx + 1}/{len(tickers)}')
 
-        metrics = [sanbot.get_price(coin, **kwargs),
+        metrics = [sanbot.get_active_addresses_24h(coin, **kwargs),
+                   sanbot.get_exchange_balance(coin, **kwargs),
+                   sanbot.get_transaction_volume(coin, **kwargs),
+                   sanbot.get_network_growth(coin, **kwargs),
+                   sanbot.get_perpetual_funding_rate(coin, **kwargs),
+                   sanbot.get_velocity(coin, **kwargs),
+                   sanbot.get_withdrawal_transactions(coin, **kwargs),
+                   sanbot.get_price(coin, **kwargs),
                    sanbot.get_marketcap(coin, **kwargs),
                    sanbot.get_volume(coin, **kwargs)]
 
         df = gen_santiment_dashboard('dashboard1', coin, metrics, save_all)
-        # frates = krakenbot.get_historical_funding_rate(symbol=coin, **kwargs)
-        # df['h_funding_rate'] = [k['fundingRate'] for k in frates]
-
         coin_dfs.append(df)
 
     db1 = pd.concat(coin_dfs, axis='index').reset_index()
-
     return db1
 
 
@@ -88,9 +92,9 @@ def gen_dashboard_2_santiment(sanbot: scraper.Santiment, platforms, tickers, sav
 
         coin_dfs.append(df)
 
-    merged_df = pd.concat(coin_dfs, axis='index')
+    db2 = pd.concat(coin_dfs, axis='index')
 
-    return merged_df
+    return db2
 
 
 def gen_dashboard_2_lunarcrush(lcbot: scraper.LunarCrush, tickers, start, end):
@@ -143,13 +147,13 @@ def gen_dashboard_3(sanbot: scraper.Santiment, tickers, save_all, **kwargs) -> p
         coin_dfs.append(df)
 
     db3 = pd.concat(coin_dfs, axis='index').reset_index()
-
     return db3
 
 
-def group_tweets_dfs(path: str, tickers: list) -> list:
+def group_tweets_dfs(path: str, tickers: list) -> pd.DataFrame:
     merged_dfs = []
     path = Path(path)
+
     for ticker in tickers:
         merged_df = pd.concat(
             [pd.read_csv(f) for f in glob.glob(rf'{path}\{ticker}*.csv')],
@@ -160,11 +164,11 @@ def group_tweets_dfs(path: str, tickers: list) -> list:
 
         merged_dfs.append(merged_df)
 
-    return merged_dfs
+    db3 = pd.concat(merged_dfs, axis='index')
+    return db3
 
 
-def get_top_n_tweets(tweets_dfs: list, n: int = 5) -> pd.DataFrame:
-    df = pd.concat(tweets_dfs, axis='index')
+def get_top_n_tweets(df: pd.DataFrame, n: int = 5) -> pd.DataFrame:
     df["tweet_score"] = df["retweets_count"] + df["likes_count"] * 0.25
     df = df.sort_values(
         ['tweet_score'], ascending=False

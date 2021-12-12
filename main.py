@@ -86,20 +86,18 @@ def async_twitter(start, end):
 
 def dashboard_1(start, end):
 
-    sanbot = Santiment(SANTIMENT_API_KEY)
-    krakenbot = Kraken()
+    sanbot = Santiment(PRO_SANTIMENT_API_KEY)
 
     # SANTIMENT
-    db1_1 = dashboards.gen_dashboard_1_1(
-        sanbot, TICKERS, save_all=False,
-        start=start, end=end,
-        interval='1d'
-    )
-    db1_1.to_csv(f'data/dashboard1/db1_data_1.csv')
+    # db1_1 = dashboards.gen_dashboard_1_1(
+    #     sanbot, TICKERS, save_all=False,
+    #     start=start, end=end,
+    #     interval='1d'
+    # )
+    # db1_1.to_csv(f'data/dashboard1/db1_data_1.csv')
 
     db1_2 = dashboards.gen_dashboard_1_2(
-        sanbot, krakenbot,
-        TICKERS, save_all=False,
+        sanbot, TICKERS, save_all=False,
         start=start, end=end,
         interval='1d'
     )
@@ -108,7 +106,7 @@ def dashboard_1(start, end):
 
 
 def dashboard_2(start, end):
-    sanbot = Santiment(SANTIMENT_API_KEY)
+    sanbot = Santiment(PRO_SANTIMENT_API_KEY)
     lcbot = LunarCrush()
 
     # SANTIMENT
@@ -127,7 +125,7 @@ def dashboard_2(start, end):
 
 
 def dashboard_3(start, end):
-    sanbot = Santiment(SANTIMENT_API_KEY)
+    sanbot = Santiment(PRO_SANTIMENT_API_KEY)
 
     db3 = dashboards.gen_dashboard_3(
         sanbot, TICKERS, save_all=False,
@@ -161,10 +159,10 @@ def main():
     end = datetime.datetime(2021, 12, 1, 0, 0, 0)
     # twitter_bot(start, end)
     # async_twitter(start, end)
-    # dashboard_1(start, end)
+    dashboard_1(start, end)
     # dashboard_2(start, end)
     # dashboard_3(start, end)
-    dashboard_4()
+    # dashboard_4()
 
 
 if __name__ == '__main__':

@@ -120,3 +120,13 @@ class Santiment(object):
         return self._request(
             san.get, f'circulation/{self._from_ticker_to_slug(coin)}', **kwargs
         )
+
+    def get_velocity(self, coin: str, **kwargs):
+        return self._request(
+            san.get, f'velocity/{self._from_ticker_to_slug(coin)}', **kwargs
+        )
+
+    def get_withdrawal_transactions(self, coin: str, **kwargs):
+        return self._request(
+            san.get, f'withdrawal_transactions/{self._from_ticker_to_slug(coin)}', **kwargs
+        )

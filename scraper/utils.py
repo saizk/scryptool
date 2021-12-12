@@ -2,20 +2,6 @@ import csv
 import json
 from pathlib import Path
 
-import pandas as pd
-
-import scraper.santiment
-from scraper._config import SANTIMENT_API_KEY
-
-
-
-class classproperty(object):  # noqa
-    def __init__(self, f):
-        self.f = f
-
-    def __get__(self, obj, owner):
-        return self.f(owner)
-
 
 def traverse_dict(original_dict):
     traversed = {}
