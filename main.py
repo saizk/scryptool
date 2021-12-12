@@ -146,11 +146,12 @@ def dashboard_4():
     parsed_tweets_df = nlp.tweet_parser(df, rf'nlp\parsed_tweets.csv')
 
     # DASHBOARD 4.1 SENTIMENT ANALYSIS
-    sentiment_df = nlp.create_sentiment_df(parsed_tweets_df)
-    sentiment_df.to_csv(f'nlp/sentiment_df.csv', index=False)
+    # sentiment_df = nlp.create_sentiment_df(parsed_tweets_df)
+    # sentiment_df.to_csv(f'nlp/sentiment_df.csv', index=False)
 
     # DASHBOARD 4.2 TOP5 TWEETS
-    top_5 = dashboards.get_top_n_tweets(df, n=5)
+
+    top_5 = dashboards.get_top_n_tweets(pd.read_csv("nlp/sentiment_df.csv", index_col=False), n=5)
     top_5.to_csv(f'data/top_5.csv', index=False)
 
 
@@ -164,10 +165,10 @@ def main():
     end = datetime.datetime(2021, 12, 1, 0, 0, 0)
     # twitter_bot(start, end)
     # async_twitter(start, end)
-    dashboard_1(start, end)
+    # dashboard_1(start, end)
     # dashboard_2(start, end)
     # dashboard_3(start, end)
-    # dashboard_4()
+    dashboard_4()
 
 
 if __name__ == '__main__':
