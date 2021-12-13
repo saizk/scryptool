@@ -1,10 +1,27 @@
-# SCrypto
-Crypto Currency Scraper for Twitter
+# scryptool
+
+### Table of contents
+1. [Installation](#installation)
+2. [API Wrappers](#api-wrappers)
+    1. [Santiment API](#1-santiment-api)
+    2. [LunarCrush API](#2-lunarcrush-api)
+       1. [Metrics description](#lc-metrics-description)
+    3. [Twitter API](#3-twitter-api)
+    4. [Async Twitter Scraper](#4-async-twitter-scraper)
+3. [Data Analysis](#data-analysis)
+    1. [Market Overview](#1-market-overview)
+    2. [Social Impact Analyzer](#2-social-impact-analyzer)
+    3. [Perspectivizer](#3-perspectivizer)
+    4. [NLP for Tweets](#4-nlp-for-tweets)
+
+
+### INSTALLATION
 
 ```
 pip install -r requirements.txt
 ```
-## SANTIMENT API
+###API WRAPPERS
+#### 1. SANTIMENT API
 | Method         | Description     |
 |--------------|-----------|
 | **list_all_coins()** | List all available coins in Santiment
@@ -27,11 +44,10 @@ pip install -r requirements.txt
 | **get_velocity()** | On-Chain Velocity
 | **get_withdrawal_transactions()** | On-Chain Withdrawal transactions
 
-## LUNARCRUSH API
+#### 2. LUNARCRUSH API
 
-### Endpoints
-Here is a short description for the LunarCrush API v2 Endpoints.
-You can find more details about the request parameters in <https://legacy.lunarcrush.com/developers/docs> 
+Here is a short description for the LunarCrush API v2 endpoints and their respective methods.
+You can find more details about the request parameters [here](https://legacy.lunarcrush.com/developers/docs) 
 
 | Method         | Description     |
 |--------------|-----------|
@@ -48,7 +64,7 @@ You can find more details about the request parameters in <https://legacy.lunarc
 | **get_influencers()** | List of social accounts that have the most influence on different assets based on number of followers, engagements and volume of posts.  |
 | **get_influencer()** | Individual influencer details including actual posts.  |
 
-### LC Metrics description
+##### LC Metrics description
 | Metric         | Description     |
 |--------------|-----------|
 | **GALAXY SCORE** | The Galaxy Score™ indicates how healthy a coin is by looking at combined performance indicators across markets and social engagement. Display the real-time Galaxy Score™ of any coin. |
@@ -58,7 +74,9 @@ You can find more details about the request parameters in <https://legacy.lunarc
 | **WORD CLOUD** | Uncover keywords used throughout collected social content for any coin. The Word Cloud is generated from all recent and available social posts from Twitter and Reddit. It looks at frequency of mentions. All data is segmented by either all coins or specific, individual coins. |
 | **SOCIAL FEED** | Display social feeds from multiple sources including Twitter, Reddit, news channels and more all at once. Gain unique insights into what's being talked about in real time. All social feeds have been cleaned with spam removed and can be organized by coin. |
 
-## TWITTER API
+#### 3. TWITTER API
+Simple API wrapper for [**tweepy**](https://github.com/tweepy/tweepy) for some endpoints.
+
 | Method         | Description     |
 |--------------|-----------|
 | **get_user()** | Request user information. |
@@ -67,11 +85,11 @@ You can find more details about the request parameters in <https://legacy.lunarc
 | **get_all_tweets_count()** | Request all twitter count given a query (Academic Research only). |
 | **get_recent_tweets_count()** | Request recent twitter counts given a query. |
 
-## ASYNC TWITTER SCRAPER
-Asynchronous Twitter scraper is based on twint project configuration. New parameters have been added to parallelize the scraping process and filter information:
-Parameters can be found in twint/config.py
+#### 4. ASYNC TWITTER SCRAPER
+Asynchronous Twitter scraper is based on [**twint project**](https://github.com/twintproject/twint/) configuration. New parameters have been added to parallelize the scraping process and filter information:
+Parameters can be found in the [configuration file](scraper/twint/config.py)
 
-| New parameters | Type     | Description     |
+| Additional *twint* parameters | Type |  Description  |
 |--------------|-----------|-----------|
 | **Users** | *dict* | Dictionary to store the **coins** (keys) and their respective **users** (values) for parallelization purposes. |
 | **Queries** | *dict* | Dictionary to store the **coins** (keys) and their respective **queries** (values) for parallelization purposes.|
@@ -80,3 +98,14 @@ Parameters can be found in twint/config.py
 | **Save_meta** | *bool* | True to store **all** the information of the tweets. |
 | **Remove_mentions** | *bool* | Remove tweet **mentions**. |
 
+### DATA ANALYSIS
+#### 1. MARKET OVERVIEW
+
+![dashboard1](images/dashboard1.png){ width=50% }
+#### 2. SOCIAL IMPACT ANALYZER
+![dashboard2](images/dashboard2_shiba.png)
+#### 3. PERSPECTIVIZER
+![dashboard3](images/dashboard3_eth_btc.png)
+#### 4. NLP FOR TWEETS
+![dashboard4](images/dashboard4.png)
+You can find the complete dashboard [here](https://datastudio.google.com/s/ujtTlFBHWe0)

@@ -62,7 +62,7 @@ def Csv(obj, config):
     if config.Lang is not None and row.get('language') != config.Lang:
         return
 
-    if not config.SaveMeta:
+    if not config.Save_meta:
         fieldnames = ('created_at', 'tweet', 'username', 'hashtags', 'cashtags',
                       'retweets_count', 'likes_count', 'replies_count')
         row = dict((k, row[k]) for k in fieldnames if k in row)

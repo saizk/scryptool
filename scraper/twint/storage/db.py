@@ -253,40 +253,41 @@ def tweets(conn, Tweet, config):
     try:
         time_ms = round(time.time() * 1000)
         cursor = conn.cursor()
-
-        entry = (Tweet.id,
-                 Tweet.id_str,
-                 Tweet.tweet,
-                 Tweet.lang,
-                 Tweet.conversation_id,
-                 Tweet.datetime,
-                 Tweet.datestamp,
-                 Tweet.timestamp,
-                 Tweet.timezone,
-                 Tweet.place,
-                 Tweet.replies_count,
-                 Tweet.likes_count,
-                 Tweet.retweets_count,
-                 Tweet.user_id,
-                 Tweet.user_id_str,
-                 Tweet.username,
-                 Tweet.name,
-                 Tweet.link,
-                 ",".join([json.dumps(mention) for mention in Tweet.mentions]),
-                 ",".join(Tweet.hashtags),
-                 ",".join(Tweet.cashtags),
-                 ",".join(Tweet.urls),
-                 ",".join(Tweet.photos),
-                 Tweet.thumbnail,
-                 Tweet.quote_url,
-                 Tweet.video,
-                 Tweet.geo,
-                 Tweet.near,
-                 Tweet.source,
-                 time_ms,
-                 Tweet.translate,
-                 Tweet.trans_src,
-                 Tweet.trans_dest)
+        entry = (
+            Tweet.id,
+            Tweet.id_str,
+            Tweet.tweet,
+            Tweet.lang,
+            Tweet.conversation_id,
+            Tweet.datetime,
+            Tweet.datestamp,
+            Tweet.timestamp,
+            Tweet.timezone,
+            Tweet.place,
+            Tweet.replies_count,
+            Tweet.likes_count,
+            Tweet.retweets_count,
+            Tweet.user_id,
+            Tweet.user_id_str,
+            Tweet.username,
+            Tweet.name,
+            Tweet.link,
+            ",".join([json.dumps(mention) for mention in Tweet.mentions]),
+            ",".join(Tweet.hashtags),
+            ",".join(Tweet.cashtags),
+            ",".join(Tweet.urls),
+            ",".join(Tweet.photos),
+            Tweet.thumbnail,
+            Tweet.quote_url,
+            Tweet.video,
+            Tweet.geo,
+            Tweet.near,
+            Tweet.source,
+            time_ms,
+            Tweet.translate,
+            Tweet.trans_src,
+            Tweet.trans_dest
+        )
         cursor.execute('INSERT INTO tweets VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
                        entry)
 
@@ -294,12 +295,12 @@ def tweets(conn, Tweet, config):
             query = 'INSERT INTO favorites VALUES(?,?)'
             cursor.execute(query, (config.User_id, Tweet.id))
 
-        if config.SaveRetweets and Tweet.retweet:
+        if config.Save_retweets and Tweet.retweet:
             query = 'INSERT INTO retweets VALUES(?,?,?,?,?)'
             _d = datetime.timestamp(datetime.strptime(Tweet.retweet_date, "%Y-%m-%d %H:%M:%S"))
             cursor.execute(query, (int(Tweet.user_rt_id), Tweet.user_rt, Tweet.id, int(Tweet.retweet_id), _d))
 
-        if config.SaveReplies and Tweet.reply_to:
+        if config.Save_replies and Tweet.reply_to:
             for reply in Tweet.reply_to:
                 query = 'INSERT INTO replies VALUES(?,?,?)'
                 cursor.execute(query, (Tweet.id, int(reply['id']), reply['name']))

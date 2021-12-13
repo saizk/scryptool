@@ -69,7 +69,7 @@ def async_twitter(start, end):
     merged_df = pd.concat(
         [pd.read_csv(f) for f in glob.glob('data/twitter/raw_tweets/*.csv')],
         axis='index'
-    ).drop("Unnamed: 0", axis=1)
+    )
     merged_df.to_csv('data/influencers_tweets.csv')
 
     # async_bot.search(
@@ -167,9 +167,9 @@ def dashboard_4(start, end):
 def main():
     start = datetime.datetime(2021, 9, 1, 0, 0, 0)
     end = datetime.datetime(2021, 12, 1, 0, 0, 0)
-    # dashboard_1(start, end)
-    # dashboard_2(start, end)
-    # dashboard_3(start, end)
+    dashboard_1(start, end)
+    dashboard_2(start, end)
+    dashboard_3(start, end)
     dashboard_4(start, end)
 
 

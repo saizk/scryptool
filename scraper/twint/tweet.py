@@ -127,7 +127,7 @@ def Tweet(tw, config):
         t.thumbnail = tw['extended_entities']['media'][0]['media_url_https']
     except KeyError:
         t.thumbnail = ''
-    if True:  # config.SaveMeta <- causes future errors
+    if True:  # config.Save_meta <- causes future errors
         try:
             if 'user_rt_id' in tw['retweet_data']:
                 t.retweet = True
