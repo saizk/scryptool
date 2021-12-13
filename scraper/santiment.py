@@ -1,7 +1,6 @@
-import datetime
-
 import san
 import time
+import datetime
 import pandas as pd
 
 from pathlib import Path

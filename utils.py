@@ -1,6 +1,5 @@
 import csv
 import json
-from pathlib import Path
 
 
 def traverse_dict(original_dict):

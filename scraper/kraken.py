@@ -1,6 +1,6 @@
 import datetime
-import urllib.parse
 import requests
+import urllib.parse
 
 
 class Kraken(object):

@@ -1,13 +1,12 @@
-import datetime
 import glob
 import string
+import datetime
 import pandas as pd
 
 from pathlib import Path
 
 import nlp
 import scraper
-from scraper.tickers import TICKERS
 
 
 def gen_santiment_dashboard(dashboard, coin, metrics, save_all):
@@ -202,7 +201,11 @@ def gen_dashboard_4_2(df: pd.DataFrame, top_n_tweets: int = 5) -> pd.DataFrame:
 
 
 def gen_dashboard_4_3(nlp_pipeline) -> pd.DataFrame:
-    coin_typos = [word.lower() for words in TICKERS.values() for word in words]
+    coin_typos = [
+        word.lower()
+        for words in scraper.TICKERS.values()
+        for word in words
+    ]
     remove_words = nlp_pipeline.count_words(
         remove_words=[
                          'nt', 'tj', 'm', 'tg', 's', 'el', 'rt', '00', 'th', '2', '$', '|',

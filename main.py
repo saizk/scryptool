@@ -1,15 +1,15 @@
+import san
 import glob
 import datetime
-import san
 import pandas as pd
 
 import dashboards
-from nlp.pipeline import NLPPipeline
 
-from scraper._config import *
 from utils import *
-from scraper.tickers import *
+from nlp.pipeline import NLPPipeline
+from scraper import TICKERS
 from scraper import Santiment, LunarCrush, Twitter, AsyncTwitter, Kraken, GlassNode
+from scraper._config import *
 
 
 def gen_query(query: list):
@@ -165,10 +165,10 @@ def dashboard_4(start, end):
 def main():
     start = datetime.datetime(2021, 9, 1, 0, 0, 0)
     end = datetime.datetime(2021, 12, 1, 0, 0, 0)
-    dashboard_1(start, end)
+    # dashboard_1(start, end)
     # dashboard_2(start, end)
     # dashboard_3(start, end)
-    # dashboard_4(start, end)
+    dashboard_4(start, end)
 
 
 if __name__ == '__main__':

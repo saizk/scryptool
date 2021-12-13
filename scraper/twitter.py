@@ -8,9 +8,6 @@ from typing import List
 from concurrent.futures import ProcessPoolExecutor
 
 
-from scraper.tickers import TICKERS
-
-
 class Twitter(object):
 
     def __init__(self, bearer_token, wait_on_rate_limit=True):

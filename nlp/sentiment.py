@@ -1,8 +1,7 @@
 import nltk
+import transformers
 import pandas as pd
 
-
-import transformers
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 # Tweet parser
