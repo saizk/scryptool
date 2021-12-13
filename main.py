@@ -1,16 +1,10 @@
-import csv
 import glob
 import datetime
 import san
 import pandas as pd
-import json
-import time
 
-from pprint import pprint
-from IPython.display import display
-
-import nlp
 import dashboards
+from nlp.pipeline import NLPPipeline
 
 from scraper._config import *
 from utils import *
@@ -139,34 +133,38 @@ def dashboard_3(start, end):
 
 def dashboard_4(start, end):
 
+    # twitter_bot(start, end)
     # async_twitter(start, end)  # scrape tweets
 
-    # All tweets with coin label
-    df = dashboards.group_tweets_dfs(f'data/twitter/raw_tweets',
-                                     list(TICKERS))
-    df.to_csv(rf'data\all_tweets_coin.csv', index_label=False)
-
     # DASHBOARD 4.1 SENTIMENT ANALYSIS
-    # parsed_tweets_df = nlp.tweet_parser(df, rf'data\nlp\parsed_tweets.csv')  # Parse tweets for future dashboards
-    # sentiment_df = nlp.create_sentiment_df(parsed_tweets_df)
-    # sentiment_df.to_csv(rf'data\nlp\sentiment_df.csv', index=False)
+    sentiment_df = dashboards.gen_dashboard_4_1_sentiment(
+        f'data/twitter/raw_tweets',
+        list(TICKERS)
+    )
+    sentiment_df.to_csv(f'data/dashboard4/sentiment_df.csv', index=False)
 
-    sentiment_df = pd.read_csv(rf'data/nlp/sentiment_df.csv', index_col=False)
-    influencer_sent_df = nlp.create_influencer_sentiment_df(sentiment_df)
-    influencer_sent_df.to_csv(rf'data\dashboard4\db4_data1.csv', index=False)
+    influencer_sent_df = dashboards.gen_dashboard_4_1_influencers_sentiment(sentiment_df)
+    influencer_sent_df.to_csv(f'data/dashboard4/db4_data1.csv', index=False)
 
     # DASHBOARD 4.2 TOP 5 TWEETS
-    top_5 = dashboards.get_top_n_tweets(sentiment_df, n=5)
+    sentiment_df = pd.read_csv(rf'data/dashboard4/sentiment_df.csv', index_col=False)
+    top_5 = dashboards.gen_dashboard_4_2(sentiment_df, top_n_tweets=5)
     top_5.to_csv(f'data/dashboard4/db4_data_2.csv', index=False)
 
     # DASHBOARD 4.3 CLOUD WORD
-    # tweet_parser("data/influencers_tweets.csv")
+    model_name = 'en_core_web_sm'
+    n_words = 50
+    nlp_pipeline = NLPPipeline(
+        model_name=model_name,
+        data=pd.read_csv("data/dashboard4/parsed_tweets.csv")
+    )
+    cloud_word_df = dashboards.gen_dashboard_4_3(nlp_pipeline)
+    cloud_word_df.to_csv(f'data/dashboard4/db4_data_3_{n_words}.csv')
 
 
 def main():
     start = datetime.datetime(2021, 9, 1, 0, 0, 0)
     end = datetime.datetime(2021, 12, 1, 0, 0, 0)
-    # twitter_bot(start, end)
     dashboard_1(start, end)
     # dashboard_2(start, end)
     # dashboard_3(start, end)

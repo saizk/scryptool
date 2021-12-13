@@ -1,14 +1,13 @@
 import datetime
 import glob
-
+import string
 import pandas as pd
 
 from pathlib import Path
 
-from IPython.core.display import display
-
+import nlp
 import scraper
-from scraper.tickers import *
+from scraper.tickers import TICKERS
 
 
 def gen_santiment_dashboard(dashboard, coin, metrics, save_all):
@@ -24,7 +23,10 @@ def gen_santiment_dashboard(dashboard, coin, metrics, save_all):
     return df
 
 
-def gen_dashboard_1_1(sanbot: scraper.Santiment, tickers, save_all, **kwargs) -> pd.DataFrame:
+def gen_dashboard_1_1(
+        sanbot: scraper.Santiment,
+        tickers, save_all, **kwargs
+) -> pd.DataFrame:
     coin_dfs = []
 
     for idx, coin in enumerate(tickers):
@@ -49,7 +51,7 @@ def gen_dashboard_1_1(sanbot: scraper.Santiment, tickers, save_all, **kwargs) ->
 def gen_dashboard_1_2(
         sanbot: scraper.Santiment,
         tickers, save_all, **kwargs
-):
+) -> pd.DataFrame:
     coin_dfs = []
     path = Path('data/dashboard1/santiment')
 
@@ -74,7 +76,11 @@ def gen_dashboard_1_2(
     return db1
 
 
-def gen_dashboard_2_santiment(sanbot: scraper.Santiment, platforms, tickers, save_all, **kwargs) -> pd.DataFrame:
+def gen_dashboard_2_santiment(
+        sanbot: scraper.Santiment,
+        platforms, tickers,
+        save_all, **kwargs
+) -> pd.DataFrame:
     coin_dfs = []
     path = Path('data/dashboard2/santiment')
 
@@ -151,7 +157,7 @@ def gen_dashboard_3(sanbot: scraper.Santiment, tickers, save_all, **kwargs) -> p
     return db3
 
 
-def group_tweets_dfs(path: str, tickers: list) -> pd.DataFrame:
+def merge_tweets_dfs(path: str, tickers: list) -> pd.DataFrame:
     merged_dfs = []
     path = Path(path)
 
@@ -169,9 +175,42 @@ def group_tweets_dfs(path: str, tickers: list) -> pd.DataFrame:
     return db3
 
 
-def get_top_n_tweets(df: pd.DataFrame, n: int = 5) -> pd.DataFrame:
+def gen_dashboard_4_1_sentiment(tweets_path, coins) -> pd.DataFrame:
+    raw_df = merge_tweets_dfs(tweets_path, coins)
+    raw_df.to_csv(f'data/all_tweets_coin.csv', index_label=False)
+
+    sentiment_df = nlp.parsers.tweet_parser(raw_df)
+    sentiment_df.to_csv(f'data/dashboard4/parsed_tweets.csv', index_label=False)
+
+    santiment = nlp.sentiment.sentiment(
+        list(sentiment_df["clean_tweets"])
+    )
+    sentiment_df["sentiment"] = [s["label"] for s in santiment]
+    return sentiment_df
+
+
+def gen_dashboard_4_1_influencers_sentiment(sentiment_df) -> pd.DataFrame:
+    return nlp.sentiment.create_influencer_sentiment_df(sentiment_df)
+
+
+def gen_dashboard_4_2(df: pd.DataFrame, top_n_tweets: int = 5) -> pd.DataFrame:
     df["tweet_score"] = df["retweets_count"] + df["likes_count"] * 0.25
     df = df.sort_values(
         ['tweet_score'], ascending=False
-    ).groupby('coin').head(n).reset_index(drop=True)
+    ).groupby('coin').head(top_n_tweets).reset_index(drop=True)
     return df
+
+
+def gen_dashboard_4_3(nlp_pipeline) -> pd.DataFrame:
+    coin_typos = [word.lower() for words in TICKERS.values() for word in words]
+    remove_words = nlp_pipeline.count_words(
+        remove_words=[
+                         'nt', 'tj', 'm', 'tg', 's', 'el', 'rt', '00', 'th', '2', '$', '|',
+                         'utc', 'crypto', 'vs', 'coin', 'token', 'currency', 'cryptocurrency',
+                         'currency', 'inu', 'hrs', '24hrs', 'usd', 'new', 'tokens', 'day',
+                         'tokens', 'projects'
+                     ] + list(string.ascii_lowercase) + coin_typos
+    )
+    all_words_count = nlp_pipeline.get_most_n_common(remove_words, n=50)
+    df_all_words = nlp_pipeline.from_counter_to_df(all_words_count)
+    return df_all_words
