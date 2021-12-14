@@ -9,9 +9,8 @@ import dashboards
 
 from utils import *
 from nlp.pipeline import NLPPipeline
-from scraper import TICKERS
-from scraper import Santiment, LunarCrush, Twitter, AsyncTwitter, Kraken, GlassNode
-from scraper._config import *
+from scrapers import Santiment, LunarCrush, Twitter, AsyncTwitter, Kraken, GlassNode, TICKERS
+from _config import *
 
 
 def gen_query(query: list):

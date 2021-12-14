@@ -55,7 +55,7 @@ class Twitter(object):
 class AsyncTwitter(object):
 
     def __init__(self):
-        from scraper import twint
+        from scrapers import twint
         self.config = twint.Config()  # for asynchronous Twitter scraping (no api key)
 
     @staticmethod
@@ -132,13 +132,13 @@ class AsyncTwitter(object):
         return config_params
 
     def parallel_run(self, n_workers: int = mp.cpu_count()):
-        from scraper import twint
+        from scrapers import twint
         config_params = self._parallel_config()
 
         with ProcessPoolExecutor(max_workers=n_workers) as pool:
             results = pool.map(twint.run.Search, config_params)
 
     def run(self):
-        from scraper import twint
+        from scrapers import twint
         self.config.Tickers = None
         twint.run.Search(self.config)

@@ -6,7 +6,7 @@ import pandas as pd
 from pathlib import Path
 
 import nlp
-import scraper
+import scrapers
 
 
 def gen_santiment_dashboard(dashboard, coin, metrics, save_all):
@@ -23,7 +23,7 @@ def gen_santiment_dashboard(dashboard, coin, metrics, save_all):
 
 
 def gen_dashboard_1_1(
-        sanbot: scraper.Santiment,
+        sanbot: scrapers.Santiment,
         tickers, save_all, **kwargs
 ) -> pd.DataFrame:
     coin_dfs = []
@@ -48,7 +48,7 @@ def gen_dashboard_1_1(
 
 
 def gen_dashboard_1_2(
-        sanbot: scraper.Santiment,
+        sanbot: scrapers.Santiment,
         tickers, save_all, **kwargs
 ) -> pd.DataFrame:
     coin_dfs = []
@@ -76,7 +76,7 @@ def gen_dashboard_1_2(
 
 
 def gen_dashboard_2_santiment(
-        sanbot: scraper.Santiment,
+        sanbot: scrapers.Santiment,
         platforms, tickers,
         save_all, **kwargs
 ) -> pd.DataFrame:
@@ -102,7 +102,7 @@ def gen_dashboard_2_santiment(
     return db2
 
 
-def gen_dashboard_2_lunarcrush(lcbot: scraper.LunarCrush, tickers, start, end):
+def gen_dashboard_2_lunarcrush(lcbot: scrapers.LunarCrush, tickers, start, end):
     path = Path('data/dashboard2')
     print(f'Dashboard 2.2:')
 
@@ -138,7 +138,7 @@ def gen_dashboard_2_lunarcrush(lcbot: scraper.LunarCrush, tickers, start, end):
     return df
 
 
-def gen_dashboard_3(sanbot: scraper.Santiment, tickers, save_all, **kwargs) -> pd.DataFrame:
+def gen_dashboard_3(sanbot: scrapers.Santiment, tickers, save_all, **kwargs) -> pd.DataFrame:
     coin_dfs = []
     path = Path('data/dashboard3/santiment')
 
@@ -203,7 +203,7 @@ def gen_dashboard_4_2(df: pd.DataFrame, top_n_tweets: int = 5) -> pd.DataFrame:
 def gen_dashboard_4_3(nlp_pipeline) -> pd.DataFrame:
     coin_typos = [
         word.lower()
-        for words in scraper.TICKERS.values()
+        for words in scrapers.TICKERS.values()
         for word in words
     ]
     remove_words = nlp_pipeline.count_words(

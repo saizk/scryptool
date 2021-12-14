@@ -1,6 +1,6 @@
 import datetime, pandas as pd, warnings
 from time import strftime, localtime
-from scraper.twint.tweet import Tweet_formats
+from scrapers.twint.tweet import Tweet_formats
 
 Tweets_df = None
 Follow_df = None
