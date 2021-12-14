@@ -19,6 +19,7 @@ Social analysis tool for cryptocurrencies.
     2. [Social Impact Analyzer](#2-social-impact-analyzer)
     3. [Perspectivizer](#3-perspectivizer)
     4. [NLP for Tweets](#4-nlp-for-tweets)
+4. [Project Organization](#project-organization)
 
 
 ## Installation
@@ -151,4 +152,43 @@ Natural Language Processing of all the **tweets** in the last 3 months from  the
 
 ![dashboard4](images/dashboard4.png)
 
+------------------------------------------------------------
+
+
+## Project Organization
+
+    ├── LICENSE
+    ├── README.md
+    ├── requirements.txt
+    │
+    ├── data
+    │   ├── dashboard1      <- Data scraped for dashboard 1 (General Overview).
+    │   ├── dashboard2      <- Data scraped for dashboard 2 (Social Impact Analysis).
+    │   ├── dashboard3      <- Data scraped for dashboard 3 (Perspectivizer).
+    │   └── dashboard4      <- Data scraped for dashboard 4 (NLP for tweets).
+    │
+    ├── images              <- Sample images generated from the dashboards. 
+    │
+    ├── main.py             <- Main script containing all the scraping and dashboard generation pipeline. 
+    ├── dashboard.py        <- Data processing and dataframe creation for dashboards.
+    ├── utils.py            <- Util functions.
+    │
+    ├── nlp                 <- Module for Natural Language Processing (NLP).
+    │   ├── __init__.py     <- Makes nlp a Python module.
+    │   ├── parsers.py      <- Data processing for parsing and cleaning scraped tweets.
+    │   ├── pipeline.py     <- Pipeline for tokenization and word counting.
+    │   └── sentiment.py    <- Sentiment analysis functions.
+    │ 
+    ├── scrapers            <- Module containing the scrapers.
+    │   ├── twint           <- Twint repository with custom modifications.
+    │   │
+    │   ├── __init__.py     <- Makes scrapers a Python module.
+    │   ├── glassnode.py    <- Glassnode simple wrapper.
+    │   ├── kraken.py       <- Kraken-Futures simple wrapper.
+    │   ├── lunarcrush.py   <- Lunarcrush wrapper.
+    │   ├── santiment.py    <- Santiment wrapper.
+    │   ├── tickers.py      <- Dictionary containing the tickers and their possible written representations.
+    │   └── twitter.py      <- Twitter wrappers (tweepy / parallel twint).
+    │
+    └── _config.py          <- Create your own _config.py file to store the API KEYS
 ------------------------------------------------------------
