@@ -153,8 +153,8 @@ def dashboard_4(start, end):
     top_5.to_csv(f'data/dashboard4/db4_data_2.csv', index=False)
 
     # DASHBOARD 4.3 CLOUD WORD
-    model_name = 'en_core_web_sm'
     n_words = 50
+    model_name = 'en_core_web_sm'
     nlp_pipeline = NLPPipeline(
         model_name=model_name,
         data=pd.read_csv("data/dashboard4/parsed_tweets.csv")
@@ -167,9 +167,9 @@ def main():
     start = datetime.datetime(2021, 9, 1, 0, 0, 0)
     end = datetime.datetime(2021, 12, 1, 0, 0, 0)
     dashboard_1(start, end)
-    dashboard_2(start, end)
-    dashboard_3(start, end)
-    dashboard_4(start, end)
+    # dashboard_2(start, end)
+    # dashboard_3(start, end)
+    # dashboard_4(start, end)
 
 
 if __name__ == '__main__':

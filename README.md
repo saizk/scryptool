@@ -43,7 +43,7 @@ List of the **18 cryptocurrencies** that have been analyzed.
 | **get_volume()** | Volume (USD)
 | **get_daily_trading_volume()** | Daily trading volume (USD)
 | **get_marketcap()** | Market Cap (USD)
-| **get_social_volume()** | Social volume based on platform (Twitter, Reddit, BitcoinTalk)
+| **get_social_volume()** | Social volume based on platform (Twitter, Reddit, Telegram, BitcoinTalk)
 | **get_sentiment_balance()** | Sentiment balance of a coin
 | **get_social_dominance()** | Social dominance of a coin
 | **get_sentiment()** | Sentiment score (positive / negative)
