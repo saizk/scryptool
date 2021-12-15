@@ -174,7 +174,6 @@ Natural Language Processing of all the **tweets** in the last 3 months from  the
     ├── utils.py            <- Util functions.
     │
     ├── nlp                 <- Module for Natural Language Processing (NLP).
-    │   ├── __init__.py     <- Makes nlp a Python module.
     │   ├── parsers.py      <- Data processing for parsing and cleaning scraped tweets.
     │   ├── pipeline.py     <- Pipeline for tokenization and word counting.
     │   └── sentiment.py    <- Sentiment analysis functions.

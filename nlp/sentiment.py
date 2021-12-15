@@ -4,12 +4,10 @@ import pandas as pd
 
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-# Tweet parser
 nltk.download('words')
 words = set(nltk.corpus.words.words())
 
 
-# dashboard 4.1
 def sentiment(tweet_list):
     tokenizer = AutoTokenizer.from_pretrained("finiteautomata/beto-sentiment-analysis")
     model = AutoModelForSequenceClassification.from_pretrained("finiteautomata/beto-sentiment-analysis")

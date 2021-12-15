@@ -22,10 +22,7 @@ def gen_santiment_dashboard(dashboard, coin, metrics, save_all):
     return df
 
 
-def gen_dashboard_1_1(
-        sanbot: scrapers.Santiment,
-        tickers, save_all, **kwargs
-) -> pd.DataFrame:
+def gen_dashboard_1_1(sanbot: scrapers.Santiment, tickers, save_all, **kwargs) -> pd.DataFrame:
     coin_dfs = []
 
     for idx, coin in enumerate(tickers):
@@ -43,14 +40,11 @@ def gen_dashboard_1_1(
         coin_dfs.append(df)
 
     db1 = pd.concat(coin_dfs, axis='index').reset_index()
-
     return db1
 
 
-def gen_dashboard_1_2(
-        sanbot: scrapers.Santiment,
-        tickers, save_all, **kwargs
-) -> pd.DataFrame:
+def gen_dashboard_1_2(sanbot: scrapers.Santiment, tickers, save_all, **kwargs) -> pd.DataFrame:
+
     coin_dfs = []
     path = Path('data/dashboard1/santiment')
 
@@ -75,11 +69,7 @@ def gen_dashboard_1_2(
     return db1
 
 
-def gen_dashboard_2_santiment(
-        sanbot: scrapers.Santiment,
-        platforms, tickers,
-        save_all, **kwargs
-) -> pd.DataFrame:
+def gen_dashboard_2_santiment(sanbot: scrapers.Santiment, platforms, tickers, save_all, **kwargs) -> pd.DataFrame:
     coin_dfs = []
     path = Path('data/dashboard2/santiment')
 
@@ -98,7 +88,6 @@ def gen_dashboard_2_santiment(
         coin_dfs.append(df)
 
     db2 = pd.concat(coin_dfs, axis='index')
-
     return db2
 
 
@@ -116,8 +105,7 @@ def gen_dashboard_2_lunarcrush(lcbot: scrapers.LunarCrush, tickers, start, end):
     symbols = {s.pop('id'): s.pop('symbol') for s in data}
     time_series = [ts.pop('timeSeries') for ts in data]
 
-    df = pd.concat([pd.DataFrame(ts) for ts in time_series])
-    df.reset_index()
+    df = pd.concat([pd.DataFrame(ts) for ts in time_series]).reset_index()
     df['time'] = pd.to_datetime(df['time'], unit='s')
     additional_points = (datetime.datetime.today() - end).days
     df.drop(df.tail(additional_points).index,
@@ -193,14 +181,14 @@ def gen_dashboard_4_1_influencers_sentiment(sentiment_df) -> pd.DataFrame:
 
 
 def gen_dashboard_4_2(df: pd.DataFrame, top_n_tweets: int = 5) -> pd.DataFrame:
-    df["tweet_score"] = df["retweets_count"] + df["likes_count"] * 0.25
+    df["tweet_score"] = df["retweets_count"] * 0.8 + df["likes_count"] * 0.2
     df = df.sort_values(
         ['tweet_score'], ascending=False
     ).groupby('coin').head(top_n_tweets).reset_index(drop=True)
     return df
 
 
-def gen_dashboard_4_3(nlp_pipeline) -> pd.DataFrame:
+def gen_dashboard_4_3(nlp_pipeline: nlp.pipeline.NLPPipeline) -> pd.DataFrame:
     coin_typos = [
         word.lower()
         for words in scrapers.TICKERS.values()

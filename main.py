@@ -85,6 +85,7 @@ def dashboard_1(start, end):
     sanbot = Santiment(PRO_SANTIMENT_API_KEY)
 
     # SANTIMENT
+    # DASHBOARD 1.1
     db1_1 = dashboards.gen_dashboard_1_1(
         sanbot, TICKERS, save_all=False,
         start=start, end=end,
@@ -92,6 +93,7 @@ def dashboard_1(start, end):
     )
     db1_1.to_csv(f'data/dashboard1/db1_data_1.csv')
 
+    # DASHBOARD 1.2
     db1_2 = dashboards.gen_dashboard_1_2(
         sanbot, TICKERS, save_all=False,
         start=start, end=end,
@@ -106,6 +108,7 @@ def dashboard_2(start, end):
     lcbot = LunarCrush()
 
     # SANTIMENT
+    # DASHBOARD 2.1
     db2_1 = dashboards.gen_dashboard_2_santiment(
         sanbot, platforms=['telegram', 'bitcointalk'],
         tickers=TICKERS, save_all=False,
@@ -116,6 +119,7 @@ def dashboard_2(start, end):
     print(f'{san.api_calls_made()[0][-1]} out of {san.api_calls_remaining()}')
 
     # LUNARCRUSH
+    # DASHBOARD 2.2
     db2_2 = dashboards.gen_dashboard_2_lunarcrush(lcbot, list(TICKERS), start, end)
     db2_2.to_csv('data/dashboard2/db2_data_2.csv')
 
@@ -123,6 +127,7 @@ def dashboard_2(start, end):
 def dashboard_3(start, end):
     sanbot = Santiment(PRO_SANTIMENT_API_KEY)
 
+    # DASHBOARD 3.1
     db3 = dashboards.gen_dashboard_3(
         sanbot, TICKERS, save_all=False,
         start=start, end=end,
@@ -166,7 +171,7 @@ def dashboard_4(start, end):
 def main():
     start = datetime.datetime(2021, 9, 1, 0, 0, 0)
     end = datetime.datetime(2021, 12, 1, 0, 0, 0)
-    dashboard_1(start, end)
+    # dashboard_1(start, end)
     # dashboard_2(start, end)
     # dashboard_3(start, end)
     # dashboard_4(start, end)
