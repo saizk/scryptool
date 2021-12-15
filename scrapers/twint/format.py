@@ -1,5 +1,6 @@
 import logging as logme
 
+
 def Tweet(config, t):
     if config.Format:
         logme.debug(__name__+':Tweet:Format')

@@ -10,6 +10,17 @@ class LunarCrush(object):
     def __init__(self, api_key=None):
         self._api_key = api_key
 
+    @staticmethod
+    def _parse_kwargs(kwargs):
+        if kwargs.get('data_points'):
+            assert kwargs['data_points'] <= 720
+        for param, value in kwargs.items():
+            if isinstance(value, list):
+                kwargs[param] = ','.join(value)
+            if isinstance(value, datetime.datetime):
+                kwargs[param] = int(time.mktime(value.timetuple()))
+        return kwargs
+
     def _gen_url(self, endpoint, **kwargs):
         url = f'{self._BASE_URL}?data={endpoint}'
         url += f'&key={self._api_key}' if self._api_key else ''
@@ -20,17 +31,6 @@ class LunarCrush(object):
         kwargs = self._parse_kwargs(kwargs)
         url = self._gen_url(endpoint, **kwargs)
         return requests.get(url).json()
-
-    @staticmethod
-    def _parse_kwargs(kwargs):
-        if kwargs.get('data_points'):
-            assert kwargs['data_points'] <= 720
-        for param, value in kwargs.items():
-            if isinstance(value, list):
-                kwargs[param] = ','.join(value)
-            if isinstance(value, datetime.datetime):
-                kwargs[param] = time.mktime(value.timetuple())
-        return kwargs
 
     def get_assets(self, symbol: list, **kwargs) -> dict:
         """

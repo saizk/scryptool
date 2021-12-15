@@ -24,11 +24,11 @@ class Kraken(object):
         return requests.get(url).json()
 
     def get_historical_funding_rate(self, **kwargs):
-        start, end = kwargs.get('start'), kwargs.get('end')
+        start, end, interval = kwargs.get('start'), kwargs.get('end'), kwargs.get('interval')
         params = self._parse_kwargs(kwargs)
         res = self._request('/historicalfundingrates', params)
         if start and end:
-            return self.filter_by_date(res, start, end, kwargs.get('interval'))
+            return self.filter_by_date(res, start, end, interval)
         return res
 
     @staticmethod

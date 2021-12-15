@@ -140,5 +140,4 @@ class AsyncTwitter(object):
 
     def run(self):
         from scrapers import twint
-        self.config.Tickers = None
         twint.run.Search(self.config)
