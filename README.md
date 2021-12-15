@@ -30,7 +30,6 @@ pip install -r requirements.txt
 ## Cryptocurrencies
 List of the **18 cryptocurrencies** that have been analyzed.
 
-|     |     |     |     |     |     |     |     |     |
 |-----|-----|-----|-----|-----|-----|-----|-----|-----|
 | ***BTC*** | ***ETH*** | ***BNB*** | ***USDT*** | ***SOL*** | ***ADA*** | ***XRP*** | ***DOT*** | ***LUNA*** |
 | ***DOGE*** | ***AVAX*** | ***SHIB*** | ***CRO*** | ***MATIC*** | ***WBTC*** | ***ALGO*** | **LTC** | **UNI** |
