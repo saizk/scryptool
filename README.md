@@ -30,13 +30,14 @@ pip install -r requirements.txt
 ## Cryptocurrencies
 List of the **18 cryptocurrencies** that have been analyzed.
 
+|     |     |     |     |     |     |     |     |     |
 |-----|-----|-----|-----|-----|-----|-----|-----|-----|
 | ***BTC*** | ***ETH*** | ***BNB*** | ***USDT*** | ***SOL*** | ***ADA*** | ***XRP*** | ***DOT*** | ***LUNA*** |
 | ***DOGE*** | ***AVAX*** | ***SHIB*** | ***CRO*** | ***MATIC*** | ***WBTC*** | ***ALGO*** | **LTC** | **UNI** |
 
 ## API Wrappers
 ### 1. SANTIMENT API
-| Method         | Description     |
+| Method      | Description     |
 |--------------|-----------|
 | **list_all_coins()** | List all available coins in Santiment
 | **get_price()** | Price (USD)
