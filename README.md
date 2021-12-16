@@ -104,8 +104,8 @@ Simple API wrapper for some methods from [**tweepy**](https://github.com/tweepy/
 
 ### 4. ASYNC TWITTER SCRAPER
 Asynchronous Twitter scraper is based on [**twint project**](https://github.com/twintproject/twint/) configuration.
-New parameters have been added to parallelize the scraping process and filter some information.
-The rest parameters can be found in the [configuration file](scrapers/twint/config.py).
+New parameters have been added to **parallelize** the scraping process and filter some information.
+The rest of the parameters can be found in the [configuration file](scrapers/twint/config.py).
 
 | Additional *twint* parameters | Type |  Description  |
 |--------------|-----------|-----------|
@@ -118,7 +118,7 @@ The rest parameters can be found in the [configuration file](scrapers/twint/conf
 ------------------------------------------------------------
 
 ### 5. OTHER WRAPPERS
-Uncompleted API Wrappers with an example endpoint request.
+Simple API Wrappers with an example endpoint request.
 * **Glassnode API:** Parameter parsing and requesting.
 * **Kraken-Futures API:** Parameter parsing and requesting.
 
