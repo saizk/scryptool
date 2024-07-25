@@ -15,7 +15,7 @@ googletransx>=2.4.2
 tweet-preprocessor>=0.6.0
 transformers==4.38.0
 pysentimiento
-torch==1.13.1
+torch==2.2.0
 nltk>=3.6.5
 spacy>=3.2.1
 sanpy==0.8.12
